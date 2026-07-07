@@ -1,0 +1,107 @@
+
+\documentclass[a4paper, 12]{article}
+
+
+\usepackage{amsmath,amssymb} 
+\usepackage[french]{babel}
+\usepackage{fancyvrb}
+                                                                                                                               
+\newtheorem{ex}{Exemple}
+
+\newcommand\set[1]{\ensuremath{\{#1\}}}
+\newcommand\acc[1]{$\{$\emph{#1}$\}$}
+\newcommand\acco{$\{$}
+\newcommand\accf{$\}$}
+
+
+
+\begin{document}
+
+\title{Raisonnement qualitatif sur les difficultés dans \emph{Kimind}}
+\date{}
+\maketitle
+
+\section{Introduction}
+Ce document explore la façon de qualifier la difficulté d’une partie de \emph{Kimind} pour un certain joueur, compte tenu des caractéristiques de la partie et du joueur.
+
+\section{Variables qualitatives}
+
+Une difficulté notée $D$ ci-dessous prend un valeur dans $Q = $ \acc{very\_difficult, difficult, medium, easy, very\_easy}.
+
+
+\subsection{Caractéristiques du joueur}
+
+\subsubsection*{Façon de joueur}
+
+\begin{itemize}
+\item \emph{plays\_colours\_order(O)} (où \emph{O} est dans \acc{in\_order, reverse\_order})
+\item \emph{respects\_colours},
+\item \emph{respects\_sum},
+\item \emph{strategy(S)} (où \emph{S} est dans \acc{dichotomic, limits})
+\end{itemize}
+
+
+\subsubsection*{Qualités du joueur}
+\begin{itemize}
+	\item \emph{rapidity(R)} (\emph{R} est dans \acc{fast,  slow})
+	\item \emph{skill\_level(L)} (\emph{L} est dans \acc{strong, weak, medium})
+	\item \emph{difficulties\_with\_high\_sum} (booléen)
+\end{itemize}
+
+\subsection{Caractéristiques de la partie}
+Étant donné une partie caractérisée par $(s, o, \omega)$ (somme, ordre des couleurs et solution)
+
+\begin{itemize}
+	\item \emph{high\_sum} (booléen),
+	\item \emph{game\_difficulty(D)} (en fonction du nombre de solutions),
+	\item \emph{type\_solution(S)} (la solution se prête à une stratégie) (\emph{S} est dans \acc{dichotomic, limits}),
+	\item \emph{order\_colours\_solution(O)} (respecte l’ordre des couleurs) (\emph{O} est dans \acc{order, reverse\_order}).
+\end{itemize}
+
+
+\section{Qualifier la difficulté d’une partie pour un joueur}
+
+\subsection{Variables qualitatives}
+
+\begin{itemize}
+	\item \emph{high\_sum(D)},
+	\item \emph{same\_colours\_order(D)},
+	\item \emph{reverse\_colours\_order(D)},
+	\item \emph{game\_difficulty(D)}.
+\end{itemize}
+
+Pour chaque variable ci-dessous, la valeur $D$ dénotant une difficulté est instanciée par des règles de \emph{bk\_partie\_joueur.pl}
+
+\subsection{Règles}
+Nous qualifions la difficulté globale d’une partie (\emph{overall\_difficulty(D)}) pour un joueur donné avec un raisonnement qualitatif à base de règles.
+
+\begin{itemize}
+\begin{Verbatim}
+overall_difficult(D) <- 
+	same_colours_order(D1),
+	
+\end{Verbatim}
+\item 
+\
+
+\item Un fort joueur a une difficulté globale améliorée d’un cran :
+\begin{Verbatim}
+player_game_difficulty (D) <- 
+	strong_player,
+	overall_difficulty(D1),
+	improve_quality(D1, D).
+\end{Verbatim}
+	
+\item Un faible joueur a une difficulté globale dégradée d’un cran :
+\begin{Verbatim}
+player_game_difficulty (D) <- 
+	weak_player,
+	overall_difficulty(D1),
+	degrade_quality(D1, D).
+\end{Verbatim}
+
+\end{itemize}
+
+
+  
+\end{document}

@@ -1,0 +1,189 @@
+{
+   "jeu": {
+      "type": "couleurs-valeurs-somme-couleurs_ordonnees",
+      "nb_cartes": 4,
+      "couleurs": [
+         "blue",
+         "green",
+         "red",
+         "yellow"
+      ],
+      "valeurs": [
+         1,
+         2,
+         3,
+         4,
+         5,
+         6,
+         7,
+         8,
+         9,
+         10
+      ],
+      "somme": 20,
+      "ordre_couleurs": [
+         "carte(jaune)",
+         "=",
+         "carte(rouge)",
+         "<",
+         "carte(bleu)",
+         "<",
+         "carte(vert)"
+      ]
+   },
+   "solution": [
+      {
+         "position": 0,
+         "couleur": "yellow",
+         "valeur": 3
+      },
+      {
+         "position": 1,
+         "couleur": "green",
+         "valeur": 10
+      },
+      {
+         "position": 2,
+         "couleur": "blue",
+         "valeur": 4
+      },
+      {
+         "position": 3,
+         "couleur": "red",
+         "valeur": 3
+      }
+   ],
+   "cartes_jouees": [
+      {
+         "position": 0,
+         "couleur": "green",
+         "valeur": 9,
+         "duree": 256.43,
+         "reponse": {
+            "couleur_devinee": false,
+            "valeur_devinee": "less"
+         }
+      },
+      {
+         "position": 1,
+         "couleur": "blue",
+         "valeur": 7,
+         "duree": 30.09,
+         "reponse": {
+            "couleur_devinee": false,
+            "valeur_devinee": "more"
+         }
+      },
+      {
+         "position": 2,
+         "couleur": "red",
+         "valeur": 2,
+         "duree": 4.18,
+         "reponse": {
+            "couleur_devinee": false,
+            "valeur_devinee": "more"
+         }
+      },
+      {
+         "position": 3,
+         "couleur": "yellow",
+         "valeur": 2,
+         "duree": 3.61,
+         "reponse": {
+            "couleur_devinee": false,
+            "valeur_devinee": "more"
+         }
+      },
+      {
+         "position": 1,
+         "couleur": "green",
+         "valeur": 8,
+         "duree": 200.28,
+         "reponse": {
+            "couleur_devinee": true,
+            "valeur_devinee": "more"
+         }
+      },
+      {
+         "position": 2,
+         "couleur": "yellow",
+         "valeur": 3,
+         "duree": 4.36,
+         "reponse": {
+            "couleur_devinee": false,
+            "valeur_devinee": "more"
+         }
+      },
+      {
+         "position": 3,
+         "couleur": "red",
+         "valeur": 3,
+         "duree": 7.71,
+         "reponse": {
+            "couleur_devinee": true,
+            "valeur_devinee": "equals"
+         }
+      },
+      {
+         "position": 0,
+         "couleur": "blue",
+         "valeur": 6,
+         "duree": 5.66,
+         "reponse": {
+            "couleur_devinee": false,
+            "valeur_devinee": "less"
+         }
+      },
+      {
+         "position": 1,
+         "couleur": "green",
+         "valeur": 9,
+         "duree": 136.44,
+         "reponse": {
+            "couleur_devinee": true,
+            "valeur_devinee": "more"
+         }
+      },
+      {
+         "position": 2,
+         "couleur": "blue",
+         "valeur": 5,
+         "duree": 13.15,
+         "reponse": {
+            "couleur_devinee": true,
+            "valeur_devinee": "less"
+         }
+      },
+      {
+         "position": 0,
+         "couleur": "yellow",
+         "valeur": 3,
+         "duree": 3.07,
+         "reponse": {
+            "couleur_devinee": true,
+            "valeur_devinee": "equals"
+         }
+      },
+      {
+         "position": 1,
+         "couleur": "green",
+         "valeur": 10,
+         "duree": 16.4,
+         "reponse": {
+            "couleur_devinee": true,
+            "valeur_devinee": "equals"
+         }
+      },
+      {
+         "position": 2,
+         "couleur": "blue",
+         "valeur": 4,
+         "duree": 1.6,
+         "reponse": {
+            "couleur_devinee": true,
+            "valeur_devinee": "equals"
+         }
+      }
+   ],
+   "resultat": "gagne"
+}

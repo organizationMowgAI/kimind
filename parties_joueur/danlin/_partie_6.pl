@@ -1,0 +1,7 @@
+joueur(8,danlin).
+partie(8,'_partie_6').
+somme(8,21).
+ordre_couleurs(8,[yellow,<,red,<,green,=,blue]).
+solution(8,[c(0,yellow,2),c(1,red,3),c(2,green,8),c(3,blue,8)]).
+cartes_jouees(8,[coup(1,[c(blue,7,1,29.56,non,moins),c(green,7,2,2.71,oui,plus),c(red,4,3,4.13,non,plus),c(yellow,3,0,1.96,oui,moins)]),coup(2,[c(green,8,2,18.15,oui,oui),c(yellow,2,0,5.23,oui,oui),c(red,3,1,31.95,oui,oui),c(blue,8,3,3.12,oui,oui)])]).
+resultat(8,gagne).

@@ -1,0 +1,139 @@
+{
+   "jeu": {
+      "type": "couleurs-valeurs-somme-couleurs_ordonnees",
+      "nb_cartes": 4,
+      "couleurs": [
+         "blue",
+         "green",
+         "red",
+         "yellow"
+      ],
+      "valeurs": [
+         1,
+         2,
+         3,
+         4,
+         5,
+         6,
+         7,
+         8,
+         9,
+         10
+      ],
+      "somme": 10,
+      "ordre_couleurs": [
+         "carte(bleu)",
+         "<",
+         "carte(vert)",
+         "=",
+         "carte(rouge)",
+         "<",
+         "carte(jaune)"
+      ]
+   },
+   "solution": [
+      {
+         "position": 0,
+         "couleur": "green",
+         "valeur": 2
+      },
+      {
+         "position": 1,
+         "couleur": "yellow",
+         "valeur": 5
+      },
+      {
+         "position": 2,
+         "couleur": "red",
+         "valeur": 2
+      },
+      {
+         "position": 3,
+         "couleur": "blue",
+         "valeur": 1
+      }
+   ],
+   "cartes_jouees": [
+      {
+         "position": 1,
+         "couleur": "blue",
+         "valeur": 1,
+         "duree": 31.66,
+         "reponse": {
+            "couleur_devinee": false,
+            "valeur_devinee": "more"
+         }
+      },
+      {
+         "position": 2,
+         "couleur": "green",
+         "valeur": 2,
+         "duree": 3.41,
+         "reponse": {
+            "couleur_devinee": false,
+            "valeur_devinee": "equals"
+         }
+      },
+      {
+         "position": 3,
+         "couleur": "red",
+         "valeur": 2,
+         "duree": 4.72,
+         "reponse": {
+            "couleur_devinee": false,
+            "valeur_devinee": "less"
+         }
+      },
+      {
+         "position": 0,
+         "couleur": "yellow",
+         "valeur": 5,
+         "duree": 5.46,
+         "reponse": {
+            "couleur_devinee": false,
+            "valeur_devinee": "less"
+         }
+      },
+      {
+         "position": 2,
+         "couleur": "red",
+         "valeur": 2,
+         "duree": 11.95,
+         "reponse": {
+            "couleur_devinee": true,
+            "valeur_devinee": "equals"
+         }
+      },
+      {
+         "position": 3,
+         "couleur": "blue",
+         "valeur": 1,
+         "duree": 10.68,
+         "reponse": {
+            "couleur_devinee": true,
+            "valeur_devinee": "equals"
+         }
+      },
+      {
+         "position": 1,
+         "couleur": "yellow",
+         "valeur": 5,
+         "duree": 16.26,
+         "reponse": {
+            "couleur_devinee": true,
+            "valeur_devinee": "equals"
+         }
+      },
+      {
+         "position": 0,
+         "couleur": "green",
+         "valeur": 2,
+         "duree": 5.5,
+         "reponse": {
+            "couleur_devinee": true,
+            "valeur_devinee": "equals"
+         }
+      }
+   ],
+   "resultat": "gagne"
+}

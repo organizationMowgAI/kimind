@@ -1,0 +1,135 @@
+
+\documentclass[a4paper, 12]{article}
+
+
+\usepackage{amsmath,amssymb} 
+\usepackage[french]{babel}
+                                                                                                                               
+\newtheorem{ex}{Exemple}
+
+\newcommand\set[1]{\ensuremath{\{#1\}}}
+
+
+
+\begin{document}
+
+\title{Quantiles}
+\date{}
+\maketitle
+
+\section{Série statistique discrète}
+Une série, par exemple $\set{3,3,5,5,5,5,6,7,7,7,7}$, est la plupart du temps représentée par ses effectifs (équivalent histogramme) :$\set{(3,2), (5,4), (6,1), (7,4)}$ (on a $2$ fois la valeur $3$, $4$ fois la valeur $5$, etc.). 
+Note importante : seule la série des effectifs est nécessaire car la série réelle s'en déduit sans jamais avoir besoin de la calculer.
+
+
+\section{Fonction quantile}
+Soit une série statistique discrète ordonnée $X = \set{x_1, \cdots, x_n}$ (ici pas de notion d’effectifs il peut y avoir des doublons). On définit une fonction de répartition empirique sur $X$ :
+$$F(x) = \#\set{x_i \le x}/n$$ où $\#\set{x_i \le x}$ est le nombre de valeurs de $X$ qui sont inférieures ou égales $x$.
+Donc $F(x)$ représente la proportion de valeurs de $X$ qui sont inférieures ou égales à $x$  (avec $0 \le F(x) \le 1$). On note que $F(x)$ est définie pour tout $x \in \mathbb{R}$ où $x$, qui n’est pas nécessairement dans $S$, représente un seuil.
+
+On définit la fonction quantile d’ordre $p$ (avec $0 \le p \le 1$) ainsi : $$Q(p) = min\set{x_i \in X \; | \; F(x_i) \ge p}.$$
+$Q(p)$ retourne la plus petite valeur $x_i$ de $X$ tel qu’au moins une proportion $p$ de valeurs de $X$ sont inférieures ou égales à $x_i$. 
+
+Quand on veut partitionner $X$ en 4 parties on utilise les quartiles définis par 
+$Q_1 = Q(0.25)$, $Q_2 = Q(0.5)$ et $Q_3 = Q(0.75)$.  
+Les parties sont les suivantes (en fonction des seuils) :
+\begin{itemize}
+	\item $P_1$ = $\set{x_i \in X   | \ x_i \le Q_1}$,
+	\item $P_2$ = $\set{x_i \in X   | \ Q_1 < x_i \le Q_2}$,
+	\item $P_3$ = $\set{x_i \in X   | \ Q_2 < x_i \le Q_3}$,
+	\item $P_4$ = $\set{x_i \in X   | x_i > Q_3}$.
+\end{itemize}
+
+Quand on veut partitionner $X$ en 5 parties on utilise les quintiles définis par 
+$Q_1 = Q(0.2)$, $Q_2 = Q(0.4)$, $Q_3 = Q(0.6)$ et $Q_4 = Q(0.8)$. 
+
+\begin{ex} \ \\
+On considère la série ordonnée $X = \set{1,1,2,2,2,4,4,5,5,5}$ contenant $n=10$ valeurs.
+Les valeurs distinctes, leurs  effectifs, les effectifs cumulés et les valeurs de la fonction de répartition sont résumés dans le tableau suivant :
+
+\[
+\begin{array}{|c|c|c|c|}
+\hline
+\text{Valeur } x_i & \text{Effectif } & \text{Effectif cumulé} & F(x_i) \\
+\hline
+1 & 2 & 2    & 0.2 \\
+2 & 3 & 5   & 0.5 \\
+4 & 2 & 7  & 0.7 \\
+5 & 3 &10 & 1.0 \\
+\hline
+\end{array}
+\]
+
+On a :
+\[
+F(x) =
+\begin{cases}
+0 & \text{si } x < 1, \\[4pt]
+0.2 & \text{si } 1 \le x < 2, \\[4pt]
+0.5 & \text{si } 2 \le x < 4, \\[4pt]
+0.7 & \text{si } 4 \le x < 5, \\[4pt]
+1 & \text{si } x \ge 5.
+\end{cases}
+\]
+
+
+Premier quartile $Q(0.25)$ 
+
+On cherche le plus petit $x_i$ de $X$ tel que $F(x_i) \ge 0.25$.
+
+\[
+F(1) = 0.2 < 0.25, \qquad
+F(2) = 0.5 \ge 0.25
+\]
+
+Donc :
+\[
+\boxed{Q(0.25) = 2}
+\]
+
+$P_1 = 	\set{x_i \in X   | \ x_i \le 2} = \set{1,1,2,2,2}$
+\\
+
+Médiane $Q(0.50)$ 
+
+   On cherche le plus petit $x_i$ de $X$ tel que $F(x_i) \ge 0.5$.
+
+\[
+F(2) = 0.5 \ge 0.5
+\]
+
+Donc :
+\[
+\boxed{Q(0.5) = 2}
+\]
+
+On remarque que le premier et le second quartile sont égaux : la plus petite proportion de valeurs de $X$ qui soit supérieure ou égale à 0.25  est aussi supérieure ou égale à 0.5.
+
+$P_2 = \set{x_i \in X   | \ 2 < x_i \le 2} = \emptyset$. \\
+
+ 
+Troisième quartile $Q(0.75)$
+
+On cherche le plus petit $x_i$ de $X$ tel que $F(x_i) \ge 0.75$.
+
+\[
+F(4) = 0.7 < 0.75, \qquad
+F(5) = 1 \ge 0.75
+\]
+
+Donc :
+\[
+\boxed{Q(0.75) = 5}
+\]
+
+$P_3 = 	\set{x_i \in X   | \ 2 < x_i \le 5} = \set{4,4,5,5,5}$\\
+
+ 
+ Enfin $P_4 =  \set{x_i \in X   | x_i > 5} = \emptyset$.
+ \end{ex}
+
+
+Remarque importante : du fait des égalités au sein d’une série les quantiles ne garantissent pas que les parties créées ont le même nombre d’éléments, et il peut y avoir des égalités entre quantiles.
+
+
+\end{document}

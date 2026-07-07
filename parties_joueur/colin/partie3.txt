@@ -1,0 +1,972 @@
+
+============================== Coup 1 ==============================
+
+nb cartes a deviner                  : 4
+
+
+solutions : 
+168 element(s)
+[
+   [c(0,yellow,1),c(1,red,1),c(2,blue,8),c(3,green,10)],
+   [c(0,yellow,1),c(1,red,1),c(2,green,10),c(3,blue,8)],
+   [c(0,yellow,1),c(1,blue,8),c(2,red,1),c(3,green,10)],
+   [c(0,yellow,1),c(1,blue,8),c(2,green,10),c(3,red,1)],
+   [c(0,yellow,1),c(1,green,10),c(2,red,1),c(3,blue,8)],
+   [c(0,yellow,1),c(1,green,10),c(2,blue,8),c(3,red,1)],
+   [c(0,yellow,2),c(1,red,2),c(2,blue,6),c(3,green,10)],
+   [c(0,yellow,2),c(1,red,2),c(2,blue,7),c(3,green,9)],
+   [c(0,yellow,2),c(1,red,2),c(2,green,9),c(3,blue,7)],
+   [c(0,yellow,2),c(1,red,2),c(2,green,10),c(3,blue,6)],
+   [c(0,yellow,2),c(1,blue,6),c(2,red,2),c(3,green,10)],
+   [c(0,yellow,2),c(1,blue,6),c(2,green,10),c(3,red,2)],
+   [c(0,yellow,2),c(1,blue,7),c(2,red,2),c(3,green,9)],
+   [c(0,yellow,2),c(1,blue,7),c(2,green,9),c(3,red,2)],
+   [c(0,yellow,2),c(1,green,9),c(2,red,2),c(3,blue,7)],
+   [c(0,yellow,2),c(1,green,9),c(2,blue,7),c(3,red,2)],
+   [c(0,yellow,2),c(1,green,10),c(2,red,2),c(3,blue,6)],
+   [c(0,yellow,2),c(1,green,10),c(2,blue,6),c(3,red,2)],
+   [c(0,yellow,3),c(1,red,3),c(2,blue,4),c(3,green,10)],
+   [c(0,yellow,3),c(1,red,3),c(2,blue,5),c(3,green,9)],
+   [c(0,yellow,3),c(1,red,3),c(2,blue,6),c(3,green,8)],
+   [c(0,yellow,3),c(1,red,3),c(2,green,8),c(3,blue,6)],
+   [c(0,yellow,3),c(1,red,3),c(2,green,9),c(3,blue,5)],
+   [c(0,yellow,3),c(1,red,3),c(2,green,10),c(3,blue,4)],
+   [c(0,yellow,3),c(1,blue,4),c(2,red,3),c(3,green,10)],
+   [c(0,yellow,3),c(1,blue,4),c(2,green,10),c(3,red,3)],
+   [c(0,yellow,3),c(1,blue,5),c(2,red,3),c(3,green,9)],
+   [c(0,yellow,3),c(1,blue,5),c(2,green,9),c(3,red,3)],
+   [c(0,yellow,3),c(1,blue,6),c(2,red,3),c(3,green,8)],
+   [c(0,yellow,3),c(1,blue,6),c(2,green,8),c(3,red,3)],
+   [c(0,yellow,3),c(1,green,8),c(2,red,3),c(3,blue,6)],
+   [c(0,yellow,3),c(1,green,8),c(2,blue,6),c(3,red,3)],
+   [c(0,yellow,3),c(1,green,9),c(2,red,3),c(3,blue,5)],
+   [c(0,yellow,3),c(1,green,9),c(2,blue,5),c(3,red,3)],
+   [c(0,yellow,3),c(1,green,10),c(2,red,3),c(3,blue,4)],
+   [c(0,yellow,3),c(1,green,10),c(2,blue,4),c(3,red,3)],
+   [c(0,yellow,4),c(1,red,4),c(2,blue,5),c(3,green,7)],
+   [c(0,yellow,4),c(1,red,4),c(2,green,7),c(3,blue,5)],
+   [c(0,yellow,4),c(1,blue,5),c(2,red,4),c(3,green,7)],
+   [c(0,yellow,4),c(1,blue,5),c(2,green,7),c(3,red,4)],
+   [c(0,yellow,4),c(1,green,7),c(2,red,4),c(3,blue,5)],
+   [c(0,yellow,4),c(1,green,7),c(2,blue,5),c(3,red,4)],
+   [c(0,red,1),c(1,yellow,1),c(2,blue,8),c(3,green,10)],
+   [c(0,red,1),c(1,yellow,1),c(2,green,10),c(3,blue,8)],
+   [c(0,red,1),c(1,blue,8),c(2,yellow,1),c(3,green,10)],
+   [c(0,red,1),c(1,blue,8),c(2,green,10),c(3,yellow,1)],
+   [c(0,red,1),c(1,green,10),c(2,yellow,1),c(3,blue,8)],
+   [c(0,red,1),c(1,green,10),c(2,blue,8),c(3,yellow,1)],
+   [c(0,red,2),c(1,yellow,2),c(2,blue,6),c(3,green,10)],
+   [c(0,red,2),c(1,yellow,2),c(2,blue,7),c(3,green,9)],
+   [c(0,red,2),c(1,yellow,2),c(2,green,9),c(3,blue,7)],
+   [c(0,red,2),c(1,yellow,2),c(2,green,10),c(3,blue,6)],
+   [c(0,red,2),c(1,blue,6),c(2,yellow,2),c(3,green,10)],
+   [c(0,red,2),c(1,blue,6),c(2,green,10),c(3,yellow,2)],
+   [c(0,red,2),c(1,blue,7),c(2,yellow,2),c(3,green,9)],
+   [c(0,red,2),c(1,blue,7),c(2,green,9),c(3,yellow,2)],
+   [c(0,red,2),c(1,green,9),c(2,yellow,2),c(3,blue,7)],
+   [c(0,red,2),c(1,green,9),c(2,blue,7),c(3,yellow,2)],
+   [c(0,red,2),c(1,green,10),c(2,yellow,2),c(3,blue,6)],
+   [c(0,red,2),c(1,green,10),c(2,blue,6),c(3,yellow,2)],
+   [c(0,red,3),c(1,yellow,3),c(2,blue,4),c(3,green,10)],
+   [c(0,red,3),c(1,yellow,3),c(2,blue,5),c(3,green,9)],
+   [c(0,red,3),c(1,yellow,3),c(2,blue,6),c(3,green,8)],
+   [c(0,red,3),c(1,yellow,3),c(2,green,8),c(3,blue,6)],
+   [c(0,red,3),c(1,yellow,3),c(2,green,9),c(3,blue,5)],
+   [c(0,red,3),c(1,yellow,3),c(2,green,10),c(3,blue,4)],
+   [c(0,red,3),c(1,blue,4),c(2,yellow,3),c(3,green,10)],
+   [c(0,red,3),c(1,blue,4),c(2,green,10),c(3,yellow,3)],
+   [c(0,red,3),c(1,blue,5),c(2,yellow,3),c(3,green,9)],
+   [c(0,red,3),c(1,blue,5),c(2,green,9),c(3,yellow,3)],
+   [c(0,red,3),c(1,blue,6),c(2,yellow,3),c(3,green,8)],
+   [c(0,red,3),c(1,blue,6),c(2,green,8),c(3,yellow,3)],
+   [c(0,red,3),c(1,green,8),c(2,yellow,3),c(3,blue,6)],
+   [c(0,red,3),c(1,green,8),c(2,blue,6),c(3,yellow,3)],
+   [c(0,red,3),c(1,green,9),c(2,yellow,3),c(3,blue,5)],
+   [c(0,red,3),c(1,green,9),c(2,blue,5),c(3,yellow,3)],
+   [c(0,red,3),c(1,green,10),c(2,yellow,3),c(3,blue,4)],
+   [c(0,red,3),c(1,green,10),c(2,blue,4),c(3,yellow,3)],
+   [c(0,red,4),c(1,yellow,4),c(2,blue,5),c(3,green,7)],
+   [c(0,red,4),c(1,yellow,4),c(2,green,7),c(3,blue,5)],
+   [c(0,red,4),c(1,blue,5),c(2,yellow,4),c(3,green,7)],
+   [c(0,red,4),c(1,blue,5),c(2,green,7),c(3,yellow,4)],
+   [c(0,red,4),c(1,green,7),c(2,yellow,4),c(3,blue,5)],
+   [c(0,red,4),c(1,green,7),c(2,blue,5),c(3,yellow,4)],
+   [c(0,blue,4),c(1,yellow,3),c(2,red,3),c(3,green,10)],
+   [c(0,blue,4),c(1,yellow,3),c(2,green,10),c(3,red,3)],
+   [c(0,blue,4),c(1,red,3),c(2,yellow,3),c(3,green,10)],
+   [c(0,blue,4),c(1,red,3),c(2,green,10),c(3,yellow,3)],
+   [c(0,blue,4),c(1,green,10),c(2,yellow,3),c(3,red,3)],
+   [c(0,blue,4),c(1,green,10),c(2,red,3),c(3,yellow,3)],
+   [c(0,blue,5),c(1,yellow,3),c(2,red,3),c(3,green,9)],
+   [c(0,blue,5),c(1,yellow,3),c(2,green,9),c(3,red,3)],
+   [c(0,blue,5),c(1,yellow,4),c(2,red,4),c(3,green,7)],
+   [c(0,blue,5),c(1,yellow,4),c(2,green,7),c(3,red,4)],
+   [c(0,blue,5),c(1,red,3),c(2,yellow,3),c(3,green,9)],
+   [c(0,blue,5),c(1,red,3),c(2,green,9),c(3,yellow,3)],
+   [c(0,blue,5),c(1,red,4),c(2,yellow,4),c(3,green,7)],
+   [c(0,blue,5),c(1,red,4),c(2,green,7),c(3,yellow,4)],
+   [c(0,blue,5),c(1,green,7),c(2,yellow,4),c(3,red,4)],
+   [c(0,blue,5),c(1,green,7),c(2,red,4),c(3,yellow,4)],
+   [c(0,blue,5),c(1,green,9),c(2,yellow,3),c(3,red,3)],
+   [c(0,blue,5),c(1,green,9),c(2,red,3),c(3,yellow,3)],
+   [c(0,blue,6),c(1,yellow,2),c(2,red,2),c(3,green,10)],
+   [c(0,blue,6),c(1,yellow,2),c(2,green,10),c(3,red,2)],
+   [c(0,blue,6),c(1,yellow,3),c(2,red,3),c(3,green,8)],
+   [c(0,blue,6),c(1,yellow,3),c(2,green,8),c(3,red,3)],
+   [c(0,blue,6),c(1,red,2),c(2,yellow,2),c(3,green,10)],
+   [c(0,blue,6),c(1,red,2),c(2,green,10),c(3,yellow,2)],
+   [c(0,blue,6),c(1,red,3),c(2,yellow,3),c(3,green,8)],
+   [c(0,blue,6),c(1,red,3),c(2,green,8),c(3,yellow,3)],
+   [c(0,blue,6),c(1,green,8),c(2,yellow,3),c(3,red,3)],
+   [c(0,blue,6),c(1,green,8),c(2,red,3),c(3,yellow,3)],
+   [c(0,blue,6),c(1,green,10),c(2,yellow,2),c(3,red,2)],
+   [c(0,blue,6),c(1,green,10),c(2,red,2),c(3,yellow,2)],
+   [c(0,blue,7),c(1,yellow,2),c(2,red,2),c(3,green,9)],
+   [c(0,blue,7),c(1,yellow,2),c(2,green,9),c(3,red,2)],
+   [c(0,blue,7),c(1,red,2),c(2,yellow,2),c(3,green,9)],
+   [c(0,blue,7),c(1,red,2),c(2,green,9),c(3,yellow,2)],
+   [c(0,blue,7),c(1,green,9),c(2,yellow,2),c(3,red,2)],
+   [c(0,blue,7),c(1,green,9),c(2,red,2),c(3,yellow,2)],
+   [c(0,blue,8),c(1,yellow,1),c(2,red,1),c(3,green,10)],
+   [c(0,blue,8),c(1,yellow,1),c(2,green,10),c(3,red,1)],
+   [c(0,blue,8),c(1,red,1),c(2,yellow,1),c(3,green,10)],
+   [c(0,blue,8),c(1,red,1),c(2,green,10),c(3,yellow,1)],
+   [c(0,blue,8),c(1,green,10),c(2,yellow,1),c(3,red,1)],
+   [c(0,blue,8),c(1,green,10),c(2,red,1),c(3,yellow,1)],
+   [c(0,green,7),c(1,yellow,4),c(2,red,4),c(3,blue,5)],
+   [c(0,green,7),c(1,yellow,4),c(2,blue,5),c(3,red,4)],
+   [c(0,green,7),c(1,red,4),c(2,yellow,4),c(3,blue,5)],
+   [c(0,green,7),c(1,red,4),c(2,blue,5),c(3,yellow,4)],
+   [c(0,green,7),c(1,blue,5),c(2,yellow,4),c(3,red,4)],
+   [c(0,green,7),c(1,blue,5),c(2,red,4),c(3,yellow,4)],
+   [c(0,green,8),c(1,yellow,3),c(2,red,3),c(3,blue,6)],
+   [c(0,green,8),c(1,yellow,3),c(2,blue,6),c(3,red,3)],
+   [c(0,green,8),c(1,red,3),c(2,yellow,3),c(3,blue,6)],
+   [c(0,green,8),c(1,red,3),c(2,blue,6),c(3,yellow,3)],
+   [c(0,green,8),c(1,blue,6),c(2,yellow,3),c(3,red,3)],
+   [c(0,green,8),c(1,blue,6),c(2,red,3),c(3,yellow,3)],
+   [c(0,green,9),c(1,yellow,2),c(2,red,2),c(3,blue,7)],
+   [c(0,green,9),c(1,yellow,2),c(2,blue,7),c(3,red,2)],
+   [c(0,green,9),c(1,yellow,3),c(2,red,3),c(3,blue,5)],
+   [c(0,green,9),c(1,yellow,3),c(2,blue,5),c(3,red,3)],
+   [c(0,green,9),c(1,red,2),c(2,yellow,2),c(3,blue,7)],
+   [c(0,green,9),c(1,red,2),c(2,blue,7),c(3,yellow,2)],
+   [c(0,green,9),c(1,red,3),c(2,yellow,3),c(3,blue,5)],
+   [c(0,green,9),c(1,red,3),c(2,blue,5),c(3,yellow,3)],
+   [c(0,green,9),c(1,blue,5),c(2,yellow,3),c(3,red,3)],
+   [c(0,green,9),c(1,blue,5),c(2,red,3),c(3,yellow,3)],
+   [c(0,green,9),c(1,blue,7),c(2,yellow,2),c(3,red,2)],
+   [c(0,green,9),c(1,blue,7),c(2,red,2),c(3,yellow,2)],
+   [c(0,green,10),c(1,yellow,1),c(2,red,1),c(3,blue,8)],
+   [c(0,green,10),c(1,yellow,1),c(2,blue,8),c(3,red,1)],
+   [c(0,green,10),c(1,yellow,2),c(2,red,2),c(3,blue,6)],
+   [c(0,green,10),c(1,yellow,2),c(2,blue,6),c(3,red,2)],
+   [c(0,green,10),c(1,yellow,3),c(2,red,3),c(3,blue,4)],
+   [c(0,green,10),c(1,yellow,3),c(2,blue,4),c(3,red,3)],
+   [c(0,green,10),c(1,red,1),c(2,yellow,1),c(3,blue,8)],
+   [c(0,green,10),c(1,red,1),c(2,blue,8),c(3,yellow,1)],
+   [c(0,green,10),c(1,red,2),c(2,yellow,2),c(3,blue,6)],
+   [c(0,green,10),c(1,red,2),c(2,blue,6),c(3,yellow,2)],
+   [c(0,green,10),c(1,red,3),c(2,yellow,3),c(3,blue,4)],
+   [c(0,green,10),c(1,red,3),c(2,blue,4),c(3,yellow,3)],
+   [c(0,green,10),c(1,blue,4),c(2,yellow,3),c(3,red,3)],
+   [c(0,green,10),c(1,blue,4),c(2,red,3),c(3,yellow,3)],
+   [c(0,green,10),c(1,blue,6),c(2,yellow,2),c(3,red,2)],
+   [c(0,green,10),c(1,blue,6),c(2,red,2),c(3,yellow,2)],
+   [c(0,green,10),c(1,blue,8),c(2,yellow,1),c(3,red,1)],
+   [c(0,green,10),c(1,blue,8),c(2,red,1),c(3,yellow,1)]
+]
+
+solutions (sans positions) : 
+7 element(s)
+[
+   [c(blue,4),c(green,10),c(red,3),c(yellow,3)],
+   [c(blue,5),c(green,7),c(red,4),c(yellow,4)],
+   [c(blue,5),c(green,9),c(red,3),c(yellow,3)],
+   [c(blue,6),c(green,8),c(red,3),c(yellow,3)],
+   [c(blue,6),c(green,10),c(red,2),c(yellow,2)],
+   [c(blue,7),c(green,9),c(red,2),c(yellow,2)],
+   [c(blue,8),c(green,10),c(red,1),c(yellow,1)]
+]
+
+domaines cartes :
+4 element(s)
+[
+   c(0,[yellow,red,blue,green],[1,2,3,4,5,6,7,8,9,10]),
+   c(1,[yellow,red,blue,green],[1,2,3,4,5,6,7,8,9,10]),
+   c(2,[yellow,red,blue,green],[1,2,3,4,5,6,7,8,9,10]),
+   c(3,[yellow,red,blue,green],[1,2,3,4,5,6,7,8,9,10])
+]
+
+============================== Coup 1 ==============================
+
+nb cartes a deviner                  : 4
+
+
+solutions : 
+168 element(s)
+[
+   [c(0,yellow,1),c(1,red,1),c(2,blue,8),c(3,green,10)],
+   [c(0,yellow,1),c(1,red,1),c(2,green,10),c(3,blue,8)],
+   [c(0,yellow,1),c(1,blue,8),c(2,red,1),c(3,green,10)],
+   [c(0,yellow,1),c(1,blue,8),c(2,green,10),c(3,red,1)],
+   [c(0,yellow,1),c(1,green,10),c(2,red,1),c(3,blue,8)],
+   [c(0,yellow,1),c(1,green,10),c(2,blue,8),c(3,red,1)],
+   [c(0,yellow,2),c(1,red,2),c(2,blue,6),c(3,green,10)],
+   [c(0,yellow,2),c(1,red,2),c(2,blue,7),c(3,green,9)],
+   [c(0,yellow,2),c(1,red,2),c(2,green,9),c(3,blue,7)],
+   [c(0,yellow,2),c(1,red,2),c(2,green,10),c(3,blue,6)],
+   [c(0,yellow,2),c(1,blue,6),c(2,red,2),c(3,green,10)],
+   [c(0,yellow,2),c(1,blue,6),c(2,green,10),c(3,red,2)],
+   [c(0,yellow,2),c(1,blue,7),c(2,red,2),c(3,green,9)],
+   [c(0,yellow,2),c(1,blue,7),c(2,green,9),c(3,red,2)],
+   [c(0,yellow,2),c(1,green,9),c(2,red,2),c(3,blue,7)],
+   [c(0,yellow,2),c(1,green,9),c(2,blue,7),c(3,red,2)],
+   [c(0,yellow,2),c(1,green,10),c(2,red,2),c(3,blue,6)],
+   [c(0,yellow,2),c(1,green,10),c(2,blue,6),c(3,red,2)],
+   [c(0,yellow,3),c(1,red,3),c(2,blue,4),c(3,green,10)],
+   [c(0,yellow,3),c(1,red,3),c(2,blue,5),c(3,green,9)],
+   [c(0,yellow,3),c(1,red,3),c(2,blue,6),c(3,green,8)],
+   [c(0,yellow,3),c(1,red,3),c(2,green,8),c(3,blue,6)],
+   [c(0,yellow,3),c(1,red,3),c(2,green,9),c(3,blue,5)],
+   [c(0,yellow,3),c(1,red,3),c(2,green,10),c(3,blue,4)],
+   [c(0,yellow,3),c(1,blue,4),c(2,red,3),c(3,green,10)],
+   [c(0,yellow,3),c(1,blue,4),c(2,green,10),c(3,red,3)],
+   [c(0,yellow,3),c(1,blue,5),c(2,red,3),c(3,green,9)],
+   [c(0,yellow,3),c(1,blue,5),c(2,green,9),c(3,red,3)],
+   [c(0,yellow,3),c(1,blue,6),c(2,red,3),c(3,green,8)],
+   [c(0,yellow,3),c(1,blue,6),c(2,green,8),c(3,red,3)],
+   [c(0,yellow,3),c(1,green,8),c(2,red,3),c(3,blue,6)],
+   [c(0,yellow,3),c(1,green,8),c(2,blue,6),c(3,red,3)],
+   [c(0,yellow,3),c(1,green,9),c(2,red,3),c(3,blue,5)],
+   [c(0,yellow,3),c(1,green,9),c(2,blue,5),c(3,red,3)],
+   [c(0,yellow,3),c(1,green,10),c(2,red,3),c(3,blue,4)],
+   [c(0,yellow,3),c(1,green,10),c(2,blue,4),c(3,red,3)],
+   [c(0,yellow,4),c(1,red,4),c(2,blue,5),c(3,green,7)],
+   [c(0,yellow,4),c(1,red,4),c(2,green,7),c(3,blue,5)],
+   [c(0,yellow,4),c(1,blue,5),c(2,red,4),c(3,green,7)],
+   [c(0,yellow,4),c(1,blue,5),c(2,green,7),c(3,red,4)],
+   [c(0,yellow,4),c(1,green,7),c(2,red,4),c(3,blue,5)],
+   [c(0,yellow,4),c(1,green,7),c(2,blue,5),c(3,red,4)],
+   [c(0,red,1),c(1,yellow,1),c(2,blue,8),c(3,green,10)],
+   [c(0,red,1),c(1,yellow,1),c(2,green,10),c(3,blue,8)],
+   [c(0,red,1),c(1,blue,8),c(2,yellow,1),c(3,green,10)],
+   [c(0,red,1),c(1,blue,8),c(2,green,10),c(3,yellow,1)],
+   [c(0,red,1),c(1,green,10),c(2,yellow,1),c(3,blue,8)],
+   [c(0,red,1),c(1,green,10),c(2,blue,8),c(3,yellow,1)],
+   [c(0,red,2),c(1,yellow,2),c(2,blue,6),c(3,green,10)],
+   [c(0,red,2),c(1,yellow,2),c(2,blue,7),c(3,green,9)],
+   [c(0,red,2),c(1,yellow,2),c(2,green,9),c(3,blue,7)],
+   [c(0,red,2),c(1,yellow,2),c(2,green,10),c(3,blue,6)],
+   [c(0,red,2),c(1,blue,6),c(2,yellow,2),c(3,green,10)],
+   [c(0,red,2),c(1,blue,6),c(2,green,10),c(3,yellow,2)],
+   [c(0,red,2),c(1,blue,7),c(2,yellow,2),c(3,green,9)],
+   [c(0,red,2),c(1,blue,7),c(2,green,9),c(3,yellow,2)],
+   [c(0,red,2),c(1,green,9),c(2,yellow,2),c(3,blue,7)],
+   [c(0,red,2),c(1,green,9),c(2,blue,7),c(3,yellow,2)],
+   [c(0,red,2),c(1,green,10),c(2,yellow,2),c(3,blue,6)],
+   [c(0,red,2),c(1,green,10),c(2,blue,6),c(3,yellow,2)],
+   [c(0,red,3),c(1,yellow,3),c(2,blue,4),c(3,green,10)],
+   [c(0,red,3),c(1,yellow,3),c(2,blue,5),c(3,green,9)],
+   [c(0,red,3),c(1,yellow,3),c(2,blue,6),c(3,green,8)],
+   [c(0,red,3),c(1,yellow,3),c(2,green,8),c(3,blue,6)],
+   [c(0,red,3),c(1,yellow,3),c(2,green,9),c(3,blue,5)],
+   [c(0,red,3),c(1,yellow,3),c(2,green,10),c(3,blue,4)],
+   [c(0,red,3),c(1,blue,4),c(2,yellow,3),c(3,green,10)],
+   [c(0,red,3),c(1,blue,4),c(2,green,10),c(3,yellow,3)],
+   [c(0,red,3),c(1,blue,5),c(2,yellow,3),c(3,green,9)],
+   [c(0,red,3),c(1,blue,5),c(2,green,9),c(3,yellow,3)],
+   [c(0,red,3),c(1,blue,6),c(2,yellow,3),c(3,green,8)],
+   [c(0,red,3),c(1,blue,6),c(2,green,8),c(3,yellow,3)],
+   [c(0,red,3),c(1,green,8),c(2,yellow,3),c(3,blue,6)],
+   [c(0,red,3),c(1,green,8),c(2,blue,6),c(3,yellow,3)],
+   [c(0,red,3),c(1,green,9),c(2,yellow,3),c(3,blue,5)],
+   [c(0,red,3),c(1,green,9),c(2,blue,5),c(3,yellow,3)],
+   [c(0,red,3),c(1,green,10),c(2,yellow,3),c(3,blue,4)],
+   [c(0,red,3),c(1,green,10),c(2,blue,4),c(3,yellow,3)],
+   [c(0,red,4),c(1,yellow,4),c(2,blue,5),c(3,green,7)],
+   [c(0,red,4),c(1,yellow,4),c(2,green,7),c(3,blue,5)],
+   [c(0,red,4),c(1,blue,5),c(2,yellow,4),c(3,green,7)],
+   [c(0,red,4),c(1,blue,5),c(2,green,7),c(3,yellow,4)],
+   [c(0,red,4),c(1,green,7),c(2,yellow,4),c(3,blue,5)],
+   [c(0,red,4),c(1,green,7),c(2,blue,5),c(3,yellow,4)],
+   [c(0,blue,4),c(1,yellow,3),c(2,red,3),c(3,green,10)],
+   [c(0,blue,4),c(1,yellow,3),c(2,green,10),c(3,red,3)],
+   [c(0,blue,4),c(1,red,3),c(2,yellow,3),c(3,green,10)],
+   [c(0,blue,4),c(1,red,3),c(2,green,10),c(3,yellow,3)],
+   [c(0,blue,4),c(1,green,10),c(2,yellow,3),c(3,red,3)],
+   [c(0,blue,4),c(1,green,10),c(2,red,3),c(3,yellow,3)],
+   [c(0,blue,5),c(1,yellow,3),c(2,red,3),c(3,green,9)],
+   [c(0,blue,5),c(1,yellow,3),c(2,green,9),c(3,red,3)],
+   [c(0,blue,5),c(1,yellow,4),c(2,red,4),c(3,green,7)],
+   [c(0,blue,5),c(1,yellow,4),c(2,green,7),c(3,red,4)],
+   [c(0,blue,5),c(1,red,3),c(2,yellow,3),c(3,green,9)],
+   [c(0,blue,5),c(1,red,3),c(2,green,9),c(3,yellow,3)],
+   [c(0,blue,5),c(1,red,4),c(2,yellow,4),c(3,green,7)],
+   [c(0,blue,5),c(1,red,4),c(2,green,7),c(3,yellow,4)],
+   [c(0,blue,5),c(1,green,7),c(2,yellow,4),c(3,red,4)],
+   [c(0,blue,5),c(1,green,7),c(2,red,4),c(3,yellow,4)],
+   [c(0,blue,5),c(1,green,9),c(2,yellow,3),c(3,red,3)],
+   [c(0,blue,5),c(1,green,9),c(2,red,3),c(3,yellow,3)],
+   [c(0,blue,6),c(1,yellow,2),c(2,red,2),c(3,green,10)],
+   [c(0,blue,6),c(1,yellow,2),c(2,green,10),c(3,red,2)],
+   [c(0,blue,6),c(1,yellow,3),c(2,red,3),c(3,green,8)],
+   [c(0,blue,6),c(1,yellow,3),c(2,green,8),c(3,red,3)],
+   [c(0,blue,6),c(1,red,2),c(2,yellow,2),c(3,green,10)],
+   [c(0,blue,6),c(1,red,2),c(2,green,10),c(3,yellow,2)],
+   [c(0,blue,6),c(1,red,3),c(2,yellow,3),c(3,green,8)],
+   [c(0,blue,6),c(1,red,3),c(2,green,8),c(3,yellow,3)],
+   [c(0,blue,6),c(1,green,8),c(2,yellow,3),c(3,red,3)],
+   [c(0,blue,6),c(1,green,8),c(2,red,3),c(3,yellow,3)],
+   [c(0,blue,6),c(1,green,10),c(2,yellow,2),c(3,red,2)],
+   [c(0,blue,6),c(1,green,10),c(2,red,2),c(3,yellow,2)],
+   [c(0,blue,7),c(1,yellow,2),c(2,red,2),c(3,green,9)],
+   [c(0,blue,7),c(1,yellow,2),c(2,green,9),c(3,red,2)],
+   [c(0,blue,7),c(1,red,2),c(2,yellow,2),c(3,green,9)],
+   [c(0,blue,7),c(1,red,2),c(2,green,9),c(3,yellow,2)],
+   [c(0,blue,7),c(1,green,9),c(2,yellow,2),c(3,red,2)],
+   [c(0,blue,7),c(1,green,9),c(2,red,2),c(3,yellow,2)],
+   [c(0,blue,8),c(1,yellow,1),c(2,red,1),c(3,green,10)],
+   [c(0,blue,8),c(1,yellow,1),c(2,green,10),c(3,red,1)],
+   [c(0,blue,8),c(1,red,1),c(2,yellow,1),c(3,green,10)],
+   [c(0,blue,8),c(1,red,1),c(2,green,10),c(3,yellow,1)],
+   [c(0,blue,8),c(1,green,10),c(2,yellow,1),c(3,red,1)],
+   [c(0,blue,8),c(1,green,10),c(2,red,1),c(3,yellow,1)],
+   [c(0,green,7),c(1,yellow,4),c(2,red,4),c(3,blue,5)],
+   [c(0,green,7),c(1,yellow,4),c(2,blue,5),c(3,red,4)],
+   [c(0,green,7),c(1,red,4),c(2,yellow,4),c(3,blue,5)],
+   [c(0,green,7),c(1,red,4),c(2,blue,5),c(3,yellow,4)],
+   [c(0,green,7),c(1,blue,5),c(2,yellow,4),c(3,red,4)],
+   [c(0,green,7),c(1,blue,5),c(2,red,4),c(3,yellow,4)],
+   [c(0,green,8),c(1,yellow,3),c(2,red,3),c(3,blue,6)],
+   [c(0,green,8),c(1,yellow,3),c(2,blue,6),c(3,red,3)],
+   [c(0,green,8),c(1,red,3),c(2,yellow,3),c(3,blue,6)],
+   [c(0,green,8),c(1,red,3),c(2,blue,6),c(3,yellow,3)],
+   [c(0,green,8),c(1,blue,6),c(2,yellow,3),c(3,red,3)],
+   [c(0,green,8),c(1,blue,6),c(2,red,3),c(3,yellow,3)],
+   [c(0,green,9),c(1,yellow,2),c(2,red,2),c(3,blue,7)],
+   [c(0,green,9),c(1,yellow,2),c(2,blue,7),c(3,red,2)],
+   [c(0,green,9),c(1,yellow,3),c(2,red,3),c(3,blue,5)],
+   [c(0,green,9),c(1,yellow,3),c(2,blue,5),c(3,red,3)],
+   [c(0,green,9),c(1,red,2),c(2,yellow,2),c(3,blue,7)],
+   [c(0,green,9),c(1,red,2),c(2,blue,7),c(3,yellow,2)],
+   [c(0,green,9),c(1,red,3),c(2,yellow,3),c(3,blue,5)],
+   [c(0,green,9),c(1,red,3),c(2,blue,5),c(3,yellow,3)],
+   [c(0,green,9),c(1,blue,5),c(2,yellow,3),c(3,red,3)],
+   [c(0,green,9),c(1,blue,5),c(2,red,3),c(3,yellow,3)],
+   [c(0,green,9),c(1,blue,7),c(2,yellow,2),c(3,red,2)],
+   [c(0,green,9),c(1,blue,7),c(2,red,2),c(3,yellow,2)],
+   [c(0,green,10),c(1,yellow,1),c(2,red,1),c(3,blue,8)],
+   [c(0,green,10),c(1,yellow,1),c(2,blue,8),c(3,red,1)],
+   [c(0,green,10),c(1,yellow,2),c(2,red,2),c(3,blue,6)],
+   [c(0,green,10),c(1,yellow,2),c(2,blue,6),c(3,red,2)],
+   [c(0,green,10),c(1,yellow,3),c(2,red,3),c(3,blue,4)],
+   [c(0,green,10),c(1,yellow,3),c(2,blue,4),c(3,red,3)],
+   [c(0,green,10),c(1,red,1),c(2,yellow,1),c(3,blue,8)],
+   [c(0,green,10),c(1,red,1),c(2,blue,8),c(3,yellow,1)],
+   [c(0,green,10),c(1,red,2),c(2,yellow,2),c(3,blue,6)],
+   [c(0,green,10),c(1,red,2),c(2,blue,6),c(3,yellow,2)],
+   [c(0,green,10),c(1,red,3),c(2,yellow,3),c(3,blue,4)],
+   [c(0,green,10),c(1,red,3),c(2,blue,4),c(3,yellow,3)],
+   [c(0,green,10),c(1,blue,4),c(2,yellow,3),c(3,red,3)],
+   [c(0,green,10),c(1,blue,4),c(2,red,3),c(3,yellow,3)],
+   [c(0,green,10),c(1,blue,6),c(2,yellow,2),c(3,red,2)],
+   [c(0,green,10),c(1,blue,6),c(2,red,2),c(3,yellow,2)],
+   [c(0,green,10),c(1,blue,8),c(2,yellow,1),c(3,red,1)],
+   [c(0,green,10),c(1,blue,8),c(2,red,1),c(3,yellow,1)]
+]
+
+solutions (sans positions) : 
+7 element(s)
+[
+   [c(blue,4),c(green,10),c(red,3),c(yellow,3)],
+   [c(blue,5),c(green,7),c(red,4),c(yellow,4)],
+   [c(blue,5),c(green,9),c(red,3),c(yellow,3)],
+   [c(blue,6),c(green,8),c(red,3),c(yellow,3)],
+   [c(blue,6),c(green,10),c(red,2),c(yellow,2)],
+   [c(blue,7),c(green,9),c(red,2),c(yellow,2)],
+   [c(blue,8),c(green,10),c(red,1),c(yellow,1)]
+]
+
+domaines cartes :
+4 element(s)
+[
+   c(0,[yellow,red,blue,green],[1,2,3,4,5,6,7,8,9,10]),
+   c(1,[yellow,red,blue,green],[1,2,3,4,5,6,7,8,9,10]),
+   c(2,[yellow,red,blue,green],[1,2,3,4,5,6,7,8,9,10]),
+   c(3,[yellow,red,blue,green],[1,2,3,4,5,6,7,8,9,10])
+]
+
+============================== Coup 1 ==============================
+
+nb cartes a deviner                  : 4
+
+
+solutions : 
+168 element(s)
+[
+   [c(0,yellow,1),c(1,red,1),c(2,blue,8),c(3,green,10)],
+   [c(0,yellow,1),c(1,red,1),c(2,green,10),c(3,blue,8)],
+   [c(0,yellow,1),c(1,blue,8),c(2,red,1),c(3,green,10)],
+   [c(0,yellow,1),c(1,blue,8),c(2,green,10),c(3,red,1)],
+   [c(0,yellow,1),c(1,green,10),c(2,red,1),c(3,blue,8)],
+   [c(0,yellow,1),c(1,green,10),c(2,blue,8),c(3,red,1)],
+   [c(0,yellow,2),c(1,red,2),c(2,blue,6),c(3,green,10)],
+   [c(0,yellow,2),c(1,red,2),c(2,blue,7),c(3,green,9)],
+   [c(0,yellow,2),c(1,red,2),c(2,green,9),c(3,blue,7)],
+   [c(0,yellow,2),c(1,red,2),c(2,green,10),c(3,blue,6)],
+   [c(0,yellow,2),c(1,blue,6),c(2,red,2),c(3,green,10)],
+   [c(0,yellow,2),c(1,blue,6),c(2,green,10),c(3,red,2)],
+   [c(0,yellow,2),c(1,blue,7),c(2,red,2),c(3,green,9)],
+   [c(0,yellow,2),c(1,blue,7),c(2,green,9),c(3,red,2)],
+   [c(0,yellow,2),c(1,green,9),c(2,red,2),c(3,blue,7)],
+   [c(0,yellow,2),c(1,green,9),c(2,blue,7),c(3,red,2)],
+   [c(0,yellow,2),c(1,green,10),c(2,red,2),c(3,blue,6)],
+   [c(0,yellow,2),c(1,green,10),c(2,blue,6),c(3,red,2)],
+   [c(0,yellow,3),c(1,red,3),c(2,blue,4),c(3,green,10)],
+   [c(0,yellow,3),c(1,red,3),c(2,blue,5),c(3,green,9)],
+   [c(0,yellow,3),c(1,red,3),c(2,blue,6),c(3,green,8)],
+   [c(0,yellow,3),c(1,red,3),c(2,green,8),c(3,blue,6)],
+   [c(0,yellow,3),c(1,red,3),c(2,green,9),c(3,blue,5)],
+   [c(0,yellow,3),c(1,red,3),c(2,green,10),c(3,blue,4)],
+   [c(0,yellow,3),c(1,blue,4),c(2,red,3),c(3,green,10)],
+   [c(0,yellow,3),c(1,blue,4),c(2,green,10),c(3,red,3)],
+   [c(0,yellow,3),c(1,blue,5),c(2,red,3),c(3,green,9)],
+   [c(0,yellow,3),c(1,blue,5),c(2,green,9),c(3,red,3)],
+   [c(0,yellow,3),c(1,blue,6),c(2,red,3),c(3,green,8)],
+   [c(0,yellow,3),c(1,blue,6),c(2,green,8),c(3,red,3)],
+   [c(0,yellow,3),c(1,green,8),c(2,red,3),c(3,blue,6)],
+   [c(0,yellow,3),c(1,green,8),c(2,blue,6),c(3,red,3)],
+   [c(0,yellow,3),c(1,green,9),c(2,red,3),c(3,blue,5)],
+   [c(0,yellow,3),c(1,green,9),c(2,blue,5),c(3,red,3)],
+   [c(0,yellow,3),c(1,green,10),c(2,red,3),c(3,blue,4)],
+   [c(0,yellow,3),c(1,green,10),c(2,blue,4),c(3,red,3)],
+   [c(0,yellow,4),c(1,red,4),c(2,blue,5),c(3,green,7)],
+   [c(0,yellow,4),c(1,red,4),c(2,green,7),c(3,blue,5)],
+   [c(0,yellow,4),c(1,blue,5),c(2,red,4),c(3,green,7)],
+   [c(0,yellow,4),c(1,blue,5),c(2,green,7),c(3,red,4)],
+   [c(0,yellow,4),c(1,green,7),c(2,red,4),c(3,blue,5)],
+   [c(0,yellow,4),c(1,green,7),c(2,blue,5),c(3,red,4)],
+   [c(0,red,1),c(1,yellow,1),c(2,blue,8),c(3,green,10)],
+   [c(0,red,1),c(1,yellow,1),c(2,green,10),c(3,blue,8)],
+   [c(0,red,1),c(1,blue,8),c(2,yellow,1),c(3,green,10)],
+   [c(0,red,1),c(1,blue,8),c(2,green,10),c(3,yellow,1)],
+   [c(0,red,1),c(1,green,10),c(2,yellow,1),c(3,blue,8)],
+   [c(0,red,1),c(1,green,10),c(2,blue,8),c(3,yellow,1)],
+   [c(0,red,2),c(1,yellow,2),c(2,blue,6),c(3,green,10)],
+   [c(0,red,2),c(1,yellow,2),c(2,blue,7),c(3,green,9)],
+   [c(0,red,2),c(1,yellow,2),c(2,green,9),c(3,blue,7)],
+   [c(0,red,2),c(1,yellow,2),c(2,green,10),c(3,blue,6)],
+   [c(0,red,2),c(1,blue,6),c(2,yellow,2),c(3,green,10)],
+   [c(0,red,2),c(1,blue,6),c(2,green,10),c(3,yellow,2)],
+   [c(0,red,2),c(1,blue,7),c(2,yellow,2),c(3,green,9)],
+   [c(0,red,2),c(1,blue,7),c(2,green,9),c(3,yellow,2)],
+   [c(0,red,2),c(1,green,9),c(2,yellow,2),c(3,blue,7)],
+   [c(0,red,2),c(1,green,9),c(2,blue,7),c(3,yellow,2)],
+   [c(0,red,2),c(1,green,10),c(2,yellow,2),c(3,blue,6)],
+   [c(0,red,2),c(1,green,10),c(2,blue,6),c(3,yellow,2)],
+   [c(0,red,3),c(1,yellow,3),c(2,blue,4),c(3,green,10)],
+   [c(0,red,3),c(1,yellow,3),c(2,blue,5),c(3,green,9)],
+   [c(0,red,3),c(1,yellow,3),c(2,blue,6),c(3,green,8)],
+   [c(0,red,3),c(1,yellow,3),c(2,green,8),c(3,blue,6)],
+   [c(0,red,3),c(1,yellow,3),c(2,green,9),c(3,blue,5)],
+   [c(0,red,3),c(1,yellow,3),c(2,green,10),c(3,blue,4)],
+   [c(0,red,3),c(1,blue,4),c(2,yellow,3),c(3,green,10)],
+   [c(0,red,3),c(1,blue,4),c(2,green,10),c(3,yellow,3)],
+   [c(0,red,3),c(1,blue,5),c(2,yellow,3),c(3,green,9)],
+   [c(0,red,3),c(1,blue,5),c(2,green,9),c(3,yellow,3)],
+   [c(0,red,3),c(1,blue,6),c(2,yellow,3),c(3,green,8)],
+   [c(0,red,3),c(1,blue,6),c(2,green,8),c(3,yellow,3)],
+   [c(0,red,3),c(1,green,8),c(2,yellow,3),c(3,blue,6)],
+   [c(0,red,3),c(1,green,8),c(2,blue,6),c(3,yellow,3)],
+   [c(0,red,3),c(1,green,9),c(2,yellow,3),c(3,blue,5)],
+   [c(0,red,3),c(1,green,9),c(2,blue,5),c(3,yellow,3)],
+   [c(0,red,3),c(1,green,10),c(2,yellow,3),c(3,blue,4)],
+   [c(0,red,3),c(1,green,10),c(2,blue,4),c(3,yellow,3)],
+   [c(0,red,4),c(1,yellow,4),c(2,blue,5),c(3,green,7)],
+   [c(0,red,4),c(1,yellow,4),c(2,green,7),c(3,blue,5)],
+   [c(0,red,4),c(1,blue,5),c(2,yellow,4),c(3,green,7)],
+   [c(0,red,4),c(1,blue,5),c(2,green,7),c(3,yellow,4)],
+   [c(0,red,4),c(1,green,7),c(2,yellow,4),c(3,blue,5)],
+   [c(0,red,4),c(1,green,7),c(2,blue,5),c(3,yellow,4)],
+   [c(0,blue,4),c(1,yellow,3),c(2,red,3),c(3,green,10)],
+   [c(0,blue,4),c(1,yellow,3),c(2,green,10),c(3,red,3)],
+   [c(0,blue,4),c(1,red,3),c(2,yellow,3),c(3,green,10)],
+   [c(0,blue,4),c(1,red,3),c(2,green,10),c(3,yellow,3)],
+   [c(0,blue,4),c(1,green,10),c(2,yellow,3),c(3,red,3)],
+   [c(0,blue,4),c(1,green,10),c(2,red,3),c(3,yellow,3)],
+   [c(0,blue,5),c(1,yellow,3),c(2,red,3),c(3,green,9)],
+   [c(0,blue,5),c(1,yellow,3),c(2,green,9),c(3,red,3)],
+   [c(0,blue,5),c(1,yellow,4),c(2,red,4),c(3,green,7)],
+   [c(0,blue,5),c(1,yellow,4),c(2,green,7),c(3,red,4)],
+   [c(0,blue,5),c(1,red,3),c(2,yellow,3),c(3,green,9)],
+   [c(0,blue,5),c(1,red,3),c(2,green,9),c(3,yellow,3)],
+   [c(0,blue,5),c(1,red,4),c(2,yellow,4),c(3,green,7)],
+   [c(0,blue,5),c(1,red,4),c(2,green,7),c(3,yellow,4)],
+   [c(0,blue,5),c(1,green,7),c(2,yellow,4),c(3,red,4)],
+   [c(0,blue,5),c(1,green,7),c(2,red,4),c(3,yellow,4)],
+   [c(0,blue,5),c(1,green,9),c(2,yellow,3),c(3,red,3)],
+   [c(0,blue,5),c(1,green,9),c(2,red,3),c(3,yellow,3)],
+   [c(0,blue,6),c(1,yellow,2),c(2,red,2),c(3,green,10)],
+   [c(0,blue,6),c(1,yellow,2),c(2,green,10),c(3,red,2)],
+   [c(0,blue,6),c(1,yellow,3),c(2,red,3),c(3,green,8)],
+   [c(0,blue,6),c(1,yellow,3),c(2,green,8),c(3,red,3)],
+   [c(0,blue,6),c(1,red,2),c(2,yellow,2),c(3,green,10)],
+   [c(0,blue,6),c(1,red,2),c(2,green,10),c(3,yellow,2)],
+   [c(0,blue,6),c(1,red,3),c(2,yellow,3),c(3,green,8)],
+   [c(0,blue,6),c(1,red,3),c(2,green,8),c(3,yellow,3)],
+   [c(0,blue,6),c(1,green,8),c(2,yellow,3),c(3,red,3)],
+   [c(0,blue,6),c(1,green,8),c(2,red,3),c(3,yellow,3)],
+   [c(0,blue,6),c(1,green,10),c(2,yellow,2),c(3,red,2)],
+   [c(0,blue,6),c(1,green,10),c(2,red,2),c(3,yellow,2)],
+   [c(0,blue,7),c(1,yellow,2),c(2,red,2),c(3,green,9)],
+   [c(0,blue,7),c(1,yellow,2),c(2,green,9),c(3,red,2)],
+   [c(0,blue,7),c(1,red,2),c(2,yellow,2),c(3,green,9)],
+   [c(0,blue,7),c(1,red,2),c(2,green,9),c(3,yellow,2)],
+   [c(0,blue,7),c(1,green,9),c(2,yellow,2),c(3,red,2)],
+   [c(0,blue,7),c(1,green,9),c(2,red,2),c(3,yellow,2)],
+   [c(0,blue,8),c(1,yellow,1),c(2,red,1),c(3,green,10)],
+   [c(0,blue,8),c(1,yellow,1),c(2,green,10),c(3,red,1)],
+   [c(0,blue,8),c(1,red,1),c(2,yellow,1),c(3,green,10)],
+   [c(0,blue,8),c(1,red,1),c(2,green,10),c(3,yellow,1)],
+   [c(0,blue,8),c(1,green,10),c(2,yellow,1),c(3,red,1)],
+   [c(0,blue,8),c(1,green,10),c(2,red,1),c(3,yellow,1)],
+   [c(0,green,7),c(1,yellow,4),c(2,red,4),c(3,blue,5)],
+   [c(0,green,7),c(1,yellow,4),c(2,blue,5),c(3,red,4)],
+   [c(0,green,7),c(1,red,4),c(2,yellow,4),c(3,blue,5)],
+   [c(0,green,7),c(1,red,4),c(2,blue,5),c(3,yellow,4)],
+   [c(0,green,7),c(1,blue,5),c(2,yellow,4),c(3,red,4)],
+   [c(0,green,7),c(1,blue,5),c(2,red,4),c(3,yellow,4)],
+   [c(0,green,8),c(1,yellow,3),c(2,red,3),c(3,blue,6)],
+   [c(0,green,8),c(1,yellow,3),c(2,blue,6),c(3,red,3)],
+   [c(0,green,8),c(1,red,3),c(2,yellow,3),c(3,blue,6)],
+   [c(0,green,8),c(1,red,3),c(2,blue,6),c(3,yellow,3)],
+   [c(0,green,8),c(1,blue,6),c(2,yellow,3),c(3,red,3)],
+   [c(0,green,8),c(1,blue,6),c(2,red,3),c(3,yellow,3)],
+   [c(0,green,9),c(1,yellow,2),c(2,red,2),c(3,blue,7)],
+   [c(0,green,9),c(1,yellow,2),c(2,blue,7),c(3,red,2)],
+   [c(0,green,9),c(1,yellow,3),c(2,red,3),c(3,blue,5)],
+   [c(0,green,9),c(1,yellow,3),c(2,blue,5),c(3,red,3)],
+   [c(0,green,9),c(1,red,2),c(2,yellow,2),c(3,blue,7)],
+   [c(0,green,9),c(1,red,2),c(2,blue,7),c(3,yellow,2)],
+   [c(0,green,9),c(1,red,3),c(2,yellow,3),c(3,blue,5)],
+   [c(0,green,9),c(1,red,3),c(2,blue,5),c(3,yellow,3)],
+   [c(0,green,9),c(1,blue,5),c(2,yellow,3),c(3,red,3)],
+   [c(0,green,9),c(1,blue,5),c(2,red,3),c(3,yellow,3)],
+   [c(0,green,9),c(1,blue,7),c(2,yellow,2),c(3,red,2)],
+   [c(0,green,9),c(1,blue,7),c(2,red,2),c(3,yellow,2)],
+   [c(0,green,10),c(1,yellow,1),c(2,red,1),c(3,blue,8)],
+   [c(0,green,10),c(1,yellow,1),c(2,blue,8),c(3,red,1)],
+   [c(0,green,10),c(1,yellow,2),c(2,red,2),c(3,blue,6)],
+   [c(0,green,10),c(1,yellow,2),c(2,blue,6),c(3,red,2)],
+   [c(0,green,10),c(1,yellow,3),c(2,red,3),c(3,blue,4)],
+   [c(0,green,10),c(1,yellow,3),c(2,blue,4),c(3,red,3)],
+   [c(0,green,10),c(1,red,1),c(2,yellow,1),c(3,blue,8)],
+   [c(0,green,10),c(1,red,1),c(2,blue,8),c(3,yellow,1)],
+   [c(0,green,10),c(1,red,2),c(2,yellow,2),c(3,blue,6)],
+   [c(0,green,10),c(1,red,2),c(2,blue,6),c(3,yellow,2)],
+   [c(0,green,10),c(1,red,3),c(2,yellow,3),c(3,blue,4)],
+   [c(0,green,10),c(1,red,3),c(2,blue,4),c(3,yellow,3)],
+   [c(0,green,10),c(1,blue,4),c(2,yellow,3),c(3,red,3)],
+   [c(0,green,10),c(1,blue,4),c(2,red,3),c(3,yellow,3)],
+   [c(0,green,10),c(1,blue,6),c(2,yellow,2),c(3,red,2)],
+   [c(0,green,10),c(1,blue,6),c(2,red,2),c(3,yellow,2)],
+   [c(0,green,10),c(1,blue,8),c(2,yellow,1),c(3,red,1)],
+   [c(0,green,10),c(1,blue,8),c(2,red,1),c(3,yellow,1)]
+]
+
+solutions (sans positions) : 
+7 element(s)
+[
+   [c(blue,4),c(green,10),c(red,3),c(yellow,3)],
+   [c(blue,5),c(green,7),c(red,4),c(yellow,4)],
+   [c(blue,5),c(green,9),c(red,3),c(yellow,3)],
+   [c(blue,6),c(green,8),c(red,3),c(yellow,3)],
+   [c(blue,6),c(green,10),c(red,2),c(yellow,2)],
+   [c(blue,7),c(green,9),c(red,2),c(yellow,2)],
+   [c(blue,8),c(green,10),c(red,1),c(yellow,1)]
+]
+
+domaines cartes :
+4 element(s)
+[
+   c(0,[yellow,red,blue,green],[1,2,3,4,5,6,7,8,9,10]),
+   c(1,[yellow,red,blue,green],[1,2,3,4,5,6,7,8,9,10]),
+   c(2,[yellow,red,blue,green],[1,2,3,4,5,6,7,8,9,10]),
+   c(3,[yellow,red,blue,green],[1,2,3,4,5,6,7,8,9,10])
+]
+
+cartes jouees :
+
+carte 0
+couleur proposee       : red (parmi [yellow,red,blue,green] selon l'IA)
+couleur devinee        : non
+valeur proposee        : 3 (parmi [1,2,3,4,5,6,7,8,9,10] selon l'IA)
+valeur devinee         : oui
+
+carte 1
+couleur proposee       : blue (parmi [yellow,red,blue,green] selon l'IA)
+couleur devinee        : non
+valeur proposee        : 7 (parmi [1,2,3,4,5,6,7,8,9,10] selon l'IA)
+valeur devinee         : plus
+
+carte 2
+couleur proposee       : green (parmi [yellow,red,blue,green] selon l'IA)
+couleur devinee        : non
+valeur proposee        : 8 (parmi [1,2,3,4,5,6,7,8,9,10] selon l'IA)
+valeur devinee         : moins
+
+carte 3
+couleur proposee       : yellow (parmi [yellow,red,blue,green] selon l'IA)
+couleur devinee        : non
+valeur proposee        : 2 (parmi [1,2,3,4,5,6,7,8,9,10] selon l'IA)
+valeur devinee         : plus
+
+--------------------------------------------------------------
+Position = 0
+
+Couleur jouee : red
+reponse       : non
+
+Valeur jouee : 3
+reponse      : oui
+--------------------------------------------------------------
+Position = 1
+
+Couleur jouee : blue
+reponse       : non
+
+Valeur jouee : 7
+reponse      : plus
+--------------------------------------------------------------
+Position = 2
+
+Couleur jouee : green
+reponse       : non
+
+Valeur jouee : 8
+reponse      : moins
+--------------------------------------------------------------
+Position = 3
+
+Couleur jouee : yellow
+reponse       : non
+
+Valeur jouee : 2
+reponse      : plus
+
+domaines cartes :
+4 element(s)
+[
+   c(0,[yellow,blue],[3]),
+   c(1,[green],[8,9,10]),
+   c(2,[yellow,red,blue],[1,2,3,4,5,6]),
+   c(3,[red,blue],[3,4,5,6,7,8])
+]
+
+ ------------------------- CONTRAINTES SWI ----------------------
+
+contraintes toutes cartes :
+1 element(s)
+[
+   v1 + v2 + v3 = 17
+]
+
+contraintes cartes c(0,c0,v0) et c(2,c2,v2) :
+4 element(s)
+[
+   3 < v2 <=> c0 avant c2,
+   3 = v2 <=> c0 meme_rang c2,
+   1 + v2 =< 3 <=> c2 avant_meme_rang c0,
+   c0 \= c2
+]
+
+contraintes cartes c(0,c0,v0) et c(3,c3,v3) :
+3 element(s)
+[
+   3 < v3 <=> c0 avant c3,
+   3 = v3 <=> c0 meme_rang c3,
+   c0 \= c3
+]
+
+contraintes cartes c(1,c1,v1) et c(2,c2,v2) :
+1 element(s)
+[
+   v1 \= v2
+]
+
+contraintes cartes c(1,c1,v1) et c(3,c3,v3) :
+1 element(s)
+[
+   1 + v3 =< v1
+]
+
+contraintes cartes c(2,c2,v2) et c(3,c3,v3) :
+4 element(s)
+[
+   v2 < v3 <=> c2 avant c3,
+   v3 < v2 <=> c3 avant c2,
+   v2 = v3 <=> c2 meme_rang c3,
+   c2 \= c3
+]
+
+============================== Coup 2 ==============================
+
+nb cartes a deviner                  : 4
+
+
+solutions : 
+6 element(s)
+[
+   [c(0,yellow,3),c(1,green,8),c(2,red,3),c(3,blue,6)],
+   [c(0,yellow,3),c(1,green,8),c(2,blue,6),c(3,red,3)],
+   [c(0,yellow,3),c(1,green,9),c(2,red,3),c(3,blue,5)],
+   [c(0,yellow,3),c(1,green,9),c(2,blue,5),c(3,red,3)],
+   [c(0,yellow,3),c(1,green,10),c(2,red,3),c(3,blue,4)],
+   [c(0,yellow,3),c(1,green,10),c(2,blue,4),c(3,red,3)]
+]
+
+solutions (sans positions) : 
+3 element(s)
+[
+   [c(blue,4),c(green,10),c(red,3),c(yellow,3)],
+   [c(blue,5),c(green,9),c(red,3),c(yellow,3)],
+   [c(blue,6),c(green,8),c(red,3),c(yellow,3)]
+]
+
+domaines cartes :
+4 element(s)
+[
+   c(0,[yellow,blue],[3]),
+   c(1,[green],[8,9,10]),
+   c(2,[yellow,red,blue],[1,2,3,4,5,6]),
+   c(3,[red,blue],[3,4,5,6,7,8])
+]
+
+cartes jouees :
+
+carte 0
+couleur proposee       : yellow (parmi [yellow,blue] selon l'IA)
+couleur devinee        : oui
+valeur proposee        : 3 (parmi [3] selon l'IA)
+valeur devinee         : oui
+
+carte 1
+couleur proposee       : green (parmi [green] selon l'IA)
+couleur devinee        : oui
+valeur proposee        : 8 (parmi [8,9,10] selon l'IA)
+valeur devinee         : plus
+
+carte 2
+couleur proposee       : blue (parmi [yellow,red,blue] selon l'IA)
+couleur devinee        : oui
+valeur proposee        : 6 (parmi [1,2,3,4,5,6] selon l'IA)
+valeur devinee         : moins
+
+carte 3
+couleur proposee       : red (parmi [red,blue] selon l'IA)
+couleur devinee        : oui
+valeur proposee        : 3 (parmi [3,4,5,6,7,8] selon l'IA)
+valeur devinee         : oui
+
+--------------------------------------------------------------
+Position = 0
+
+Couleur jouee : yellow
+reponse       : oui
+
+Valeur jouee : 3
+reponse      : oui
+--------------------------------------------------------------
+Position = 1
+
+Couleur jouee : green
+reponse       : oui
+
+Valeur jouee : 8
+reponse      : plus
+--------------------------------------------------------------
+Position = 2
+
+Couleur jouee : blue
+reponse       : oui
+
+Valeur jouee : 6
+reponse      : moins
+--------------------------------------------------------------
+Position = 3
+
+Couleur jouee : red
+reponse       : oui
+
+Valeur jouee : 3
+reponse      : oui
+
+domaines cartes :
+4 element(s)
+[
+   c(0,[yellow],[3]),
+   c(1,[green],[9,10]),
+   c(2,[blue],[4,5]),
+   c(3,[red],[3])
+]
+
+ ------------------------- CONTRAINTES SWI ----------------------
+
+contraintes cartes c(1,c1,v1) et c(2,c2,v2) :
+1 element(s)
+[
+   v1 + v2 = 14
+]
+
+============================== Coup 3 ==============================
+
+nb cartes a deviner                  : 2
+
+
+solutions : 
+2 element(s)
+[
+   [c(1,green,9),c(2,blue,5)],
+   [c(1,green,10),c(2,blue,4)]
+]
+
+solutions (sans positions) : 
+2 element(s)
+[
+   [c(blue,4),c(green,10)],
+   [c(blue,5),c(green,9)]
+]
+
+domaines cartes :
+2 element(s)
+[
+   c(1,[green],[9,10]),
+   c(2,[blue],[4,5])
+]
+
+cartes jouees :
+
+carte 1
+couleur proposee       : green (parmi [green] selon l'IA)
+couleur devinee        : oui
+valeur proposee        : 9 (parmi [9,10] selon l'IA)
+valeur devinee         : plus
+
+carte 2
+couleur proposee       : blue (parmi [blue] selon l'IA)
+couleur devinee        : oui
+valeur proposee        : 5 (parmi [4,5] selon l'IA)
+valeur devinee         : moins
+
+--------------------------------------------------------------
+Position = 1
+
+Couleur jouee : green
+reponse       : oui
+
+Valeur jouee : 9
+reponse      : plus
+--------------------------------------------------------------
+Position = 2
+
+Couleur jouee : blue
+reponse       : oui
+
+Valeur jouee : 5
+reponse      : moins
+
+domaines cartes :
+2 element(s)
+[
+   c(1,[green],[10]),
+   c(2,[blue],[4])
+]
+
+ ------------------------- CONTRAINTES SWI ----------------------
+
+============================== Coup 4 ==============================
+
+nb cartes a deviner                  : 2
+
+
+solutions : 
+1 element(s)
+[
+   [c(1,green,10),c(2,blue,4)]
+]
+
+solutions (sans positions) : 
+1 element(s)
+[
+   [c(blue,4),c(green,10)]
+]
+
+domaines cartes :
+2 element(s)
+[
+   c(1,[green],[10]),
+   c(2,[blue],[4])
+]
+
+cartes jouees :
+
+carte 1
+couleur proposee       : green (parmi [green] selon l'IA)
+couleur devinee        : oui
+valeur proposee        : 10 (parmi [10] selon l'IA)
+valeur devinee         : oui
+
+carte 2
+couleur proposee       : blue (parmi [blue] selon l'IA)
+couleur devinee        : oui
+valeur proposee        : 4 (parmi [4] selon l'IA)
+valeur devinee         : oui
+
+--------------------------------------------------------------
+Position = 1
+
+Couleur jouee : green
+reponse       : oui
+
+Valeur jouee : 10
+reponse      : oui
+--------------------------------------------------------------
+Position = 2
+
+Couleur jouee : blue
+reponse       : oui
+
+Valeur jouee : 4
+reponse      : oui
+
+domaines cartes :
+2 element(s)
+[
+   c(1,[green],[10]),
+   c(2,[blue],[4])
+]
+
+ ------------------------- CONTRAINTES SWI ----------------------
+
+Analyse partie terminee.
+le joueur a gagne en 4 coups
+
+solution trouvee : 
+[c(0,yellow,3),c(1,green,10),c(2,blue,4),c(3,red,3)]
+ident('7','20yellow=red<blue<green0yellow31green102blue43red3').
+joueur('7',colin).
+partie('7','../parties_joueur/colin/_partie_3').
+somme('7',20).
+ordre_couleurs('7',[yellow,=,red,<,blue,<,green]).
+solution('7',[c(0,yellow,3),c(1,green,10),c(2,blue,4),c(3,red,3)]).
+nb_solutions('7',168).
+cartes_jouees(7,
+   [
+coup(1,168,6,[c(0,red,3,0,non,oui),c(1,blue,7,0,non,plus),c(2,green,8,0,non,moins),c(3,yellow,2,0,non,plus)]).
+coup(2,6,2,[c(0,yellow,3,0,oui,oui),c(1,green,8,0,oui,plus),c(2,blue,6,0,oui,moins),c(3,red,3,0,oui,oui)]).
+coup(3,2,1,[c(1,green,9,0,oui,plus),c(2,blue,5,0,oui,moins)]).
+coup(4,1,1,[c(1,green,10,0,oui,oui),c(2,blue,4,0,oui,oui)]).
+   ]
+            ).
+resultat('7',gagne).

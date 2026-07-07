@@ -1,0 +1,1582 @@
+========================================================================
+  Apprentissage Curriculaire KiMind — Joueur : LÉA
+  Graine de simulation : 42
+========================================================================
+
+────────────────────────────────────────────────────────────────────────
+SÉANCE 01  │  Étape 0 : Découverte — Comprendre les retours
+────────────────────────────────────────────────────────────────────────
+
+  OBJECTIF PÉDAGOGIQUE
+  L'enfant découvre le jeu : poser n'importe quel essai, lire les
+  retours de la machine (oui / plus / moins). Aucune stratégie
+  n'est encore requise — il s'agit d'explorer.
+
+  CONSEIL À L'ENFANT
+    Essaie de poser quatre cartes quelconques et observe ce que dit la machine !
+      • « oui »  = bonne carte ✓
+      • « plus » = ton nombre est trop petit, essaie plus grand
+      • « moins »= ton nombre est trop grand, essaie plus petit
+
+  PARTIE GÉNÉRÉE (depuis le répertoire, id=101)
+    Somme        : 12
+    Ordre couleurs: bleu = rouge = vert = jaune
+    Solution     : [bleu=3, rouge=3, vert=3, jaune=3]
+    Nb solutions : 1  (difficulté : très_facile)
+    Pourquoi     : difficulté=très_facile, sum=12 ≤ 16, ordre des couleurs tout-égal, ≤ 24 solutions
+
+  DÉROULEMENT DE LA PARTIE
+    Tour 1: essai [bleu=2, rouge=5, vert=1, jaune=4]
+           → bleu=+  rouge=−  vert=+  jaune=−  ⚠ VIOLATION D'ORDRE
+    Tour 2: essai [bleu=1, rouge=1, vert=3, jaune=7]
+           → bleu=+  rouge=+  vert=✓  jaune=−  ⚠ VIOLATION D'ORDRE
+    Tour 3: essai [bleu=3, rouge=2, vert=8, jaune=1]
+           → bleu=✓  rouge=+  vert=−  jaune=+  ⚠ VIOLATION DE SOMME  ⚠ VIOLATION D'ORDRE
+    Tour 4: essai [bleu=5, rouge=3, vert=1, jaune=2]
+           → bleu=−  rouge=✓  vert=+  jaune=+  ⚠ VIOLATION DE SOMME  ⚠ VIOLATION D'ORDRE
+    Tour 5: essai [bleu=5, rouge=3, vert=3, jaune=5]
+           → bleu=−  rouge=✓  vert=✓  jaune=−  ⚠ VIOLATION DE SOMME  ⚠ VIOLATION D'ORDRE
+    Tour 6: essai [bleu=3, rouge=3, vert=2, jaune=3]
+           → bleu=✓  rouge=✓  vert=+  jaune=✓  ⚠ VIOLATION DE SOMME  ⚠ VIOLATION D'ORDRE
+    Tour 7: essai [bleu=3, rouge=3, vert=1, jaune=3]
+           → bleu=✓  rouge=✓  vert=+  jaune=✓  ⚠ VIOLATION DE SOMME  ⚠ VIOLATION D'ORDRE
+    Tour 8: essai [bleu=3, rouge=3, vert=1, jaune=3]
+           → bleu=✓  rouge=✓  vert=+  jaune=✓  ⚠ VIOLATION DE SOMME  ⚠ VIOLATION D'ORDRE
+    Tour 9: essai [bleu=3, rouge=3, vert=3, jaune=3]
+           → bleu=✓  rouge=✓  vert=✓  jaune=✓
+    Résultat : GAGNÉ ✓  (en 9 coups)
+
+  ANALYSE  (comme le produirait analyse_partie)
+    respects_sum(léa)           : false  [6 erreur(s)]
+    follows_colours_order(léa)  : false  [8 violation(s)]
+    plays_dichotomic(léa)        : true 
+    struggles_high_numbers(léa) : false
+    strong_player(léa)           : false
+    nb_coups / optimal                  : 9 / ~1
+
+  PROFIL MIS À JOUR  (bk_joueur_léa.pl)
+    compétences : (aucune pour l'instant)
+    points faibles: (aucun)
+
+  DÉCISION CURRICULAIRE
+    ✓ Condition de maîtrise atteinte  (1/2)
+    ➜ RÉPÉTER l'Étape 0 une fois de plus pour confirmer la maîtrise.
+
+────────────────────────────────────────────────────────────────────────
+SÉANCE 02  │  Étape 0 : Découverte — Comprendre les retours
+────────────────────────────────────────────────────────────────────────
+
+  OBJECTIF PÉDAGOGIQUE
+  L'enfant découvre le jeu : poser n'importe quel essai, lire les
+  retours de la machine (oui / plus / moins). Aucune stratégie
+  n'est encore requise — il s'agit d'explorer.
+
+  CONSEIL À L'ENFANT
+    Essaie de poser quatre cartes quelconques et observe ce que dit la machine !
+      • « oui »  = bonne carte ✓
+      • « plus » = ton nombre est trop petit, essaie plus grand
+      • « moins »= ton nombre est trop grand, essaie plus petit
+
+  PARTIE GÉNÉRÉE (depuis le répertoire, id=102)
+    Somme        : 16
+    Ordre couleurs: bleu = rouge = vert = jaune
+    Solution     : [bleu=4, rouge=4, vert=4, jaune=4]
+    Nb solutions : 1  (difficulté : très_facile)
+    Pourquoi     : difficulté=très_facile, sum=16 ≤ 16, ordre des couleurs tout-égal, ≤ 24 solutions
+
+  DÉROULEMENT DE LA PARTIE
+    Tour 1: essai [bleu=10, rouge=2, vert=3, jaune=2]
+           → bleu=−  rouge=+  vert=+  jaune=+  ⚠ VIOLATION DE SOMME  ⚠ VIOLATION D'ORDRE
+    Tour 2: essai [bleu=1, rouge=5, vert=3, jaune=6]
+           → bleu=+  rouge=−  vert=+  jaune=−  ⚠ VIOLATION DE SOMME  ⚠ VIOLATION D'ORDRE
+    Tour 3: essai [bleu=9, rouge=4, vert=10, jaune=3]
+           → bleu=−  rouge=✓  vert=−  jaune=+  ⚠ VIOLATION DE SOMME  ⚠ VIOLATION D'ORDRE
+    Tour 4: essai [bleu=4, rouge=5, vert=4, jaune=4]
+           → bleu=✓  rouge=−  vert=✓  jaune=✓  ⚠ VIOLATION DE SOMME  ⚠ VIOLATION D'ORDRE
+    Tour 5: essai [bleu=6, rouge=4, vert=4, jaune=4]
+           → bleu=−  rouge=✓  vert=✓  jaune=✓  ⚠ VIOLATION DE SOMME  ⚠ VIOLATION D'ORDRE
+    Tour 6: essai [bleu=3, rouge=4, vert=4, jaune=4]
+           → bleu=+  rouge=✓  vert=✓  jaune=✓  ⚠ VIOLATION DE SOMME  ⚠ VIOLATION D'ORDRE
+    Tour 7: essai [bleu=4, rouge=6, vert=5, jaune=4]
+           → bleu=✓  rouge=−  vert=−  jaune=✓  ⚠ VIOLATION DE SOMME  ⚠ VIOLATION D'ORDRE
+    Tour 8: essai [bleu=4, rouge=4, vert=4, jaune=4]
+           → bleu=✓  rouge=✓  vert=✓  jaune=✓
+    Résultat : GAGNÉ ✓  (en 8 coups)
+
+  ANALYSE  (comme le produirait analyse_partie)
+    respects_sum(léa)           : false  [7 erreur(s)]
+    follows_colours_order(léa)  : false  [7 violation(s)]
+    plays_dichotomic(léa)        : true 
+    struggles_high_numbers(léa) : false
+    strong_player(léa)           : false
+    nb_coups / optimal                  : 8 / ~1
+
+  PROFIL MIS À JOUR  (bk_joueur_léa.pl)
+    compétences : (aucune pour l'instant)
+    points faibles: (aucun)
+
+  DÉCISION CURRICULAIRE
+    ✓ Condition de maîtrise atteinte  (2/2)
+    ➜ PASSER À Étape 1 : Contrainte de somme
+
+────────────────────────────────────────────────────────────────────────
+SÉANCE 03  │  Étape 1 : Contrainte de somme
+────────────────────────────────────────────────────────────────────────
+
+  OBJECTIF PÉDAGOGIQUE
+  Les quatre valeurs de cartes doivent toujours s'additionner pour donner la
+  somme annoncée. L'enfant doit apprendre à vérifier cela avant de jouer.
+
+  CONSEIL À L'ENFANT
+    Souviens-toi : tes quatre nombres doivent toujours s'additionner pour donner le total affiché !
+      Exemple : si la somme est 16, tu peux jouer 4+4+4+4 = 16  ✓
+
+  PARTIE GÉNÉRÉE (depuis le répertoire, id=15)
+    Somme        : 16
+    Ordre couleurs: vert < rouge < jaune = bleu
+    Solution     : [jaune=5, bleu=5, rouge=4, vert=2]
+    Nb solutions : 48  (difficulté : facile)
+    Pourquoi     : difficulté=facile, sum=16 ≤ 20, ≤ 48 solutions
+
+  DÉROULEMENT DE LA PARTIE
+    Tour 1: essai [jaune=2, bleu=4, rouge=5, vert=5]
+           → jaune=+  bleu=+  rouge=−  vert=−  ⚠ VIOLATION D'ORDRE
+    Tour 2: essai [jaune=9, bleu=3, rouge=2, vert=2]
+           → jaune=−  bleu=+  rouge=+  vert=✓  ⚠ VIOLATION D'ORDRE
+    Tour 3: essai [jaune=2, bleu=5, rouge=3, vert=5]
+           → jaune=+  bleu=✓  rouge=+  vert=−  ⚠ VIOLATION DE SOMME  ⚠ VIOLATION D'ORDRE
+    Tour 4: essai [jaune=3, bleu=5, rouge=4, vert=4]
+           → jaune=+  bleu=✓  rouge=✓  vert=−  ⚠ VIOLATION D'ORDRE
+    Tour 5: essai [jaune=5, bleu=5, rouge=2, vert=4]
+           → jaune=✓  bleu=✓  rouge=+  vert=−  ⚠ VIOLATION D'ORDRE
+    Tour 6: essai [jaune=5, bleu=5, rouge=4, vert=2]
+           → jaune=✓  bleu=✓  rouge=✓  vert=✓
+    Résultat : GAGNÉ ✓  (en 6 coups)
+
+  ANALYSE  (comme le produirait analyse_partie)
+    respects_sum(léa)           : false  [1 erreur(s)]
+    follows_colours_order(léa)  : false  [5 violation(s)]
+    plays_dichotomic(léa)        : true 
+    struggles_high_numbers(léa) : false
+    strong_player(léa)           : false
+    nb_coups / optimal                  : 6 / ~7
+
+  PROFIL MIS À JOUR  (bk_joueur_léa.pl)
+    compétences : (aucune pour l'instant)
+    points faibles: ['sum_errors']
+
+  DÉCISION CURRICULAIRE
+    ✗ Condition de maîtrise NON atteinte :
+        • erreurs de somme : 1
+    ➜ RÉPÉTER l'Étape 1 avec une nouvelle partie ciblant les mêmes compétences.
+
+────────────────────────────────────────────────────────────────────────
+SÉANCE 04  │  Étape 1 : Contrainte de somme
+────────────────────────────────────────────────────────────────────────
+
+  OBJECTIF PÉDAGOGIQUE
+  Les quatre valeurs de cartes doivent toujours s'additionner pour donner la
+  somme annoncée. L'enfant doit apprendre à vérifier cela avant de jouer.
+
+  CONSEIL À L'ENFANT
+    Souviens-toi : tes quatre nombres doivent toujours s'additionner pour donner le total affiché !
+      Exemple : si la somme est 16, tu peux jouer 4+4+4+4 = 16  ✓
+
+  PARTIE GÉNÉRÉE (depuis le répertoire, id=6)
+    Somme        : 11
+    Ordre couleurs: vert = jaune = rouge < bleu
+    Solution     : [bleu=5, vert=2, jaune=2, rouge=2]
+    Nb solutions : 48  (difficulté : facile)
+    Pourquoi     : difficulté=facile, sum=11 ≤ 20, ≤ 48 solutions
+
+  DÉROULEMENT DE LA PARTIE
+    Tour 1: essai [bleu=5, vert=4, jaune=1, rouge=1]
+           → bleu=✓  vert=−  jaune=+  rouge=+  ⚠ VIOLATION D'ORDRE
+    Tour 2: essai [bleu=2, vert=5, jaune=3, rouge=2]
+           → bleu=+  vert=−  jaune=−  rouge=✓  ⚠ VIOLATION DE SOMME  ⚠ VIOLATION D'ORDRE
+    Tour 3: essai [bleu=2, vert=2, jaune=2, rouge=5]
+           → bleu=+  vert=✓  jaune=✓  rouge=−  ⚠ VIOLATION D'ORDRE
+    Tour 4: essai [bleu=2, vert=4, jaune=2, rouge=4]
+           → bleu=+  vert=−  jaune=✓  rouge=−  ⚠ VIOLATION DE SOMME  ⚠ VIOLATION D'ORDRE
+    Tour 5: essai [bleu=5, vert=2, jaune=3, rouge=2]
+           → bleu=✓  vert=✓  jaune=−  rouge=✓  ⚠ VIOLATION DE SOMME  ⚠ VIOLATION D'ORDRE
+    Tour 6: essai [bleu=2, vert=2, jaune=2, rouge=5]
+           → bleu=+  vert=✓  jaune=✓  rouge=−  ⚠ VIOLATION D'ORDRE
+    Tour 7: essai [bleu=2, vert=2, jaune=4, rouge=3]
+           → bleu=+  vert=✓  jaune=−  rouge=−  ⚠ VIOLATION D'ORDRE
+    Tour 8: essai [bleu=3, vert=2, jaune=4, rouge=2]
+           → bleu=+  vert=✓  jaune=−  rouge=✓  ⚠ VIOLATION D'ORDRE
+    Tour 9: essai [bleu=2, vert=2, jaune=4, rouge=2]
+           → bleu=+  vert=✓  jaune=−  rouge=✓  ⚠ VIOLATION DE SOMME  ⚠ VIOLATION D'ORDRE
+    Résultat : PERDU ✗  (en 9 coups)
+
+  ANALYSE  (comme le produirait analyse_partie)
+    respects_sum(léa)           : false  [4 erreur(s)]
+    follows_colours_order(léa)  : false  [9 violation(s)]
+    plays_dichotomic(léa)        : true 
+    struggles_high_numbers(léa) : false
+    strong_player(léa)           : false
+    nb_coups / optimal                  : 9 / ~7
+
+  PROFIL MIS À JOUR  (bk_joueur_léa.pl)
+    compétences : (aucune pour l'instant)
+    points faibles: ['sum_errors']
+
+  DÉCISION CURRICULAIRE
+    ✗ Condition de maîtrise NON atteinte :
+        • n'a pas gagné la partie
+        • erreurs de somme : 4
+    ➜ RÉPÉTER l'Étape 1 avec une nouvelle partie ciblant les mêmes compétences.
+
+────────────────────────────────────────────────────────────────────────
+SÉANCE 05  │  Étape 1 : Contrainte de somme
+────────────────────────────────────────────────────────────────────────
+
+  OBJECTIF PÉDAGOGIQUE
+  Les quatre valeurs de cartes doivent toujours s'additionner pour donner la
+  somme annoncée. L'enfant doit apprendre à vérifier cela avant de jouer.
+
+  CONSEIL À L'ENFANT
+    Souviens-toi : tes quatre nombres doivent toujours s'additionner pour donner le total affiché !
+      Exemple : si la somme est 16, tu peux jouer 4+4+4+4 = 16  ✓
+
+  PARTIE GÉNÉRÉE (depuis le répertoire, id=103)
+    Somme        : 20
+    Ordre couleurs: bleu = rouge = vert = jaune
+    Solution     : [bleu=5, rouge=5, vert=5, jaune=5]
+    Nb solutions : 1  (difficulté : très_facile)
+    Pourquoi     : difficulté=très_facile, sum=20 ≤ 20, ≤ 48 solutions
+
+  DÉROULEMENT DE LA PARTIE
+    Tour 1: essai [bleu=9, rouge=1, vert=8, jaune=2]
+           → bleu=−  rouge=+  vert=−  jaune=+  ⚠ VIOLATION D'ORDRE
+    Tour 2: essai [bleu=2, rouge=9, vert=7, jaune=3]
+           → bleu=+  rouge=−  vert=−  jaune=+  ⚠ VIOLATION DE SOMME  ⚠ VIOLATION D'ORDRE
+    Tour 3: essai [bleu=3, rouge=7, vert=5, jaune=5]
+           → bleu=+  rouge=−  vert=✓  jaune=✓  ⚠ VIOLATION D'ORDRE
+    Tour 4: essai [bleu=5, rouge=3, vert=5, jaune=5]
+           → bleu=✓  rouge=+  vert=✓  jaune=✓  ⚠ VIOLATION DE SOMME  ⚠ VIOLATION D'ORDRE
+    Tour 5: essai [bleu=4, rouge=5, vert=5, jaune=5]
+           → bleu=+  rouge=✓  vert=✓  jaune=✓  ⚠ VIOLATION DE SOMME  ⚠ VIOLATION D'ORDRE
+    Tour 6: essai [bleu=5, rouge=5, vert=5, jaune=5]
+           → bleu=✓  rouge=✓  vert=✓  jaune=✓
+    Résultat : GAGNÉ ✓  (en 6 coups)
+
+  ANALYSE  (comme le produirait analyse_partie)
+    respects_sum(léa)           : false  [3 erreur(s)]
+    follows_colours_order(léa)  : false  [5 violation(s)]
+    plays_dichotomic(léa)        : true 
+    struggles_high_numbers(léa) : false
+    strong_player(léa)           : false
+    nb_coups / optimal                  : 6 / ~1
+
+  PROFIL MIS À JOUR  (bk_joueur_léa.pl)
+    compétences : (aucune pour l'instant)
+    points faibles: ['sum_errors']
+
+  DÉCISION CURRICULAIRE
+    ✗ Condition de maîtrise NON atteinte :
+        • erreurs de somme : 3
+    ➜ RÉPÉTER l'Étape 1 avec une nouvelle partie ciblant les mêmes compétences.
+
+────────────────────────────────────────────────────────────────────────
+SÉANCE 06  │  Étape 1 : Contrainte de somme
+────────────────────────────────────────────────────────────────────────
+
+  OBJECTIF PÉDAGOGIQUE
+  Les quatre valeurs de cartes doivent toujours s'additionner pour donner la
+  somme annoncée. L'enfant doit apprendre à vérifier cela avant de jouer.
+
+  CONSEIL À L'ENFANT
+    Souviens-toi : tes quatre nombres doivent toujours s'additionner pour donner le total affiché !
+      Exemple : si la somme est 16, tu peux jouer 4+4+4+4 = 16  ✓
+
+  PARTIE GÉNÉRÉE (depuis le répertoire, id=9)
+    Somme        : 10
+    Ordre couleurs: bleu < vert = rouge < jaune
+    Solution     : [vert=2, jaune=5, rouge=2, bleu=1]
+    Nb solutions : 24  (difficulté : très_facile)
+    Pourquoi     : difficulté=très_facile, sum=10 ≤ 20, ≤ 48 solutions
+
+  DÉROULEMENT DE LA PARTIE
+    Tour 1: essai [vert=3, jaune=2, rouge=2, bleu=3]
+           → vert=−  jaune=+  rouge=✓  bleu=−  ⚠ VIOLATION D'ORDRE
+    Tour 2: essai [vert=1, jaune=5, rouge=2, bleu=2]
+           → vert=+  jaune=✓  rouge=✓  bleu=−  ⚠ VIOLATION D'ORDRE
+    Tour 3: essai [vert=2, jaune=3, rouge=2, bleu=1]
+           → vert=✓  jaune=+  rouge=✓  bleu=✓  ⚠ VIOLATION DE SOMME
+    Tour 4: essai [vert=2, jaune=1, rouge=2, bleu=4]
+           → vert=✓  jaune=+  rouge=✓  bleu=−  ⚠ VIOLATION DE SOMME  ⚠ VIOLATION D'ORDRE
+    Tour 5: essai [vert=2, jaune=2, rouge=2, bleu=3]
+           → vert=✓  jaune=+  rouge=✓  bleu=−  ⚠ VIOLATION DE SOMME  ⚠ VIOLATION D'ORDRE
+    Tour 6: essai [vert=2, jaune=2, rouge=7, bleu=1]
+           → vert=✓  jaune=+  rouge=−  bleu=✓  ⚠ VIOLATION DE SOMME  ⚠ VIOLATION D'ORDRE
+    Tour 7: essai [vert=1, jaune=4, rouge=2, bleu=2]
+           → vert=+  jaune=+  rouge=✓  bleu=−  ⚠ VIOLATION DE SOMME  ⚠ VIOLATION D'ORDRE
+    Tour 8: essai [vert=2, jaune=1, rouge=2, bleu=5]
+           → vert=✓  jaune=+  rouge=✓  bleu=−  ⚠ VIOLATION D'ORDRE
+    Tour 9: essai [vert=2, jaune=3, rouge=2, bleu=3]
+           → vert=✓  jaune=+  rouge=✓  bleu=−  ⚠ VIOLATION D'ORDRE
+    Résultat : PERDU ✗  (en 9 coups)
+
+  ANALYSE  (comme le produirait analyse_partie)
+    respects_sum(léa)           : false  [5 erreur(s)]
+    follows_colours_order(léa)  : false  [8 violation(s)]
+    plays_dichotomic(léa)        : true 
+    struggles_high_numbers(léa) : false
+    strong_player(léa)           : false
+    nb_coups / optimal                  : 9 / ~6
+
+  PROFIL MIS À JOUR  (bk_joueur_léa.pl)
+    compétences : (aucune pour l'instant)
+    points faibles: ['sum_errors']
+
+  DÉCISION CURRICULAIRE
+    ✗ Condition de maîtrise NON atteinte :
+        • n'a pas gagné la partie
+        • erreurs de somme : 5
+    ➜ RÉPÉTER l'Étape 1 avec une nouvelle partie ciblant les mêmes compétences.
+
+────────────────────────────────────────────────────────────────────────
+SÉANCE 07  │  Étape 1 : Contrainte de somme
+────────────────────────────────────────────────────────────────────────
+
+  OBJECTIF PÉDAGOGIQUE
+  Les quatre valeurs de cartes doivent toujours s'additionner pour donner la
+  somme annoncée. L'enfant doit apprendre à vérifier cela avant de jouer.
+
+  CONSEIL À L'ENFANT
+    Souviens-toi : tes quatre nombres doivent toujours s'additionner pour donner le total affiché !
+      Exemple : si la somme est 16, tu peux jouer 4+4+4+4 = 16  ✓
+
+  PARTIE GÉNÉRÉE (depuis le répertoire, id=7)
+    Somme        : 10
+    Ordre couleurs: vert < bleu < rouge < jaune
+    Solution     : [rouge=3, jaune=4, bleu=2, vert=1]
+    Nb solutions : 24  (difficulté : très_facile)
+    Pourquoi     : difficulté=très_facile, sum=10 ≤ 20, ≤ 48 solutions
+
+  DÉROULEMENT DE LA PARTIE
+    Tour 1: essai [rouge=5, jaune=4, bleu=1, vert=1]
+           → rouge=−  jaune=✓  bleu=+  vert=✓  ⚠ VIOLATION DE SOMME  ⚠ VIOLATION D'ORDRE
+    Tour 2: essai [rouge=1, jaune=1, bleu=2, vert=4]
+           → rouge=+  jaune=+  bleu=✓  vert=−  ⚠ VIOLATION DE SOMME  ⚠ VIOLATION D'ORDRE
+    Tour 3: essai [rouge=2, jaune=4, bleu=2, vert=2]
+           → rouge=+  jaune=✓  bleu=✓  vert=−  ⚠ VIOLATION D'ORDRE
+    Tour 4: essai [rouge=3, jaune=1, bleu=1, vert=4]
+           → rouge=✓  jaune=+  bleu=+  vert=−  ⚠ VIOLATION DE SOMME  ⚠ VIOLATION D'ORDRE
+    Tour 5: essai [rouge=3, jaune=4, bleu=2, vert=1]
+           → rouge=✓  jaune=✓  bleu=✓  vert=✓
+    Résultat : GAGNÉ ✓  (en 5 coups)
+
+  ANALYSE  (comme le produirait analyse_partie)
+    respects_sum(léa)           : false  [3 erreur(s)]
+    follows_colours_order(léa)  : false  [4 violation(s)]
+    plays_dichotomic(léa)        : true 
+    struggles_high_numbers(léa) : false
+    strong_player(léa)           : false
+    nb_coups / optimal                  : 5 / ~6
+
+  PROFIL MIS À JOUR  (bk_joueur_léa.pl)
+    compétences : (aucune pour l'instant)
+    points faibles: ['sum_errors']
+
+  DÉCISION CURRICULAIRE
+    ✗ Condition de maîtrise NON atteinte :
+        • erreurs de somme : 3
+    ➜ RÉPÉTER l'Étape 1 avec une nouvelle partie ciblant les mêmes compétences.
+
+────────────────────────────────────────────────────────────────────────
+SÉANCE 08  │  Étape 1 : Contrainte de somme
+────────────────────────────────────────────────────────────────────────
+
+  OBJECTIF PÉDAGOGIQUE
+  Les quatre valeurs de cartes doivent toujours s'additionner pour donner la
+  somme annoncée. L'enfant doit apprendre à vérifier cela avant de jouer.
+
+  CONSEIL À L'ENFANT
+    Souviens-toi : tes quatre nombres doivent toujours s'additionner pour donner le total affiché !
+      Exemple : si la somme est 16, tu peux jouer 4+4+4+4 = 16  ✓
+
+  PARTIE GÉNÉRÉE (depuis le répertoire, id=17)
+    Somme        : 37
+    Ordre couleurs: vert < rouge = bleu = jaune
+    Solution     : [rouge=10, bleu=10, vert=7, jaune=10]
+    Nb solutions : 24  (difficulté : très_facile)
+    Pourquoi     : difficulté=très_facile, sum=37 ≤ 20, ≤ 48 solutions
+
+  DÉROULEMENT DE LA PARTIE
+    Tour 1: essai [rouge=10, bleu=10, vert=6, jaune=10]
+           → rouge=✓  bleu=✓  vert=+  jaune=✓  ⚠ VIOLATION DE SOMME
+    Tour 2: essai [rouge=10, bleu=10, vert=10, jaune=10]
+           → rouge=✓  bleu=✓  vert=−  jaune=✓  ⚠ VIOLATION DE SOMME  ⚠ VIOLATION D'ORDRE
+    Tour 3: essai [rouge=10, bleu=10, vert=7, jaune=10]
+           → rouge=✓  bleu=✓  vert=✓  jaune=✓
+    Résultat : GAGNÉ ✓  (en 3 coups)
+
+  ANALYSE  (comme le produirait analyse_partie)
+    respects_sum(léa)           : false  [2 erreur(s)]
+    follows_colours_order(léa)  : false  [1 violation(s)]
+    plays_dichotomic(léa)        : true 
+    struggles_high_numbers(léa) : false
+    strong_player(léa)           : false
+    nb_coups / optimal                  : 3 / ~6
+
+  PROFIL MIS À JOUR  (bk_joueur_léa.pl)
+    compétences : (aucune pour l'instant)
+    points faibles: ['sum_errors']
+
+  DÉCISION CURRICULAIRE
+    ✗ Condition de maîtrise NON atteinte :
+        • erreurs de somme : 2
+    ➜ RÉPÉTER l'Étape 1 avec une nouvelle partie ciblant les mêmes compétences.
+
+────────────────────────────────────────────────────────────────────────
+SÉANCE 09  │  Étape 1 : Contrainte de somme
+────────────────────────────────────────────────────────────────────────
+
+  OBJECTIF PÉDAGOGIQUE
+  Les quatre valeurs de cartes doivent toujours s'additionner pour donner la
+  somme annoncée. L'enfant doit apprendre à vérifier cela avant de jouer.
+
+  CONSEIL À L'ENFANT
+    Souviens-toi : tes quatre nombres doivent toujours s'additionner pour donner le total affiché !
+      Exemple : si la somme est 16, tu peux jouer 4+4+4+4 = 16  ✓
+
+  PARTIE GÉNÉRÉE (depuis le répertoire, id=11)
+    Somme        : 39
+    Ordre couleurs: jaune < vert = bleu = rouge
+    Solution     : [vert=10, jaune=9, bleu=10, rouge=10]
+    Nb solutions : 24  (difficulté : très_facile)
+    Pourquoi     : difficulté=très_facile, sum=39 ≤ 20, ≤ 48 solutions
+
+  DÉROULEMENT DE LA PARTIE
+    Tour 1: essai [vert=9, jaune=10, bleu=10, rouge=10]
+           → vert=+  jaune=−  bleu=✓  rouge=✓  ⚠ VIOLATION D'ORDRE
+    Tour 2: essai [vert=10, jaune=9, bleu=10, rouge=10]
+           → vert=✓  jaune=✓  bleu=✓  rouge=✓
+    Résultat : GAGNÉ ✓  (en 2 coups)
+
+  ANALYSE  (comme le produirait analyse_partie)
+    respects_sum(léa)           : true 
+    follows_colours_order(léa)  : false  [1 violation(s)]
+    plays_dichotomic(léa)        : false
+    struggles_high_numbers(léa) : false
+    strong_player(léa)           : false
+    nb_coups / optimal                  : 2 / ~6
+
+  PROFIL MIS À JOUR  (bk_joueur_léa.pl)
+    compétences : ['respects_sum']
+    points faibles: (aucun)
+
+  DÉCISION CURRICULAIRE
+    ✓ Condition de maîtrise atteinte  (1/2)
+    ➜ RÉPÉTER l'Étape 1 une fois de plus pour confirmer la maîtrise.
+
+────────────────────────────────────────────────────────────────────────
+SÉANCE 10  │  Étape 1 : Contrainte de somme
+────────────────────────────────────────────────────────────────────────
+
+  OBJECTIF PÉDAGOGIQUE
+  Les quatre valeurs de cartes doivent toujours s'additionner pour donner la
+  somme annoncée. L'enfant doit apprendre à vérifier cela avant de jouer.
+
+  CONSEIL À L'ENFANT
+    Souviens-toi : tes quatre nombres doivent toujours s'additionner pour donner le total affiché !
+      Exemple : si la somme est 16, tu peux jouer 4+4+4+4 = 16  ✓
+
+  PARTIE GÉNÉRÉE (depuis le répertoire, id=4)
+    Somme        : 25
+    Ordre couleurs: jaune = vert = rouge < bleu
+    Solution     : [jaune=5, bleu=10, vert=5, rouge=5]
+    Nb solutions : 48  (difficulté : facile)
+    Pourquoi     : difficulté=facile, sum=25 ≤ 20, ≤ 48 solutions
+
+  DÉROULEMENT DE LA PARTIE
+    Tour 1: essai [jaune=3, bleu=4, vert=8, rouge=10]
+           → jaune=+  bleu=+  vert=−  rouge=−  ⚠ VIOLATION D'ORDRE
+    Tour 2: essai [jaune=10, bleu=10, vert=2, rouge=3]
+           → jaune=−  bleu=✓  vert=+  rouge=+  ⚠ VIOLATION D'ORDRE
+    Tour 3: essai [jaune=7, bleu=4, vert=4, rouge=10]
+           → jaune=−  bleu=+  vert=+  rouge=−  ⚠ VIOLATION D'ORDRE
+    Tour 4: essai [jaune=4, bleu=9, vert=5, rouge=6]
+           → jaune=+  bleu=+  vert=✓  rouge=−  ⚠ VIOLATION DE SOMME  ⚠ VIOLATION D'ORDRE
+    Tour 5: essai [jaune=5, bleu=10, vert=5, rouge=5]
+           → jaune=✓  bleu=✓  vert=✓  rouge=✓
+    Résultat : GAGNÉ ✓  (en 5 coups)
+
+  ANALYSE  (comme le produirait analyse_partie)
+    respects_sum(léa)           : false  [1 erreur(s)]
+    follows_colours_order(léa)  : false  [4 violation(s)]
+    plays_dichotomic(léa)        : true 
+    struggles_high_numbers(léa) : true 
+    strong_player(léa)           : false
+    nb_coups / optimal                  : 5 / ~7
+
+  PROFIL MIS À JOUR  (bk_joueur_léa.pl)
+    compétences : ['respects_sum']
+    points faibles: (aucun)
+
+  DÉCISION CURRICULAIRE
+    ✗ Condition de maîtrise NON atteinte :
+        • erreurs de somme : 1
+    ➜ RÉPÉTER l'Étape 1 avec une nouvelle partie ciblant les mêmes compétences.
+
+────────────────────────────────────────────────────────────────────────
+SÉANCE 11  │  Étape 1 : Contrainte de somme
+────────────────────────────────────────────────────────────────────────
+
+  OBJECTIF PÉDAGOGIQUE
+  Les quatre valeurs de cartes doivent toujours s'additionner pour donner la
+  somme annoncée. L'enfant doit apprendre à vérifier cela avant de jouer.
+
+  CONSEIL À L'ENFANT
+    Souviens-toi : tes quatre nombres doivent toujours s'additionner pour donner le total affiché !
+      Exemple : si la somme est 16, tu peux jouer 4+4+4+4 = 16  ✓
+
+  PARTIE GÉNÉRÉE (depuis le répertoire, id=19)
+    Somme        : 38
+    Ordre couleurs: vert = bleu < jaune = rouge
+    Solution     : [jaune=10, rouge=10, vert=9, bleu=9]
+    Nb solutions : 24  (difficulté : très_facile)
+    Pourquoi     : difficulté=très_facile, sum=38 ≤ 20, ≤ 48 solutions
+
+  DÉROULEMENT DE LA PARTIE
+    Tour 1: essai [jaune=10, rouge=10, vert=9, bleu=9]
+           → jaune=✓  rouge=✓  vert=✓  bleu=✓
+    Résultat : GAGNÉ ✓  (en 1 coup)
+
+  ANALYSE  (comme le produirait analyse_partie)
+    respects_sum(léa)           : true 
+    follows_colours_order(léa)  : true 
+    plays_dichotomic(léa)        : false
+    struggles_high_numbers(léa) : false
+    strong_player(léa)           : false
+    nb_coups / optimal                  : 1 / ~6
+
+  PROFIL MIS À JOUR  (bk_joueur_léa.pl)
+    compétences : ['respects_sum']
+    points faibles: (aucun)
+
+  DÉCISION CURRICULAIRE
+    ✓ Condition de maîtrise atteinte  (1/2)
+    ➜ RÉPÉTER l'Étape 1 une fois de plus pour confirmer la maîtrise.
+
+────────────────────────────────────────────────────────────────────────
+SÉANCE 12  │  Étape 1 : Contrainte de somme
+────────────────────────────────────────────────────────────────────────
+
+  OBJECTIF PÉDAGOGIQUE
+  Les quatre valeurs de cartes doivent toujours s'additionner pour donner la
+  somme annoncée. L'enfant doit apprendre à vérifier cela avant de jouer.
+
+  CONSEIL À L'ENFANT
+    Souviens-toi : tes quatre nombres doivent toujours s'additionner pour donner le total affiché !
+      Exemple : si la somme est 16, tu peux jouer 4+4+4+4 = 16  ✓
+
+  PARTIE GÉNÉRÉE (depuis le répertoire, id=13)
+    Somme        : 39
+    Ordre couleurs: rouge < bleu = jaune = vert
+    Solution     : [bleu=10, rouge=9, jaune=10, vert=10]
+    Nb solutions : 24  (difficulté : très_facile)
+    Pourquoi     : difficulté=très_facile, sum=39 ≤ 20, ≤ 48 solutions
+
+  DÉROULEMENT DE LA PARTIE
+    Tour 1: essai [bleu=10, rouge=10, jaune=9, vert=10]
+           → bleu=✓  rouge=−  jaune=+  vert=✓  ⚠ VIOLATION D'ORDRE
+    Tour 2: essai [bleu=10, rouge=10, jaune=9, vert=10]
+           → bleu=✓  rouge=−  jaune=+  vert=✓  ⚠ VIOLATION D'ORDRE
+    Tour 3: essai [bleu=10, rouge=9, jaune=10, vert=10]
+           → bleu=✓  rouge=✓  jaune=✓  vert=✓
+    Résultat : GAGNÉ ✓  (en 3 coups)
+
+  ANALYSE  (comme le produirait analyse_partie)
+    respects_sum(léa)           : true 
+    follows_colours_order(léa)  : false  [2 violation(s)]
+    plays_dichotomic(léa)        : true 
+    struggles_high_numbers(léa) : false
+    strong_player(léa)           : false
+    nb_coups / optimal                  : 3 / ~6
+
+  PROFIL MIS À JOUR  (bk_joueur_léa.pl)
+    compétences : ['respects_sum']
+    points faibles: (aucun)
+
+  DÉCISION CURRICULAIRE
+    ✓ Condition de maîtrise atteinte  (2/2)
+    ➜ PASSER À Étape 2 : Ordre des couleurs — Strict (<) uniquement
+
+────────────────────────────────────────────────────────────────────────
+SÉANCE 13  │  Étape 2 : Ordre des couleurs — Strict (<) uniquement
+────────────────────────────────────────────────────────────────────────
+
+  OBJECTIF PÉDAGOGIQUE
+  La contrainte d'ordre utilise uniquement '<' : une couleur doit toujours
+  avoir une valeur strictement plus petite qu'une autre. L'enfant apprend
+  à respecter cela.
+
+  CONSEIL À L'ENFANT
+    Regarde le classement des couleurs affiché à l'écran.
+      S'il indique 'bleu < rouge', ta carte bleue doit avoir un nombre PLUS PETIT que rouge.
+      Vérifie tes couleurs avant de jouer !
+
+  PARTIE GÉNÉRÉE (depuis le répertoire, id=1)
+    Somme        : 34
+    Ordre couleurs: bleu < rouge < vert < jaune
+    Solution     : [bleu=7, rouge=8, vert=9, jaune=10]
+    Nb solutions : 24  (difficulté : très_facile)
+    Pourquoi     : difficulté=très_facile, sum=34 ≤ 22, ordre des couleurs strict (<) uniquement, ≤ 24 solutions
+
+  DÉROULEMENT DE LA PARTIE
+    Tour 1: essai [bleu=7, rouge=9, vert=9, jaune=10]
+           → bleu=✓  rouge=−  vert=✓  jaune=✓  ⚠ VIOLATION DE SOMME  ⚠ VIOLATION D'ORDRE
+    Tour 2: essai [bleu=7, rouge=8, vert=9, jaune=10]
+           → bleu=✓  rouge=✓  vert=✓  jaune=✓
+    Résultat : GAGNÉ ✓  (en 2 coups)
+
+  ANALYSE  (comme le produirait analyse_partie)
+    respects_sum(léa)           : false  [1 erreur(s)]
+    follows_colours_order(léa)  : false  [1 violation(s)]
+    plays_dichotomic(léa)        : false
+    struggles_high_numbers(léa) : false
+    strong_player(léa)           : false
+    nb_coups / optimal                  : 2 / ~6
+
+  PROFIL MIS À JOUR  (bk_joueur_léa.pl)
+    compétences : ['respects_sum']
+    points faibles: ['colour_order_errors']
+
+  DÉCISION CURRICULAIRE
+    ✗ Condition de maîtrise NON atteinte :
+        • erreurs de somme : 1
+        • violations d'ordre des couleurs : 1
+    ➜ RÉPÉTER l'Étape 2 avec une nouvelle partie ciblant les mêmes compétences.
+
+────────────────────────────────────────────────────────────────────────
+SÉANCE 14  │  Étape 2 : Ordre des couleurs — Strict (<) uniquement
+────────────────────────────────────────────────────────────────────────
+
+  OBJECTIF PÉDAGOGIQUE
+  La contrainte d'ordre utilise uniquement '<' : une couleur doit toujours
+  avoir une valeur strictement plus petite qu'une autre. L'enfant apprend
+  à respecter cela.
+
+  CONSEIL À L'ENFANT
+    Regarde le classement des couleurs affiché à l'écran.
+      S'il indique 'bleu < rouge', ta carte bleue doit avoir un nombre PLUS PETIT que rouge.
+      Vérifie tes couleurs avant de jouer !
+
+  PARTIE GÉNÉRÉE (depuis le répertoire, id=16)
+    Somme        : 38
+    Ordre couleurs: bleu < rouge = jaune = vert
+    Solution     : [rouge=10, jaune=10, vert=10, bleu=8]
+    Nb solutions : 24  (difficulté : très_facile)
+    Pourquoi     : difficulté=très_facile, sum=38 ≤ 22, ordre des couleurs strict (<) uniquement, ≤ 24 solutions
+
+  DÉROULEMENT DE LA PARTIE
+    Tour 1: essai [rouge=10, jaune=10, vert=10, bleu=8]
+           → rouge=✓  jaune=✓  vert=✓  bleu=✓
+    Résultat : GAGNÉ ✓  (en 1 coup)
+
+  ANALYSE  (comme le produirait analyse_partie)
+    respects_sum(léa)           : true 
+    follows_colours_order(léa)  : true 
+    plays_dichotomic(léa)        : false
+    struggles_high_numbers(léa) : false
+    strong_player(léa)           : false
+    nb_coups / optimal                  : 1 / ~6
+
+  PROFIL MIS À JOUR  (bk_joueur_léa.pl)
+    compétences : ['follows_colours_order', 'respects_sum']
+    points faibles: (aucun)
+
+  DÉCISION CURRICULAIRE
+    ✓ Condition de maîtrise atteinte  (1/2)
+    ➜ RÉPÉTER l'Étape 2 une fois de plus pour confirmer la maîtrise.
+
+────────────────────────────────────────────────────────────────────────
+SÉANCE 15  │  Étape 2 : Ordre des couleurs — Strict (<) uniquement
+────────────────────────────────────────────────────────────────────────
+
+  OBJECTIF PÉDAGOGIQUE
+  La contrainte d'ordre utilise uniquement '<' : une couleur doit toujours
+  avoir une valeur strictement plus petite qu'une autre. L'enfant apprend
+  à respecter cela.
+
+  CONSEIL À L'ENFANT
+    Regarde le classement des couleurs affiché à l'écran.
+      S'il indique 'bleu < rouge', ta carte bleue doit avoir un nombre PLUS PETIT que rouge.
+      Vérifie tes couleurs avant de jouer !
+
+  PARTIE GÉNÉRÉE (depuis le répertoire, id=14)
+    Somme        : 35
+    Ordre couleurs: jaune < rouge = bleu < vert
+    Solution     : [rouge=9, bleu=9, vert=10, jaune=7]
+    Nb solutions : 24  (difficulté : très_facile)
+    Pourquoi     : difficulté=très_facile, sum=35 ≤ 22, ordre des couleurs strict (<) uniquement, ≤ 24 solutions
+
+  DÉROULEMENT DE LA PARTIE
+    Tour 1: essai [rouge=9, bleu=9, vert=10, jaune=7]
+           → rouge=✓  bleu=✓  vert=✓  jaune=✓
+    Résultat : GAGNÉ ✓  (en 1 coup)
+
+  ANALYSE  (comme le produirait analyse_partie)
+    respects_sum(léa)           : true 
+    follows_colours_order(léa)  : true 
+    plays_dichotomic(léa)        : false
+    struggles_high_numbers(léa) : false
+    strong_player(léa)           : false
+    nb_coups / optimal                  : 1 / ~6
+
+  PROFIL MIS À JOUR  (bk_joueur_léa.pl)
+    compétences : ['follows_colours_order', 'respects_sum']
+    points faibles: (aucun)
+
+  DÉCISION CURRICULAIRE
+    ✓ Condition de maîtrise atteinte  (2/2)
+    ➜ PASSER À Étape 3 : Stratégie dichotomique — Parties faciles
+
+────────────────────────────────────────────────────────────────────────
+SÉANCE 16  │  Étape 3 : Stratégie dichotomique — Parties faciles
+────────────────────────────────────────────────────────────────────────
+
+  OBJECTIF PÉDAGOGIQUE
+  Quand la machine dit « plus », la vraie valeur est au-dessus de ton essai.
+  Quand elle dit « moins », elle est en dessous. Le coup optimal est toujours
+  le milieu de l'intervalle possible — cela divise les possibilités par deux.
+
+  CONSEIL À L'ENFANT
+    Nouvelle stratégie : COUPER EN DEUX !
+      • Intervalle [1–10] → essai 5. Si « plus » : nouvel intervalle [6–10] → essai 8. Etc.
+      Cela trouve n'importe quelle valeur en 4 essais au maximum !
+
+  PARTIE GÉNÉRÉE (depuis le répertoire, id=18)
+    Somme        : 32
+    Ordre couleurs: vert < jaune < bleu < rouge
+    Solution     : [rouge=10, bleu=9, jaune=7, vert=6]
+    Nb solutions : 48  (difficulté : facile)
+    Pourquoi     : difficulté=facile, sum=32 ≤ 24, ≤ 48 solutions
+
+  DÉROULEMENT DE LA PARTIE
+    Tour 1: essai [rouge=10, bleu=9, jaune=7, vert=6]
+           → rouge=✓  bleu=✓  jaune=✓  vert=✓
+    Résultat : GAGNÉ ✓  (en 1 coup)
+
+  ANALYSE  (comme le produirait analyse_partie)
+    respects_sum(léa)           : true 
+    follows_colours_order(léa)  : true 
+    plays_dichotomic(léa)        : true 
+    struggles_high_numbers(léa) : false
+    strong_player(léa)           : false
+    nb_coups / optimal                  : 1 / ~7
+
+  PROFIL MIS À JOUR  (bk_joueur_léa.pl)
+    compétences : ['follows_colours_order', 'plays_dichotomic', 'respects_sum']
+    points faibles: (aucun)
+
+  DÉCISION CURRICULAIRE
+    ✓ Condition de maîtrise atteinte  (1/2)
+    ➜ RÉPÉTER l'Étape 3 une fois de plus pour confirmer la maîtrise.
+
+────────────────────────────────────────────────────────────────────────
+SÉANCE 17  │  Étape 3 : Stratégie dichotomique — Parties faciles
+────────────────────────────────────────────────────────────────────────
+
+  OBJECTIF PÉDAGOGIQUE
+  Quand la machine dit « plus », la vraie valeur est au-dessus de ton essai.
+  Quand elle dit « moins », elle est en dessous. Le coup optimal est toujours
+  le milieu de l'intervalle possible — cela divise les possibilités par deux.
+
+  CONSEIL À L'ENFANT
+    Nouvelle stratégie : COUPER EN DEUX !
+      • Intervalle [1–10] → essai 5. Si « plus » : nouvel intervalle [6–10] → essai 8. Etc.
+      Cela trouve n'importe quelle valeur en 4 essais au maximum !
+
+  PARTIE GÉNÉRÉE (depuis le répertoire, id=21)
+    Somme        : 36
+    Ordre couleurs: bleu < jaune = vert = rouge
+    Solution     : [jaune=10, bleu=6, vert=10, rouge=10]
+    Nb solutions : 24  (difficulté : très_facile)
+    Pourquoi     : difficulté=très_facile, sum=36 ≤ 24, ≤ 48 solutions
+
+  DÉROULEMENT DE LA PARTIE
+    Tour 1: essai [jaune=9, bleu=9, vert=9, rouge=9]
+           → jaune=+  bleu=−  vert=+  rouge=+  ⚠ VIOLATION D'ORDRE
+    Tour 2: essai [jaune=10, bleu=8, vert=10, rouge=10]
+           → jaune=✓  bleu=−  vert=✓  rouge=✓  ⚠ VIOLATION DE SOMME
+    Tour 3: essai [jaune=10, bleu=7, vert=10, rouge=10]
+           → jaune=✓  bleu=−  vert=✓  rouge=✓  ⚠ VIOLATION DE SOMME
+    Tour 4: essai [jaune=10, bleu=6, vert=10, rouge=10]
+           → jaune=✓  bleu=✓  vert=✓  rouge=✓
+    Résultat : GAGNÉ ✓  (en 4 coups)
+
+  ANALYSE  (comme le produirait analyse_partie)
+    respects_sum(léa)           : false  [2 erreur(s)]
+    follows_colours_order(léa)  : false  [1 violation(s)]
+    plays_dichotomic(léa)        : true 
+    struggles_high_numbers(léa) : false
+    strong_player(léa)           : false
+    nb_coups / optimal                  : 4 / ~6
+
+  PROFIL MIS À JOUR  (bk_joueur_léa.pl)
+    compétences : ['follows_colours_order', 'plays_dichotomic', 'respects_sum']
+    points faibles: (aucun)
+
+  DÉCISION CURRICULAIRE
+    ✗ Condition de maîtrise NON atteinte :
+        • erreurs de somme : 2
+        • violations d'ordre des couleurs : 1
+    ➜ RÉPÉTER l'Étape 3 avec une nouvelle partie ciblant les mêmes compétences.
+
+────────────────────────────────────────────────────────────────────────
+SÉANCE 18  │  Étape 3 : Stratégie dichotomique — Parties faciles
+────────────────────────────────────────────────────────────────────────
+
+  OBJECTIF PÉDAGOGIQUE
+  Quand la machine dit « plus », la vraie valeur est au-dessus de ton essai.
+  Quand elle dit « moins », elle est en dessous. Le coup optimal est toujours
+  le milieu de l'intervalle possible — cela divise les possibilités par deux.
+
+  CONSEIL À L'ENFANT
+    Nouvelle stratégie : COUPER EN DEUX !
+      • Intervalle [1–10] → essai 5. Si « plus » : nouvel intervalle [6–10] → essai 8. Etc.
+      Cela trouve n'importe quelle valeur en 4 essais au maximum !
+
+  PARTIE GÉNÉRÉE (depuis le répertoire, id=2)
+    Somme        : 35
+    Ordre couleurs: jaune < vert < rouge = bleu
+    Solution     : [rouge=10, bleu=10, vert=8, jaune=7]
+    Nb solutions : 48  (difficulté : facile)
+    Pourquoi     : difficulté=facile, sum=35 ≤ 24, ≤ 48 solutions
+
+  DÉROULEMENT DE LA PARTIE
+    Tour 1: essai [rouge=10, bleu=10, vert=8, jaune=7]
+           → rouge=✓  bleu=✓  vert=✓  jaune=✓
+    Résultat : GAGNÉ ✓  (en 1 coup)
+
+  ANALYSE  (comme le produirait analyse_partie)
+    respects_sum(léa)           : true 
+    follows_colours_order(léa)  : true 
+    plays_dichotomic(léa)        : true 
+    struggles_high_numbers(léa) : false
+    strong_player(léa)           : false
+    nb_coups / optimal                  : 1 / ~7
+
+  PROFIL MIS À JOUR  (bk_joueur_léa.pl)
+    compétences : ['follows_colours_order', 'plays_dichotomic', 'respects_sum']
+    points faibles: (aucun)
+
+  DÉCISION CURRICULAIRE
+    ✓ Condition de maîtrise atteinte  (1/2)
+    ➜ RÉPÉTER l'Étape 3 une fois de plus pour confirmer la maîtrise.
+
+────────────────────────────────────────────────────────────────────────
+SÉANCE 19  │  Étape 3 : Stratégie dichotomique — Parties faciles
+────────────────────────────────────────────────────────────────────────
+
+  OBJECTIF PÉDAGOGIQUE
+  Quand la machine dit « plus », la vraie valeur est au-dessus de ton essai.
+  Quand elle dit « moins », elle est en dessous. Le coup optimal est toujours
+  le milieu de l'intervalle possible — cela divise les possibilités par deux.
+
+  CONSEIL À L'ENFANT
+    Nouvelle stratégie : COUPER EN DEUX !
+      • Intervalle [1–10] → essai 5. Si « plus » : nouvel intervalle [6–10] → essai 8. Etc.
+      Cela trouve n'importe quelle valeur en 4 essais au maximum !
+
+  PARTIE GÉNÉRÉE (depuis le répertoire, id=25)
+    Somme        : 20
+    Ordre couleurs: bleu = jaune < rouge < vert
+    Solution     : [bleu=3, vert=10, jaune=3, rouge=4]
+    Nb solutions : 168  (difficulté : très_difficile)
+    Pourquoi     : difficulté=très_difficile, sum=20 ≤ 24, ≤ 48 solutions
+
+  DÉROULEMENT DE LA PARTIE
+    Tour 1: essai [bleu=4, vert=7, jaune=4, rouge=5]
+           → bleu=−  vert=+  jaune=−  rouge=−
+    Tour 2: essai [bleu=3, vert=8, jaune=3, rouge=4]
+           → bleu=✓  vert=+  jaune=✓  rouge=✓  ⚠ VIOLATION DE SOMME
+    Tour 3: essai [bleu=3, vert=9, jaune=3, rouge=4]
+           → bleu=✓  vert=+  jaune=✓  rouge=✓  ⚠ VIOLATION DE SOMME
+    Tour 4: essai [bleu=3, vert=10, jaune=3, rouge=4]
+           → bleu=✓  vert=✓  jaune=✓  rouge=✓
+    Résultat : GAGNÉ ✓  (en 4 coups)
+
+  ANALYSE  (comme le produirait analyse_partie)
+    respects_sum(léa)           : false  [2 erreur(s)]
+    follows_colours_order(léa)  : true 
+    plays_dichotomic(léa)        : true 
+    struggles_high_numbers(léa) : true 
+    strong_player(léa)           : false
+    nb_coups / optimal                  : 4 / ~8
+
+  PROFIL MIS À JOUR  (bk_joueur_léa.pl)
+    compétences : ['follows_colours_order', 'plays_dichotomic', 'respects_sum']
+    points faibles: (aucun)
+
+  DÉCISION CURRICULAIRE
+    ✗ Condition de maîtrise NON atteinte :
+        • erreurs de somme : 2
+    ➜ RÉPÉTER l'Étape 3 avec une nouvelle partie ciblant les mêmes compétences.
+
+────────────────────────────────────────────────────────────────────────
+SÉANCE 20  │  Étape 3 : Stratégie dichotomique — Parties faciles
+────────────────────────────────────────────────────────────────────────
+
+  OBJECTIF PÉDAGOGIQUE
+  Quand la machine dit « plus », la vraie valeur est au-dessus de ton essai.
+  Quand elle dit « moins », elle est en dessous. Le coup optimal est toujours
+  le milieu de l'intervalle possible — cela divise les possibilités par deux.
+
+  CONSEIL À L'ENFANT
+    Nouvelle stratégie : COUPER EN DEUX !
+      • Intervalle [1–10] → essai 5. Si « plus » : nouvel intervalle [6–10] → essai 8. Etc.
+      Cela trouve n'importe quelle valeur en 4 essais au maximum !
+
+  PARTIE GÉNÉRÉE (depuis le répertoire, id=8)
+    Somme        : 21
+    Ordre couleurs: jaune < rouge < vert = bleu
+    Solution     : [jaune=2, rouge=3, vert=8, bleu=8]
+    Nb solutions : 168  (difficulté : très_difficile)
+    Pourquoi     : difficulté=très_difficile, sum=21 ≤ 24, ≤ 48 solutions
+
+  DÉROULEMENT DE LA PARTIE
+    Tour 1: essai [jaune=4, rouge=5, vert=6, bleu=6]
+           → jaune=−  rouge=−  vert=+  bleu=+
+    Tour 2: essai [jaune=3, rouge=4, vert=7, bleu=7]
+           → jaune=−  rouge=−  vert=+  bleu=+
+    Tour 3: essai [jaune=2, rouge=3, vert=8, bleu=8]
+           → jaune=✓  rouge=✓  vert=✓  bleu=✓
+    Résultat : GAGNÉ ✓  (en 3 coups)
+
+  ANALYSE  (comme le produirait analyse_partie)
+    respects_sum(léa)           : true 
+    follows_colours_order(léa)  : true 
+    plays_dichotomic(léa)        : true 
+    struggles_high_numbers(léa) : false
+    strong_player(léa)           : false
+    nb_coups / optimal                  : 3 / ~8
+
+  PROFIL MIS À JOUR  (bk_joueur_léa.pl)
+    compétences : ['follows_colours_order', 'plays_dichotomic', 'respects_sum']
+    points faibles: (aucun)
+
+  DÉCISION CURRICULAIRE
+    ✓ Condition de maîtrise atteinte  (1/2)
+    ➜ RÉPÉTER l'Étape 3 une fois de plus pour confirmer la maîtrise.
+
+────────────────────────────────────────────────────────────────────────
+SÉANCE 21  │  Étape 3 : Stratégie dichotomique — Parties faciles
+────────────────────────────────────────────────────────────────────────
+
+  OBJECTIF PÉDAGOGIQUE
+  Quand la machine dit « plus », la vraie valeur est au-dessus de ton essai.
+  Quand elle dit « moins », elle est en dessous. Le coup optimal est toujours
+  le milieu de l'intervalle possible — cela divise les possibilités par deux.
+
+  CONSEIL À L'ENFANT
+    Nouvelle stratégie : COUPER EN DEUX !
+      • Intervalle [1–10] → essai 5. Si « plus » : nouvel intervalle [6–10] → essai 8. Etc.
+      Cela trouve n'importe quelle valeur en 4 essais au maximum !
+
+  PARTIE GÉNÉRÉE (depuis le répertoire, id=10)
+    Somme        : 24
+    Ordre couleurs: bleu < vert < jaune < rouge
+    Solution     : [rouge=9, vert=5, jaune=7, bleu=3]
+    Nb solutions : 384  (difficulté : très_difficile)
+    Pourquoi     : difficulté=très_difficile, sum=24 ≤ 24, ≤ 48 solutions
+
+  DÉROULEMENT DE LA PARTIE
+    Tour 1: essai [rouge=9, vert=5, jaune=6, bleu=4]
+           → rouge=✓  vert=✓  jaune=+  bleu=−
+    Tour 2: essai [rouge=9, vert=7, jaune=7, bleu=3]
+           → rouge=✓  vert=−  jaune=✓  bleu=✓  ⚠ VIOLATION DE SOMME  ⚠ VIOLATION D'ORDRE
+    Tour 3: essai [rouge=9, vert=5, jaune=7, bleu=3]
+           → rouge=✓  vert=✓  jaune=✓  bleu=✓
+    Résultat : GAGNÉ ✓  (en 3 coups)
+
+  ANALYSE  (comme le produirait analyse_partie)
+    respects_sum(léa)           : false  [1 erreur(s)]
+    follows_colours_order(léa)  : false  [1 violation(s)]
+    plays_dichotomic(léa)        : true 
+    struggles_high_numbers(léa) : false
+    strong_player(léa)           : false
+    nb_coups / optimal                  : 3 / ~10
+
+  PROFIL MIS À JOUR  (bk_joueur_léa.pl)
+    compétences : ['follows_colours_order', 'plays_dichotomic', 'respects_sum']
+    points faibles: (aucun)
+
+  DÉCISION CURRICULAIRE
+    ✗ Condition de maîtrise NON atteinte :
+        • erreurs de somme : 1
+        • violations d'ordre des couleurs : 1
+    ➜ RÉPÉTER l'Étape 3 avec une nouvelle partie ciblant les mêmes compétences.
+
+────────────────────────────────────────────────────────────────────────
+SÉANCE 22  │  Étape 3 : Stratégie dichotomique — Parties faciles
+────────────────────────────────────────────────────────────────────────
+
+  OBJECTIF PÉDAGOGIQUE
+  Quand la machine dit « plus », la vraie valeur est au-dessus de ton essai.
+  Quand elle dit « moins », elle est en dessous. Le coup optimal est toujours
+  le milieu de l'intervalle possible — cela divise les possibilités par deux.
+
+  CONSEIL À L'ENFANT
+    Nouvelle stratégie : COUPER EN DEUX !
+      • Intervalle [1–10] → essai 5. Si « plus » : nouvel intervalle [6–10] → essai 8. Etc.
+      Cela trouve n'importe quelle valeur en 4 essais au maximum !
+
+  PARTIE GÉNÉRÉE (depuis le répertoire, id=24)
+    Somme        : 24
+    Ordre couleurs: jaune < rouge < bleu < vert
+    Solution     : [jaune=3, rouge=5, vert=9, bleu=7]
+    Nb solutions : 384  (difficulté : très_difficile)
+    Pourquoi     : difficulté=très_difficile, sum=24 ≤ 24, ≤ 48 solutions
+
+  DÉROULEMENT DE LA PARTIE
+    Tour 1: essai [jaune=4, rouge=5, vert=9, bleu=6]
+           → jaune=−  rouge=✓  vert=✓  bleu=+
+    Tour 2: essai [jaune=3, rouge=5, vert=9, bleu=7]
+           → jaune=✓  rouge=✓  vert=✓  bleu=✓
+    Résultat : GAGNÉ ✓  (en 2 coups)
+
+  ANALYSE  (comme le produirait analyse_partie)
+    respects_sum(léa)           : true 
+    follows_colours_order(léa)  : true 
+    plays_dichotomic(léa)        : true 
+    struggles_high_numbers(léa) : false
+    strong_player(léa)           : false
+    nb_coups / optimal                  : 2 / ~10
+
+  PROFIL MIS À JOUR  (bk_joueur_léa.pl)
+    compétences : ['follows_colours_order', 'plays_dichotomic', 'respects_sum']
+    points faibles: (aucun)
+
+  DÉCISION CURRICULAIRE
+    ✓ Condition de maîtrise atteinte  (1/2)
+    ➜ RÉPÉTER l'Étape 3 une fois de plus pour confirmer la maîtrise.
+
+────────────────────────────────────────────────────────────────────────
+SÉANCE 23  │  Étape 3 : Stratégie dichotomique — Parties faciles
+────────────────────────────────────────────────────────────────────────
+
+  OBJECTIF PÉDAGOGIQUE
+  Quand la machine dit « plus », la vraie valeur est au-dessus de ton essai.
+  Quand elle dit « moins », elle est en dessous. Le coup optimal est toujours
+  le milieu de l'intervalle possible — cela divise les possibilités par deux.
+
+  CONSEIL À L'ENFANT
+    Nouvelle stratégie : COUPER EN DEUX !
+      • Intervalle [1–10] → essai 5. Si « plus » : nouvel intervalle [6–10] → essai 8. Etc.
+      Cela trouve n'importe quelle valeur en 4 essais au maximum !
+
+  PARTIE GÉNÉRÉE (depuis le répertoire, id=12)
+    Somme        : 21
+    Ordre couleurs: bleu < jaune < rouge < vert
+    Solution     : [jaune=4, rouge=6, bleu=2, vert=9]
+    Nb solutions : 384  (difficulté : très_difficile)
+    Pourquoi     : difficulté=très_difficile, sum=21 ≤ 24, ≤ 48 solutions
+
+  DÉROULEMENT DE LA PARTIE
+    Tour 1: essai [jaune=4, rouge=5, bleu=3, vert=9]
+           → jaune=✓  rouge=+  bleu=−  vert=✓
+    Tour 2: essai [jaune=4, rouge=6, bleu=2, vert=9]
+           → jaune=✓  rouge=✓  bleu=✓  vert=✓
+    Résultat : GAGNÉ ✓  (en 2 coups)
+
+  ANALYSE  (comme le produirait analyse_partie)
+    respects_sum(léa)           : true 
+    follows_colours_order(léa)  : true 
+    plays_dichotomic(léa)        : true 
+    struggles_high_numbers(léa) : false
+    strong_player(léa)           : false
+    nb_coups / optimal                  : 2 / ~10
+
+  PROFIL MIS À JOUR  (bk_joueur_léa.pl)
+    compétences : ['follows_colours_order', 'plays_dichotomic', 'respects_sum']
+    points faibles: (aucun)
+
+  DÉCISION CURRICULAIRE
+    ✓ Condition de maîtrise atteinte  (2/2)
+    ➜ PASSER À Étape 4 : Stratégie dichotomique — Sommes modérées
+
+────────────────────────────────────────────────────────────────────────
+SÉANCE 24  │  Étape 4 : Stratégie dichotomique — Sommes modérées
+────────────────────────────────────────────────────────────────────────
+
+  OBJECTIF PÉDAGOGIQUE
+  Appliquer la recherche dichotomique sur des sommes modérées (25–35),
+  ce qui demande un calcul mental assuré avec des nombres intermédiaires.
+
+  CONSEIL À L'ENFANT
+    Continue à utiliser la stratégie de dichotomie.
+      Les sommes sont un peu plus grandes — n'oublie pas de vérifier qu'elles s'additionnent !
+
+  PARTIE GÉNÉRÉE (depuis le répertoire, id=3)
+    Somme        : 33
+    Ordre couleurs: rouge < jaune < vert = bleu
+    Solution     : [vert=10, bleu=10, rouge=5, jaune=8]
+    Nb solutions : 96  (difficulté : difficile)
+    Pourquoi     : difficulté=difficile, sum=33 ≤ 35, sum=33 ≥ 25, ≤ 96 solutions
+
+  DÉROULEMENT DE LA PARTIE
+    Tour 1: essai [vert=9, bleu=9, rouge=7, jaune=8]
+           → vert=+  bleu=+  rouge=−  jaune=✓
+    Tour 2: essai [vert=10, bleu=10, rouge=6, jaune=8]
+           → vert=✓  bleu=✓  rouge=−  jaune=✓  ⚠ VIOLATION DE SOMME
+    Tour 3: essai [vert=10, bleu=10, rouge=5, jaune=8]
+           → vert=✓  bleu=✓  rouge=✓  jaune=✓
+    Résultat : GAGNÉ ✓  (en 3 coups)
+
+  ANALYSE  (comme le produirait analyse_partie)
+    respects_sum(léa)           : false  [1 erreur(s)]
+    follows_colours_order(léa)  : true 
+    plays_dichotomic(léa)        : true 
+    struggles_high_numbers(léa) : false
+    strong_player(léa)           : false
+    nb_coups / optimal                  : 3 / ~8
+
+  PROFIL MIS À JOUR  (bk_joueur_léa.pl)
+    compétences : ['follows_colours_order', 'plays_dichotomic', 'respects_sum']
+    points faibles: (aucun)
+
+  DÉCISION CURRICULAIRE
+    ✗ Condition de maîtrise NON atteinte :
+        • erreurs de somme : 1
+    ➜ RÉPÉTER l'Étape 4 avec une nouvelle partie ciblant les mêmes compétences.
+
+────────────────────────────────────────────────────────────────────────
+SÉANCE 25  │  Étape 4 : Stratégie dichotomique — Sommes modérées
+────────────────────────────────────────────────────────────────────────
+
+  OBJECTIF PÉDAGOGIQUE
+  Appliquer la recherche dichotomique sur des sommes modérées (25–35),
+  ce qui demande un calcul mental assuré avec des nombres intermédiaires.
+
+  CONSEIL À L'ENFANT
+    Continue à utiliser la stratégie de dichotomie.
+      Les sommes sont un peu plus grandes — n'oublie pas de vérifier qu'elles s'additionnent !
+
+  PARTIE GÉNÉRÉE (depuis le répertoire, id=23)
+    Somme        : 30
+    Ordre couleurs: rouge < jaune < vert < bleu
+    Solution     : [jaune=7, vert=8, bleu=10, rouge=5]
+    Nb solutions : 120  (difficulté : difficile)
+    Pourquoi     : difficulté=difficile, sum=30 ≤ 35, sum=30 ≥ 25, ≤ 96 solutions
+
+  DÉROULEMENT DE LA PARTIE
+    Tour 1: essai [jaune=7, vert=8, bleu=9, rouge=6]
+           → jaune=✓  vert=✓  bleu=+  rouge=−
+    Tour 2: essai [jaune=7, vert=8, bleu=10, rouge=5]
+           → jaune=✓  vert=✓  bleu=✓  rouge=✓
+    Résultat : GAGNÉ ✓  (en 2 coups)
+
+  ANALYSE  (comme le produirait analyse_partie)
+    respects_sum(léa)           : true 
+    follows_colours_order(léa)  : true 
+    plays_dichotomic(léa)        : true 
+    struggles_high_numbers(léa) : false
+    strong_player(léa)           : false
+    nb_coups / optimal                  : 2 / ~8
+
+  PROFIL MIS À JOUR  (bk_joueur_léa.pl)
+    compétences : ['follows_colours_order', 'plays_dichotomic', 'respects_sum']
+    points faibles: (aucun)
+
+  DÉCISION CURRICULAIRE
+    ✓ Condition de maîtrise atteinte  (1/2)
+    ➜ RÉPÉTER l'Étape 4 une fois de plus pour confirmer la maîtrise.
+
+────────────────────────────────────────────────────────────────────────
+SÉANCE 26  │  Étape 4 : Stratégie dichotomique — Sommes modérées
+────────────────────────────────────────────────────────────────────────
+
+  OBJECTIF PÉDAGOGIQUE
+  Appliquer la recherche dichotomique sur des sommes modérées (25–35),
+  ce qui demande un calcul mental assuré avec des nombres intermédiaires.
+
+  CONSEIL À L'ENFANT
+    Continue à utiliser la stratégie de dichotomie.
+      Les sommes sont un peu plus grandes — n'oublie pas de vérifier qu'elles s'additionnent !
+
+  PARTIE GÉNÉRÉE (depuis le répertoire, id=20)
+    Somme        : 30
+    Ordre couleurs: jaune < bleu < vert < rouge
+    Solution     : [vert=8, bleu=7, jaune=5, rouge=10]
+    Nb solutions : 120  (difficulté : difficile)
+    Pourquoi     : difficulté=difficile, sum=30 ≤ 35, sum=30 ≥ 25, ≤ 96 solutions
+
+  DÉROULEMENT DE LA PARTIE
+    Tour 1: essai [vert=8, bleu=7, jaune=6, rouge=9]
+           → vert=✓  bleu=✓  jaune=−  rouge=+
+    Tour 2: essai [vert=8, bleu=7, jaune=5, rouge=10]
+           → vert=✓  bleu=✓  jaune=✓  rouge=✓
+    Résultat : GAGNÉ ✓  (en 2 coups)
+
+  ANALYSE  (comme le produirait analyse_partie)
+    respects_sum(léa)           : true 
+    follows_colours_order(léa)  : true 
+    plays_dichotomic(léa)        : true 
+    struggles_high_numbers(léa) : false
+    strong_player(léa)           : false
+    nb_coups / optimal                  : 2 / ~8
+
+  PROFIL MIS À JOUR  (bk_joueur_léa.pl)
+    compétences : ['follows_colours_order', 'plays_dichotomic', 'respects_sum']
+    points faibles: (aucun)
+
+  DÉCISION CURRICULAIRE
+    ✓ Condition de maîtrise atteinte  (2/2)
+    ➜ PASSER À Étape 5 : Grands nombres (Somme ≥ 30, valeurs ≥ 8)
+
+────────────────────────────────────────────────────────────────────────
+SÉANCE 27  │  Étape 5 : Grands nombres (Somme ≥ 30, valeurs ≥ 8)
+────────────────────────────────────────────────────────────────────────
+
+  OBJECTIF PÉDAGOGIQUE
+  Beaucoup d'enfants ont du mal quand les valeurs sont proches de 10. Cette étape
+  renforce l'aisance : la stratégie dichotomique en haut de l'intervalle
+  (ex. : intervalle [8–10] → essai 9) demande un calcul attentif.
+
+  CONSEIL À L'ENFANT
+    Ces cartes ont de GRANDS nombres !
+      Si ton intervalle est [8–10], le milieu est 9.
+      Prends ton temps et compte attentivement.
+
+  PARTIE GÉNÉRÉE (depuis le répertoire, id=5)
+    Somme        : 20
+    Ordre couleurs: jaune = rouge < bleu < vert
+    Solution     : [jaune=3, vert=10, bleu=4, rouge=3]
+    Nb solutions : 168  (difficulté : très_difficile)
+    Pourquoi     : difficulté=très_difficile, sum=20 ≥ 30, grandes valeurs (max=10), ≤ 48 solutions
+
+  DÉROULEMENT DE LA PARTIE
+    Tour 1: essai [jaune=4, vert=7, bleu=5, rouge=4]
+           → jaune=−  vert=+  bleu=−  rouge=−
+    Tour 2: essai [jaune=3, vert=8, bleu=4, rouge=3]
+           → jaune=✓  vert=+  bleu=✓  rouge=✓  ⚠ VIOLATION DE SOMME
+    Tour 3: essai [jaune=3, vert=9, bleu=4, rouge=3]
+           → jaune=✓  vert=+  bleu=✓  rouge=✓  ⚠ VIOLATION DE SOMME
+    Tour 4: essai [jaune=3, vert=10, bleu=4, rouge=3]
+           → jaune=✓  vert=✓  bleu=✓  rouge=✓
+    Résultat : GAGNÉ ✓  (en 4 coups)
+
+  ANALYSE  (comme le produirait analyse_partie)
+    respects_sum(léa)           : false  [2 erreur(s)]
+    follows_colours_order(léa)  : true 
+    plays_dichotomic(léa)        : true 
+    struggles_high_numbers(léa) : true 
+    strong_player(léa)           : false
+    nb_coups / optimal                  : 4 / ~8
+
+  PROFIL MIS À JOUR  (bk_joueur_léa.pl)
+    compétences : ['follows_colours_order', 'plays_dichotomic', 'respects_sum']
+    points faibles: ['struggles_with_higher_numbers']
+
+  DÉCISION CURRICULAIRE
+    ✓ Condition de maîtrise atteinte  (1/2)
+    ➜ RÉPÉTER l'Étape 5 une fois de plus pour confirmer la maîtrise.
+
+────────────────────────────────────────────────────────────────────────
+SÉANCE 28  │  Étape 5 : Grands nombres (Somme ≥ 30, valeurs ≥ 8)
+────────────────────────────────────────────────────────────────────────
+
+  OBJECTIF PÉDAGOGIQUE
+  Beaucoup d'enfants ont du mal quand les valeurs sont proches de 10. Cette étape
+  renforce l'aisance : la stratégie dichotomique en haut de l'intervalle
+  (ex. : intervalle [8–10] → essai 9) demande un calcul attentif.
+
+  CONSEIL À L'ENFANT
+    Ces cartes ont de GRANDS nombres !
+      Si ton intervalle est [8–10], le milieu est 9.
+      Prends ton temps et compte attentivement.
+
+  PARTIE GÉNÉRÉE (depuis le répertoire, id=22)
+    Somme        : 20
+    Ordre couleurs: bleu < jaune = rouge < vert
+    Solution     : [vert=7, jaune=5, rouge=5, bleu=3]
+    Nb solutions : 168  (difficulté : très_difficile)
+    Pourquoi     : difficulté=très_difficile, sum=20 ≥ 30, grandes valeurs (max=7), ≤ 48 solutions
+
+  DÉROULEMENT DE LA PARTIE
+    Tour 1: essai [vert=6, jaune=5, rouge=5, bleu=4]
+           → vert=+  jaune=✓  rouge=✓  bleu=−
+    Tour 2: essai [vert=7, jaune=5, rouge=5, bleu=3]
+           → vert=✓  jaune=✓  rouge=✓  bleu=✓
+    Résultat : GAGNÉ ✓  (en 2 coups)
+
+  ANALYSE  (comme le produirait analyse_partie)
+    respects_sum(léa)           : true 
+    follows_colours_order(léa)  : true 
+    plays_dichotomic(léa)        : true 
+    struggles_high_numbers(léa) : false
+    strong_player(léa)           : false
+    nb_coups / optimal                  : 2 / ~8
+
+  PROFIL MIS À JOUR  (bk_joueur_léa.pl)
+    compétences : ['follows_colours_order', 'handles_high_numbers', 'plays_dichotomic', 'respects_sum']
+    points faibles: (aucun)
+
+  DÉCISION CURRICULAIRE
+    ✓ Condition de maîtrise atteinte  (2/2)
+    ➜ PASSER À Étape 6 : Ordres de couleurs mixtes avec égalité (=)
+
+────────────────────────────────────────────────────────────────────────
+SÉANCE 29  │  Étape 6 : Ordres de couleurs mixtes avec égalité (=)
+────────────────────────────────────────────────────────────────────────
+
+  OBJECTIF PÉDAGOGIQUE
+  Un ordre de couleurs avec '=' signifie que deux couleurs doivent avoir la MÊME valeur.
+  Si tu en trouves une, tu connais l'autre immédiatement.
+
+  CONSEIL À L'ENFANT
+    Quand l'ordre indique 'rouge = bleu', ces deux cartes ont toujours la même valeur.
+      Trouve-en une → tu as trouvé les deux ! Utilise ça pour économiser des coups.
+
+  PARTIE GÉNÉRÉE (depuis le répertoire, id=6)
+    Somme        : 11
+    Ordre couleurs: vert = jaune = rouge < bleu
+    Solution     : [bleu=5, vert=2, jaune=2, rouge=2]
+    Nb solutions : 48  (difficulté : facile)
+    Pourquoi     : difficulté=facile, présence d'une paire d'égalité (=), ≤ 96 solutions
+
+  DÉROULEMENT DE LA PARTIE
+    Tour 1: essai [bleu=5, vert=2, jaune=2, rouge=2]
+           → bleu=✓  vert=✓  jaune=✓  rouge=✓
+    Résultat : GAGNÉ ✓  (en 1 coup)
+
+  ANALYSE  (comme le produirait analyse_partie)
+    respects_sum(léa)           : true 
+    follows_colours_order(léa)  : true 
+    plays_dichotomic(léa)        : true 
+    struggles_high_numbers(léa) : false
+    strong_player(léa)           : false
+    nb_coups / optimal                  : 1 / ~7
+
+  PROFIL MIS À JOUR  (bk_joueur_léa.pl)
+    compétences : ['follows_colours_order', 'handles_high_numbers', 'plays_dichotomic', 'respects_sum']
+    points faibles: (aucun)
+
+  DÉCISION CURRICULAIRE
+    ✓ Condition de maîtrise atteinte  (1/2)
+    ➜ RÉPÉTER l'Étape 6 une fois de plus pour confirmer la maîtrise.
+
+────────────────────────────────────────────────────────────────────────
+SÉANCE 30  │  Étape 6 : Ordres de couleurs mixtes avec égalité (=)
+────────────────────────────────────────────────────────────────────────
+
+  OBJECTIF PÉDAGOGIQUE
+  Un ordre de couleurs avec '=' signifie que deux couleurs doivent avoir la MÊME valeur.
+  Si tu en trouves une, tu connais l'autre immédiatement.
+
+  CONSEIL À L'ENFANT
+    Quand l'ordre indique 'rouge = bleu', ces deux cartes ont toujours la même valeur.
+      Trouve-en une → tu as trouvé les deux ! Utilise ça pour économiser des coups.
+
+  PARTIE GÉNÉRÉE (depuis le répertoire, id=2)
+    Somme        : 35
+    Ordre couleurs: jaune < vert < rouge = bleu
+    Solution     : [rouge=10, bleu=10, vert=8, jaune=7]
+    Nb solutions : 48  (difficulté : facile)
+    Pourquoi     : difficulté=facile, présence d'une paire d'égalité (=), ≤ 96 solutions
+
+  DÉROULEMENT DE LA PARTIE
+    Tour 1: essai [rouge=10, bleu=10, vert=8, jaune=7]
+           → rouge=✓  bleu=✓  vert=✓  jaune=✓
+    Résultat : GAGNÉ ✓  (en 1 coup)
+
+  ANALYSE  (comme le produirait analyse_partie)
+    respects_sum(léa)           : true 
+    follows_colours_order(léa)  : true 
+    plays_dichotomic(léa)        : true 
+    struggles_high_numbers(léa) : false
+    strong_player(léa)           : false
+    nb_coups / optimal                  : 1 / ~7
+
+  PROFIL MIS À JOUR  (bk_joueur_léa.pl)
+    compétences : ['follows_colours_order', 'handles_high_numbers', 'plays_dichotomic', 'respects_sum']
+    points faibles: (aucun)
+
+  DÉCISION CURRICULAIRE
+    ✓ Condition de maîtrise atteinte  (2/2)
+    ➜ PASSER À Étape 7 : Déduction inter-tours
+
+────────────────────────────────────────────────────────────────────────
+SÉANCE 31  │  Étape 7 : Déduction inter-tours
+────────────────────────────────────────────────────────────────────────
+
+  OBJECTIF PÉDAGOGIQUE
+  Utilise les réponses des tours précédents pour déduire directement
+  les valeurs non encore trouvées. Après que la machine dit « oui » pour
+  une carte, ne la rejoue plus jamais ; utilise les contraintes pour
+  réduire les inconnues restantes.
+
+  CONSEIL À L'ENFANT
+    Réfléchis ! Si la machine a déjà dit « oui » pour rouge=9, tu sais que rouge=9.
+      Utilise maintenant l'ordre des couleurs pour déduire ce que doit être bleu SANS le tester.
+      Peux-tu gagner en 2 coups ?
+
+  PARTIE GÉNÉRÉE (depuis le répertoire, id=15)
+    Somme        : 16
+    Ordre couleurs: vert < rouge < jaune = bleu
+    Solution     : [jaune=5, bleu=5, rouge=4, vert=2]
+    Nb solutions : 48  (difficulté : facile)
+    Pourquoi     : difficulté=facile, présence d'une paire d'égalité (=), ≤ 168 solutions
+
+  DÉROULEMENT DE LA PARTIE
+    Tour 1: essai [jaune=5, bleu=5, rouge=4, vert=2]
+           → jaune=✓  bleu=✓  rouge=✓  vert=✓
+    Résultat : GAGNÉ ✓  (en 1 coup)
+
+  ANALYSE  (comme le produirait analyse_partie)
+    respects_sum(léa)           : true 
+    follows_colours_order(léa)  : true 
+    plays_dichotomic(léa)        : true 
+    struggles_high_numbers(léa) : false
+    strong_player(léa)           : false
+    nb_coups / optimal                  : 1 / ~7
+
+  PROFIL MIS À JOUR  (bk_joueur_léa.pl)
+    compétences : ['follows_colours_order', 'handles_high_numbers', 'plays_dichotomic', 'respects_sum']
+    points faibles: (aucun)
+
+  DÉCISION CURRICULAIRE
+    ✓ Condition de maîtrise atteinte  (1/2)
+    ➜ RÉPÉTER l'Étape 7 une fois de plus pour confirmer la maîtrise.
+
+────────────────────────────────────────────────────────────────────────
+SÉANCE 32  │  Étape 7 : Déduction inter-tours
+────────────────────────────────────────────────────────────────────────
+
+  OBJECTIF PÉDAGOGIQUE
+  Utilise les réponses des tours précédents pour déduire directement
+  les valeurs non encore trouvées. Après que la machine dit « oui » pour
+  une carte, ne la rejoue plus jamais ; utilise les contraintes pour
+  réduire les inconnues restantes.
+
+  CONSEIL À L'ENFANT
+    Réfléchis ! Si la machine a déjà dit « oui » pour rouge=9, tu sais que rouge=9.
+      Utilise maintenant l'ordre des couleurs pour déduire ce que doit être bleu SANS le tester.
+      Peux-tu gagner en 2 coups ?
+
+  PARTIE GÉNÉRÉE (depuis le répertoire, id=15)
+    Somme        : 16
+    Ordre couleurs: vert < rouge < jaune = bleu
+    Solution     : [jaune=5, bleu=5, rouge=4, vert=2]
+    Nb solutions : 48  (difficulté : facile)
+    Pourquoi     : difficulté=facile, présence d'une paire d'égalité (=), ≤ 168 solutions
+
+  DÉROULEMENT DE LA PARTIE
+    Tour 1: essai [jaune=5, bleu=5, rouge=5, vert=2]
+           → jaune=✓  bleu=✓  rouge=−  vert=✓  ⚠ VIOLATION DE SOMME  ⚠ VIOLATION D'ORDRE
+    Tour 2: essai [jaune=5, bleu=5, rouge=4, vert=2]
+           → jaune=✓  bleu=✓  rouge=✓  vert=✓
+    Résultat : GAGNÉ ✓  (en 2 coups)
+
+  ANALYSE  (comme le produirait analyse_partie)
+    respects_sum(léa)           : false  [1 erreur(s)]
+    follows_colours_order(léa)  : false  [1 violation(s)]
+    plays_dichotomic(léa)        : true 
+    struggles_high_numbers(léa) : false
+    strong_player(léa)           : false
+    nb_coups / optimal                  : 2 / ~7
+
+  PROFIL MIS À JOUR  (bk_joueur_léa.pl)
+    compétences : ['follows_colours_order', 'handles_high_numbers', 'plays_dichotomic', 'respects_sum']
+    points faibles: (aucun)
+
+  DÉCISION CURRICULAIRE
+    ✓ Condition de maîtrise atteinte  (2/2)
+    ➜ PASSER À Étape 8 : Maîtrise totale — Parties difficiles
+
+────────────────────────────────────────────────────────────────────────
+SÉANCE 33  │  Étape 8 : Maîtrise totale — Parties difficiles
+────────────────────────────────────────────────────────────────────────
+
+  OBJECTIF PÉDAGOGIQUE
+  Toutes les compétences combinées sur des parties difficiles et très difficiles.
+  Grandes sommes, contraintes d'égalité mixtes, grands espaces de solutions.
+
+  CONSEIL À L'ENFANT
+    Niveau expert ! Combine tout ce que tu sais :
+      somme ✓  ordre des couleurs ✓  couper en deux ✓  utiliser les réponses passées ✓
+
+  PARTIE GÉNÉRÉE (depuis le répertoire, id=22)
+    Somme        : 20
+    Ordre couleurs: bleu < jaune = rouge < vert
+    Solution     : [vert=7, jaune=5, rouge=5, bleu=3]
+    Nb solutions : 168  (difficulté : très_difficile)
+    Pourquoi     : difficulté=très_difficile
+
+  DÉROULEMENT DE LA PARTIE
+    Tour 1: essai [vert=6, jaune=5, rouge=5, bleu=4]
+           → vert=+  jaune=✓  rouge=✓  bleu=−
+    Tour 2: essai [vert=7, jaune=5, rouge=5, bleu=3]
+           → vert=✓  jaune=✓  rouge=✓  bleu=✓
+    Résultat : GAGNÉ ✓  (en 2 coups)
+
+  ANALYSE  (comme le produirait analyse_partie)
+    respects_sum(léa)           : true 
+    follows_colours_order(léa)  : true 
+    plays_dichotomic(léa)        : true 
+    struggles_high_numbers(léa) : false
+    strong_player(léa)           : false
+    nb_coups / optimal                  : 2 / ~8
+
+  PROFIL MIS À JOUR  (bk_joueur_léa.pl)
+    compétences : ['follows_colours_order', 'handles_high_numbers', 'plays_dichotomic', 'respects_sum']
+    points faibles: (aucun)
+
+  DÉCISION CURRICULAIRE
+    ✓ Condition de maîtrise atteinte  (1/2)
+    ➜ RÉPÉTER l'Étape 8 une fois de plus pour confirmer la maîtrise.
+
+────────────────────────────────────────────────────────────────────────
+SÉANCE 34  │  Étape 8 : Maîtrise totale — Parties difficiles
+────────────────────────────────────────────────────────────────────────
+
+  OBJECTIF PÉDAGOGIQUE
+  Toutes les compétences combinées sur des parties difficiles et très difficiles.
+  Grandes sommes, contraintes d'égalité mixtes, grands espaces de solutions.
+
+  CONSEIL À L'ENFANT
+    Niveau expert ! Combine tout ce que tu sais :
+      somme ✓  ordre des couleurs ✓  couper en deux ✓  utiliser les réponses passées ✓
+
+  PARTIE GÉNÉRÉE (depuis le répertoire, id=23)
+    Somme        : 30
+    Ordre couleurs: rouge < jaune < vert < bleu
+    Solution     : [jaune=7, vert=8, bleu=10, rouge=5]
+    Nb solutions : 120  (difficulté : difficile)
+    Pourquoi     : difficulté=difficile
+
+  DÉROULEMENT DE LA PARTIE
+    Tour 1: essai [jaune=7, vert=8, bleu=9, rouge=6]
+           → jaune=✓  vert=✓  bleu=+  rouge=−
+    Tour 2: essai [jaune=7, vert=8, bleu=10, rouge=5]
+           → jaune=✓  vert=✓  bleu=✓  rouge=✓
+    Résultat : GAGNÉ ✓  (en 2 coups)
+
+  ANALYSE  (comme le produirait analyse_partie)
+    respects_sum(léa)           : true 
+    follows_colours_order(léa)  : true 
+    plays_dichotomic(léa)        : true 
+    struggles_high_numbers(léa) : false
+    strong_player(léa)           : false
+    nb_coups / optimal                  : 2 / ~8
+
+  PROFIL MIS À JOUR  (bk_joueur_léa.pl)
+    compétences : ['follows_colours_order', 'handles_high_numbers', 'plays_dichotomic', 'respects_sum']
+    points faibles: (aucun)
+
+  DÉCISION CURRICULAIRE
+    ✓ Condition de maîtrise atteinte  (2/2)
+    ➜ CURRICULUM TERMINÉ — maîtrise totale atteinte !
+
+════════════════════════════════════════════════════════════════════════
+  FIN DE LA SÉANCE CURRICULAIRE — 34 parties jouées
+  Dernière étape atteinte : 9  (Maîtrise totale — Parties difficiles)
+  Compétences acquises : ['follows_colours_order', 'handles_high_numbers', 'plays_dichotomic', 'respects_sum']
+  Points faibles restants : []
+════════════════════════════════════════════════════════════════════════

@@ -1,0 +1,401 @@
+/* ========================================================================== */
+/*                              BK_PLAYER jean                                */
+/* ========================================================================== */
+
+
+/* ==================== INFORMATION ON THE PLAYER =========================== */
+
+name(jean).
+
+/* ===================  CHARACTERISTICS OF jean's PLAYING =================== */
+
+follows_colours_order(jean).
+struggles_with_higher_numbers(jean).
+respects_colours(jean).
+respects_sum(jean).
+plays_dichotomic(jean).
+fast_player(jean).
+strong_player(jean).
+
+/* ============  PERSONAL SKILLS WITH RESPECT TO GAMES DIFFICULTIES ========= */
+
+relative_game_difficulty(
+	sum(34),
+	colours_order('b<r<g<y'),
+	solution(
+		[
+			c(0,blue,7),
+			c(1,red,8),
+			c(2,green,9),
+			c(3,yellow,10)
+		]
+	),
+	game_difficulty(very_easy),
+	player_difficulties(
+		[
+			same_colours_order(very_easy),
+			high_sum(easy)
+		]
+	)
+).
+
+relative_game_difficulty(
+	sum(35),
+	colours_order('y<g<r=b'),
+	solution(
+		[
+			c(0,red,10),
+			c(1,blue,10),
+			c(2,green,8),
+			c(3,yellow,7)
+		]
+	),
+	game_difficulty(easy),
+	player_difficulties(high_sum(difficult))
+).
+
+relative_game_difficulty(
+	sum(33),
+	colours_order('r<y<g=b'),
+	solution(
+		[
+			c(0,green,10),
+			c(1,blue,10),
+			c(2,red,5),
+			c(3,yellow,8)
+		]
+	),
+	game_difficulty(difficult),
+	player_difficulties(high_sum(very_difficult))
+).
+
+relative_game_difficulty(
+	sum(25),
+	colours_order('y=g=r<b'),
+	solution(
+		[
+			c(0,yellow,5),
+			c(1,blue,10),
+			c(2,green,5),
+			c(3,red,5)
+		]
+	),
+	game_difficulty(easy),
+	player_difficulties(high_sum(difficult))
+).
+
+relative_game_difficulty(
+	sum(20),
+	colours_order('y=r<b<g'),
+	solution(
+		[
+			c(0,yellow,3),
+			c(1,green,10),
+			c(2,blue,4),
+			c(3,red,3)
+		]
+	),
+	game_difficulty(very_difficult),
+	player_difficulties(very_difficult)
+).
+
+relative_game_difficulty(
+	sum(11),
+	colours_order('g=y=r<b'),
+	solution(
+		[
+			c(0,blue,5),
+			c(1,green,2),
+			c(2,yellow,2),
+			c(3,red,2)
+		]
+	),
+	game_difficulty(easy),
+	player_difficulties(easy)
+).
+
+relative_game_difficulty(
+	sum(10),
+	colours_order('g<b<r<y'),
+	solution(
+		[
+			c(0,red,3),
+			c(1,yellow,4),
+			c(2,blue,2),
+			c(3,green,1)
+		]
+	),
+	game_difficulty(very_easy),
+	player_difficulties(very_easy)
+).
+
+relative_game_difficulty(
+	sum(21),
+	colours_order('y<r<g=b'),
+	solution(
+		[
+			c(0,yellow,2),
+			c(1,red,3),
+			c(2,green,8),
+			c(3,blue,8)
+		]
+	),
+	game_difficulty(very_difficult),
+	player_difficulties(same_colours_order(very_easy))
+).
+
+relative_game_difficulty(
+	sum(10),
+	colours_order('b<g=r<y'),
+	solution(
+		[
+			c(0,green,2),
+			c(1,yellow,5),
+			c(2,red,2),
+			c(3,blue,1)
+		]
+	),
+	game_difficulty(very_easy),
+	player_difficulties(very_easy)
+).
+
+relative_game_difficulty(
+	sum(24),
+	colours_order('b<g<y<r'),
+	solution(
+		[
+			c(0,red,9),
+			c(1,green,5),
+			c(2,yellow,7),
+			c(3,blue,3)
+		]
+	),
+	game_difficulty(very_difficult),
+	player_difficulties(high_sum(very_difficult))
+).
+
+relative_game_difficulty(
+	sum(39),
+	colours_order('y<g=b=r'),
+	solution(
+		[
+			c(0,green,10),
+			c(1,yellow,9),
+			c(2,blue,10),
+			c(3,red,10)
+		]
+	),
+	game_difficulty(very_easy),
+	player_difficulties(very_easy)
+).
+
+relative_game_difficulty(
+	sum(21),
+	colours_order('b<y<r<g'),
+	solution(
+		[
+			c(0,yellow,4),
+			c(1,red,6),
+			c(2,blue,2),
+			c(3,green,9)
+		]
+	),
+	game_difficulty(very_difficult),
+	player_difficulties(very_difficult)
+).
+
+relative_game_difficulty(
+	sum(39),
+	colours_order('r<b=y=g'),
+	solution(
+		[
+			c(0,blue,10),
+			c(1,red,9),
+			c(2,yellow,10),
+			c(3,green,10)
+		]
+	),
+	game_difficulty(very_easy),
+	player_difficulties(very_easy)
+).
+
+relative_game_difficulty(
+	sum(35),
+	colours_order('y<r=b<g'),
+	solution(
+		[
+			c(0,red,9),
+			c(1,blue,9),
+			c(2,green,10),
+			c(3,yellow,7)
+		]
+	),
+	game_difficulty(very_easy),
+	player_difficulties(high_sum(intermediary))
+).
+
+relative_game_difficulty(
+	sum(16),
+	colours_order('g<r<y=b'),
+	solution(
+		[
+			c(0,yellow,5),
+			c(1,blue,5),
+			c(2,red,4),
+			c(3,green,2)
+		]
+	),
+	game_difficulty(easy),
+	player_difficulties(easy)
+).
+
+relative_game_difficulty(
+	sum(38),
+	colours_order('b<r=y=g'),
+	solution(
+		[
+			c(0,red,10),
+			c(1,yellow,10),
+			c(2,green,10),
+			c(3,blue,8)
+		]
+	),
+	game_difficulty(very_easy),
+	player_difficulties(high_sum(intermediary))
+).
+
+relative_game_difficulty(
+	sum(37),
+	colours_order('g<r=b=y'),
+	solution(
+		[
+			c(0,red,10),
+			c(1,blue,10),
+			c(2,green,7),
+			c(3,yellow,10)
+		]
+	),
+	game_difficulty(very_easy),
+	player_difficulties(high_sum(intermediary))
+).
+
+relative_game_difficulty(
+	sum(32),
+	colours_order('g<y<b<r'),
+	solution(
+		[
+			c(0,red,10),
+			c(1,blue,9),
+			c(2,yellow,7),
+			c(3,green,6)
+		]
+	),
+	game_difficulty(easy),
+	player_difficulties(high_sum(difficult))
+).
+
+relative_game_difficulty(
+	sum(38),
+	colours_order('g=b<y=r'),
+	solution(
+		[
+			c(0,yellow,10),
+			c(1,red,10),
+			c(2,green,9),
+			c(3,blue,9)
+		]
+	),
+	game_difficulty(very_easy),
+	player_difficulties(high_sum(very_easy))
+).
+
+relative_game_difficulty(
+	sum(30),
+	colours_order('y<b<g<r'),
+	solution(
+		[
+			c(0,green,8),
+			c(1,blue,7),
+			c(2,yellow,5),
+			c(3,red,10)
+		]
+	),
+	game_difficulty(difficult),
+	player_difficulties(high_sum(very_difficult))
+).
+
+relative_game_difficulty(
+	sum(36),
+	colours_order('b<y=g=r'),
+	solution(
+		[
+			c(0,yellow,10),
+			c(1,blue,6),
+			c(2,green,10),
+			c(3,red,10)
+		]
+	),
+	game_difficulty(very_easy),
+	player_difficulties(high_sum(difficult))
+).
+
+relative_game_difficulty(
+	sum(20),
+	colours_order('b<y=r<g'),
+	solution(
+		[
+			c(0,green,7),
+			c(1,yellow,5),
+			c(2,red,5),
+			c(3,blue,3)
+		]
+	),
+	game_difficulty(very_difficult),
+	player_difficulties(very_difficult)
+).
+
+relative_game_difficulty(
+	sum(30),
+	colours_order('r<y<g<b'),
+	solution(
+		[
+			c(0,yellow,7),
+			c(1,green,8),
+			c(2,blue,10),
+			c(3,red,5)
+		]
+	),
+	game_difficulty(difficult),
+	player_difficulties(high_sum(very_difficult))
+).
+
+relative_game_difficulty(
+	sum(24),
+	colours_order('y<r<b<g'),
+	solution(
+		[
+			c(0,yellow,3),
+			c(1,red,5),
+			c(2,green,9),
+			c(3,blue,7)
+		]
+	),
+	game_difficulty(very_difficult),
+	player_difficulties(high_sum(very_difficult))
+).
+
+relative_game_difficulty(
+	sum(20),
+	colours_order('b=y<r<g'),
+	solution(
+		[
+			c(0,blue,3),
+			c(1,green,10),
+			c(2,yellow,3),
+			c(3,red,4)
+		]
+	),
+	game_difficulty(very_difficult),
+	player_difficulties(very_difficult)
+).
+

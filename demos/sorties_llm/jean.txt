@@ -1,0 +1,12 @@
+Here is the player profile for Jean.
+
+Regarding the approach to colour ordering, when Jean proposes a first combination, the cards are most often placed following the ascending colour constraint order. This means that in more than 75 percent of games, the first move follows the natural colour ordering, for example blue then red then green then yellow.
+
+When it comes to handling constraints, Jean shows a good understanding of the colour constraints: in more than 75 percent of games, the very first move proposes values that respect the ordering between colours. For example, if the constraint says blue less than red, a smaller value is correctly assigned to blue than to red. Furthermore, Jean handles the sum arithmetic well: in more than 75 percent of games, the very first move proposes values whose total matches the target sum exactly.
+
+From a strategic standpoint, Jean favours a dichotomic approach: preferring values in the middle of each card's domain, which eliminates half the possibilities with each move, much like a binary search.
+
+Jean has more difficulty when the target sum is high. Mental arithmetic becomes less reliable with large numbers: nearby sums get confused, which increases the number of solutions to consider and makes the search harder.
+
+In terms of performance, Jean is faster than the average player: the average time per game is below the overall average, reflecting good comfort with the game. Additionally, Jean is an efficient player: games are solved in fewer moves than the average player, showing an ability to quickly deduce the correct values.
+

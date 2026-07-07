@@ -1,0 +1,91 @@
+{
+  "cartes_jouees": [
+    {
+      "couleur":"yellow",
+      "duree":81.83,
+      "position":0,
+      "reponse": {"couleur_devinee":true,"valeur_devinee":"equals"},
+      "valeur":3
+    },
+    {
+      "couleur":"red",
+      "duree":3.7,
+      "position":2,
+      "reponse": {"couleur_devinee":false,"valeur_devinee":"more"},
+      "valeur":3
+    },
+    {
+      "couleur":"green",
+      "duree":19.72,
+      "position":1,
+      "reponse": {"couleur_devinee":true,"valeur_devinee":"more"},
+      "valeur":8
+    },
+    {
+      "couleur":"blue",
+      "duree":5.05,
+      "position":3,
+      "reponse": {"couleur_devinee":false,"valeur_devinee":"less"},
+      "valeur":6
+    },
+    {
+      "couleur":"green",
+      "duree":52.03,
+      "position":1,
+      "reponse": {"couleur_devinee":true,"valeur_devinee":"more"},
+      "valeur":9
+    },
+    {
+      "couleur":"blue",
+      "duree":6.42,
+      "position":2,
+      "reponse": {"couleur_devinee":true,"valeur_devinee":"less"},
+      "valeur":5
+    },
+    {
+      "couleur":"red",
+      "duree":3.62,
+      "position":3,
+      "reponse": {"couleur_devinee":true,"valeur_devinee":"equals"},
+      "valeur":3
+    },
+    {
+      "couleur":"green",
+      "duree":6.58,
+      "position":1,
+      "reponse": {"couleur_devinee":true,"valeur_devinee":"equals"},
+      "valeur":10
+    },
+    {
+      "couleur":"blue",
+      "duree":4.9,
+      "position":2,
+      "reponse": {"couleur_devinee":true,"valeur_devinee":"equals"},
+      "valeur":4
+    }
+  ],
+  "ident":"20yellow=red<blue<green0yellow31green102blue43red3",
+  "jeu": {
+    "couleurs": ["blue", "green", "red", "yellow" ],
+    "nb_cartes":4,
+    "ordre_couleurs": [
+      "carte(jaune)",
+      "=",
+      "carte(rouge)",
+      "<",
+      "carte(bleu)",
+      "<",
+      "carte(vert)"
+    ],
+    "somme":20,
+    "type":"couleurs-valeurs-somme-couleurs_ordonnees",
+    "valeurs": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ]
+  },
+  "resultat":"gagne",
+  "solution": [
+    {"couleur":"yellow","position":0,"valeur":3},
+    {"couleur":"green","position":1,"valeur":10},
+    {"couleur":"blue","position":2,"valeur":4},
+    {"couleur":"red","position":3,"valeur":3}
+  ]
+}

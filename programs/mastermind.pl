@@ -1,0 +1,10 @@
+nom(./mastermind).
+jeu(couleurs-valeurs-somme-couleurs_ordonnees).
+nb_cartes(4).
+couleurs([blue,green,red,yellow]).
+valeurs([1,2,3,4,5,6,7,8,9,10]).
+somme(28).
+ordre_couleurs([yellow,<,red,=,blue,=,green]).
+solution([c(0,red,9),c(1,blue,9),c(2,green,9),c(3,yellow,1)]).
+[coup(1,[c(yellow,6,3,5.22,oui,moins),c(red,4,2,2.2,non,plus),c(blue,3,1,3.09,oui,plus),c(green,10,0,3.38,non,moins)]),coup(2,[c(green,6,2,13.38,oui,plus),c(red,5,0,5.8,oui,plus),c(blue,7,1,6.13,oui,plus),c(yellow,3,3,3.68,oui,moins)]),coup(3,[c(red,10,0,11.51,oui,moins),c(blue,8,1,4.59,oui,plus),c(green,9,2,1.8,oui,oui),c(yellow,2,3,4.31,oui,moins)]),coup(4,[c(red,7,0,17.46,oui,plus),c(blue,8,1,8.89,oui,plus),c(yellow,1,3,7.4,oui,oui)]),coup(5,[c(blue,7,1,6.8,oui,plus),c(red,8,0,5.11,oui,plus)]),coup(6,[c(red,8,0,3.58,oui,plus),c(blue,9,1,5.97,oui,oui)]),coup(7,[c(red,8,0,9.42,oui,plus)]),coup(8,[c(red,9,0,7.99,oui,oui)])].
+resultat(gagne).

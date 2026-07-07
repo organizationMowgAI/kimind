@@ -1,0 +1,5 @@
+.aux
+.log
+.gz
+__pycache__/
+demos/videos/kimind.mp4

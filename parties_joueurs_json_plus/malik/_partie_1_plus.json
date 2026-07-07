@@ -1,0 +1,70 @@
+{
+  "cartes_jouees": [
+    {
+      "couleur":"red",
+      "duree":261.3,
+      "position":0,
+      "reponse": {"couleur_devinee":true,"valeur_devinee":"equals"},
+      "valeur":10
+    },
+    {
+      "couleur":"blue",
+      "duree":6.62,
+      "position":1,
+      "reponse": {"couleur_devinee":true,"valeur_devinee":"equals"},
+      "valeur":9
+    },
+    {
+      "couleur":"yellow",
+      "duree":4.18,
+      "position":2,
+      "reponse": {"couleur_devinee":true,"valeur_devinee":"less"},
+      "valeur":8
+    },
+    {
+      "couleur":"green",
+      "duree":4.2,
+      "position":3,
+      "reponse": {"couleur_devinee":true,"valeur_devinee":"more"},
+      "valeur":5
+    },
+    {
+      "couleur":"yellow",
+      "duree":18.53,
+      "position":2,
+      "reponse": {"couleur_devinee":true,"valeur_devinee":"equals"},
+      "valeur":7
+    },
+    {
+      "couleur":"green",
+      "duree":1.85,
+      "position":3,
+      "reponse": {"couleur_devinee":true,"valeur_devinee":"equals"},
+      "valeur":6
+    }
+  ],
+  "ident":"32green<yellow<blue<red0red101blue92yellow73green6",
+  "jeu": {
+    "couleurs": ["blue", "green", "red", "yellow" ],
+    "nb_cartes":4,
+    "ordre_couleurs": [
+      "carte(vert)",
+      "<",
+      "carte(jaune)",
+      "<",
+      "carte(bleu)",
+      "<",
+      "carte(rouge)"
+    ],
+    "somme":32,
+    "type":"couleurs-valeurs-somme-couleurs_ordonnees",
+    "valeurs": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ]
+  },
+  "resultat":"gagne",
+  "solution": [
+    {"couleur":"red","position":0,"valeur":10},
+    {"couleur":"blue","position":1,"valeur":9},
+    {"couleur":"yellow","position":2,"valeur":7},
+    {"couleur":"green","position":3,"valeur":6}
+  ]
+}

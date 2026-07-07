@@ -1,0 +1,14 @@
+ident(5,'20yellow=red<blue<green0yellow31green102blue43red3')
+joueur(5,colin).
+partie(5,'_partie_3').
+somme(5,20).
+ordre_couleurs(5,[yellow,=,red,<,blue,<,green]).
+solution(5,[c(0,yellow,3),c(1,green,10),c(2,blue,4),c(3,red,3)]).
+nb_solutions_probleme((avec positions)).
+cartes_jouees(5,
+	[
+		coup(1,Nb_solutions_avant_coup, Nb_solutions_apres_coup, [c(red,3,0,12.88,non,oui),c(blue,7,1,3.51,non,plus),c(green,8,2,2.08,non,moins),c(yellow,2,3,1.82,non,plus)]),
+		coup(2,[c(yellow,3,0,13.57,oui,oui),c(green,8,1,15.91,oui,plus),c(blue,6,2,2.1,oui,moins),c(red,3,3,2.8,oui,oui)]),
+		coup(3,[c(green,9,1,12.74,oui,plus),c(blue,5,2,1.47,oui,moins)]),coup(4,[c(green,10,1,29.37,oui,oui),c(blue,4,2,1.62,oui,oui)])
+	]).
+resultat(5,gagne).

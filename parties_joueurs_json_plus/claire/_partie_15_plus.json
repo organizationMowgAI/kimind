@@ -1,0 +1,84 @@
+{
+  "cartes_jouees": [
+    {
+      "couleur":"red",
+      "duree":51.17,
+      "position":1,
+      "reponse": {"couleur_devinee":false,"valeur_devinee":"equals"},
+      "valeur":10
+    },
+    {
+      "couleur":"yellow",
+      "duree":2.12,
+      "position":3,
+      "reponse": {"couleur_devinee":true,"valeur_devinee":"less"},
+      "valeur":10
+    },
+    {
+      "couleur":"green",
+      "duree":4.97,
+      "position":2,
+      "reponse": {"couleur_devinee":true,"valeur_devinee":"less"},
+      "valeur":9
+    },
+    {
+      "couleur":"blue",
+      "duree":11.24,
+      "position":0,
+      "reponse": {"couleur_devinee":false,"valeur_devinee":"more"},
+      "valeur":6
+    },
+    {
+      "couleur":"red",
+      "duree":40.23,
+      "position":0,
+      "reponse": {"couleur_devinee":true,"valeur_devinee":"equals"},
+      "valeur":10
+    },
+    {
+      "couleur":"blue",
+      "duree":7.32,
+      "position":1,
+      "reponse": {"couleur_devinee":true,"valeur_devinee":"equals"},
+      "valeur":10
+    },
+    {
+      "couleur":"green",
+      "duree":5.89,
+      "position":2,
+      "reponse": {"couleur_devinee":true,"valeur_devinee":"equals"},
+      "valeur":8
+    },
+    {
+      "couleur":"yellow",
+      "duree":5.4,
+      "position":3,
+      "reponse": {"couleur_devinee":true,"valeur_devinee":"equals"},
+      "valeur":7
+    }
+  ],
+  "ident":"35yellow<green<red=blue0red101blue102green83yellow7",
+  "jeu": {
+    "couleurs": ["blue", "green", "red", "yellow" ],
+    "nb_cartes":4,
+    "ordre_couleurs": [
+      "carte(jaune)",
+      "<",
+      "carte(vert)",
+      "<",
+      "carte(rouge)",
+      "=",
+      "carte(bleu)"
+    ],
+    "somme":35,
+    "type":"couleurs-valeurs-somme-couleurs_ordonnees",
+    "valeurs": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ]
+  },
+  "resultat":"gagne",
+  "solution": [
+    {"couleur":"red","position":0,"valeur":10},
+    {"couleur":"blue","position":1,"valeur":10},
+    {"couleur":"green","position":2,"valeur":8},
+    {"couleur":"yellow","position":3,"valeur":7}
+  ]
+}

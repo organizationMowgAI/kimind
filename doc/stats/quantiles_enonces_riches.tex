@@ -1,0 +1,794 @@
+
+\documentclass[a4paper, 12]{article}
+
+
+\usepackage{amsmath,amssymb} 
+\usepackage[french]{babel}
+                                                                                                                               
+\newtheorem{ex}{Exemple}
+
+\newcommand\set[1]{\ensuremath{\{#1\}}}
+
+
+\begin{document}
+
+\title{Qualifier la difficulté des énoncés étendus de \emph{Kimind}}
+\date{}
+\maketitle
+
+\section{Introduction}
+Ce document explore la difficulté théorique des énonces du jeu \emph{Kimind} à différents stades du jeu.
+
+\section{Énonce étendu \emph{Kimind}}
+Jusqu’ici on définissait un énoncé  \emph{Kimind} par une somme et un ordre des couleurs, par exemple
+\emph{($22$, rouge $<$ vert = jaune $<$ bleu)} où $22$ est la somme et \emph{rouge $<$ vert = jaune $<$ bleu} l’ordre des couleurs
+\footnote{Dans ce document nous ne tenons pas compte de la solution cachée qui est une autre composante d'un énoncé.}. 
+
+Nous intégrons à un énoncé des connaissances supplémentaires sur les couleurs et valeurs des cartes.
+Notons  $dc_i$ et $dv_i$ les domaines des couleurs et valeurs pour la carte en position $i$ ($i \in \set{0,\cdots, 3}$).
+Un énoncé étendu est de la forme $(S, O, D)$ où $S$ est la somme, $O$ l’ordre des couleurs et
+$D = \set{(dc_0, dv_0),$ $(dc_1, dv_1),$ $(dc_2,dv_2),$ $(dc_3,dv_3)}$ les domaines
+actuels des cartes.
+
+On sait qu’initialement $dc_i = \set{bleu, jaune, rouge, vert}$ et $dv_i = \set{1, \cdots, 10}$.  Nous nommerons $D_0$
+l’ensemble de ces domaines initiaux.
+Si l’on tient compte des contraintes et des réponses du système $dc_i$ et $dv_i$ évoluent et sont plus restreints.
+
+Par exemple $dc_1 = \set{rouge}$ signifie qu’on a identifié la couleur de la carte en position $1$,
+$dv_2 = \set{4, 5}$ signifie que la valeur de la carte en position $2$ est $4$ ou $5$.
+
+Soit $\textit{Sol} = \set{s_1,\cdots, s_n}$ les solutions avec positions d’un énoncé simple $(S, O)$
+et $D$ l’ensemble des domaines courant des cartes.
+
+Nous devons parcourir les $n$ solutions de $Sol$ et vérifier pour chacune d’elle si elle satisfait les domaines,
+ce qui s’effectue en $O(n)$ (temps constant pour la vérification).
+Nous obtenons ainsi $\textit{Sol}(D)$ les solutions compatibles avec $D$.
+
+\section{Partition des énoncés étendus}
+
+Nous voulons explorer les énoncés étendus $(S, O, D)$ en partant d’un énoncé initial $(S, O, D_0)$.
+
+Pour qualifier un énoncé nous avons besoin de deux séries statistiques.
+
+\subsection{Série des énoncés }
+
+L'annexe \ref{annexe1} présente la série $S$ présentant les effectifs des énoncés possibles, c'est à dire les énoncés et leur nombre de solutions.
+Par exemple \emph{e(instance($21$,[=,=,$<$]),$2$)} signale qu'il y a 2 solutions satisfaisant l'énoncé  \emph{instance($21$,[=,=,$<$])}.
+Nous donnons ci-dessous un extrait de cette série.
+\begin{verbatim}
+   e(instance(21,[=,=,<]),2),
+   e(instance(21,[=,<,<]),8),
+   e(instance(21,[<,=,=]),1),
+   e(instance(21,[<,=,<]),7),
+   e(instance(21,[<,<,=]),7),
+   e(instance(21,[<,<,<]),16),
+   
+   e(instance(22,[=,=,<]),2),
+   e(instance(22,[=,<,=]),5),
+   e(instance(22,[=,<,<]),5),
+   e(instance(22,[<,=,=]),2),
+   e(instance(22,[<,=,<]),6),
+   e(instance(22,[<,<,=]),5),
+   e(instance(22,[<,<,<]),18),
+\end{verbatim}
+
+\subsection{Série des distributions des énoncés}
+Nous présentons ci-dessous la série $D$ des distributions des énoncés où $e(1,68)$ signale qu'il y a 68 énoncés qui ont 1 solution :
+\begin{verbatim}
+[
+   e(1,68),
+   e(2,42),
+   e(3,16),
+   e(4,14),
+   e(5,11),
+   e(6,13),
+   e(7,12),
+   e(8,4),
+   e(9,6),
+   e(10,2),
+   e(13,2),
+   e(14,2),
+   e(16,4),
+   e(18,1)
+]
+\end{verbatim}
+
+Noter que les énoncés n'apparaissent pas dans cette série.
+
+
+\section{Qualifier la difficulté d'un énoncé}
+
+
+L'idée est d'utiliser une partition de $D$ pour partitionner $S$ en 5 ensembles $S_1$ (\emph{enonces$\_$tres$\_$faciles}), $S_2$ (\emph{enonces$\_$faciles}), $S_3$ (\emph{enonces$\_$moyens}),\\  $S_4$ (\emph{enonces$\_$difficiles}) et 
+$S_5$ (\emph{enonces$\_$tres$\_$difficiles}).
+
+Pour chaque enoncé-effectif $e(s_i, d_i)$ de $S$ on regarde dans quelle partie $D_j$ de $D$ se trouve $d_i$ et l'on place $e_i$ dans la partie $S_j$ de $S$. 
+
+Par exemple, on souhaite connaître la difficulté associée à l'énoncé-effectif \emph{e(instance($28$,[$<$,=,$<$]),$5$)} de $S$. On constate que $5$ (nombre de solutions de \emph{instance($28$,[$<$,=,$<$])}) est dans la partie $D_4$ de $D$, on met donc l'énoncé
+\\ \emph{instance($28$,[$<$,=,$<$])} dans $S_4$ comprenant les énoncés \emph{difficiles}.
+
+
+\section{Prédicats disponibles}
+
+Le fichier \emph{fonctions\_enonces.pl} contient le prédicat \emph{difficultes$\_$instances(Nb$\_$types\_difficultes, Partition$\_$instances)} qui prend en entrée un nombre de types de diffficultés et retourne la partition de tous les énoncés possible en termes de difficulté (voir annexes \ref{annexe3} et \ref{annexe4}).
+
+\section{Annexes}
+
+\subsection{Série des énoncés}
+
+\label{annexe1}
+
+Ci-dessous e(instance($9$, [=,=,$<$]),2) signifie qu’il y a 2 solutions sur 4 cartes satisfaisant l’énonce instance($9$, [=,=,$<$]), le préfixe $e$ signifiant effectif.
+
+\begin{verbatim}
+[
+   e(instance(4,[=,=,=]),1),
+   e(instance(5,[=,=,<]),1),
+   e(instance(6,[=,=,<]),1),
+   e(instance(6,[=,<,=]),1),
+   e(instance(7,[=,=,<]),1),
+   e(instance(7,[=,<,<]),1),
+   e(instance(7,[<,=,=]),1),
+   e(instance(8,[=,=,=]),1),
+   e(instance(8,[=,=,<]),1),
+   e(instance(8,[=,<,=]),1),
+   e(instance(8,[=,<,<]),1),
+   e(instance(8,[<,=,<]),1),
+   e(instance(9,[=,=,<]),2),
+   e(instance(9,[=,<,<]),2),
+   e(instance(9,[<,=,<]),1),
+   e(instance(9,[<,<,=]),1),
+   e(instance(10,[=,=,<]),2),
+   e(instance(10,[=,<,=]),2),
+   e(instance(10,[=,<,<]),2),
+   e(instance(10,[<,=,=]),1),
+   e(instance(10,[<,=,<]),1),
+   e(instance(10,[<,<,<]),1),
+   e(instance(11,[=,=,<]),2),
+   e(instance(11,[=,<,<]),4),
+   e(instance(11,[<,=,=]),1),
+   e(instance(11,[<,=,<]),2),
+   e(instance(11,[<,<,=]),1),
+   e(instance(11,[<,<,<]),1),
+   e(instance(12,[=,=,=]),1),
+   e(instance(12,[=,=,<]),2),
+   e(instance(12,[=,<,=]),2),
+   e(instance(12,[=,<,<]),4),
+   e(instance(12,[<,=,<]),3),
+   e(instance(12,[<,<,=]),1),
+   e(instance(12,[<,<,<]),2),
+   e(instance(13,[=,=,<]),3),
+   e(instance(13,[=,<,<]),6),
+   e(instance(13,[<,=,=]),1),
+   e(instance(13,[<,=,<]),3),
+   e(instance(13,[<,<,=]),2),
+   e(instance(13,[<,<,<]),3),
+   e(instance(14,[=,=,<]),2),
+   e(instance(14,[=,<,=]),3),
+   e(instance(14,[=,<,<]),6),
+   e(instance(14,[<,=,=]),1),
+   e(instance(14,[<,=,<]),4),
+   e(instance(14,[<,<,=]),1),
+   e(instance(14,[<,<,<]),5),
+   e(instance(15,[=,=,<]),2),
+   e(instance(15,[=,<,<]),8),
+   e(instance(15,[<,=,=]),1),
+   e(instance(15,[<,=,<]),5),
+   e(instance(15,[<,<,=]),3),
+   e(instance(15,[<,<,<]),6),
+   e(instance(16,[=,=,=]),1),
+   e(instance(16,[=,=,<]),2),
+   e(instance(16,[=,<,=]),3),
+   e(instance(16,[=,<,<]),7),
+   e(instance(16,[<,=,=]),1),
+   e(instance(16,[<,=,<]),5),
+   e(instance(16,[<,<,=]),2),
+   e(instance(16,[<,<,<]),9),
+   e(instance(17,[=,=,<]),2),
+   e(instance(17,[=,<,<]),9),
+   e(instance(17,[<,=,=]),1),
+   e(instance(17,[<,=,<]),6),
+   e(instance(17,[<,<,=]),4),
+   e(instance(17,[<,<,<]),10),
+   e(instance(18,[=,=,<]),2),
+   e(instance(18,[=,<,=]),4),
+   e(instance(18,[=,<,<]),7),
+   e(instance(18,[<,=,=]),1),
+   e(instance(18,[<,=,<]),6),
+   e(instance(18,[<,<,=]),3),
+   e(instance(18,[<,<,<]),13),
+   e(instance(19,[=,=,<]),2),
+   e(instance(19,[=,<,<]),9),
+   e(instance(19,[<,=,=]),2),
+   e(instance(19,[<,=,<]),6),
+   e(instance(19,[<,<,=]),5),
+   e(instance(19,[<,<,<]),14),
+   e(instance(20,[=,=,=]),1),
+   e(instance(20,[=,=,<]),1),
+   e(instance(20,[=,<,=]),4),
+   e(instance(20,[=,<,<]),7),
+   e(instance(20,[<,=,=]),1),
+   e(instance(20,[<,=,<]),7),
+   e(instance(20,[<,<,=]),4),
+   e(instance(20,[<,<,<]),16),
+   e(instance(21,[=,=,<]),2),
+   e(instance(21,[=,<,<]),8),
+   e(instance(21,[<,=,=]),1),
+   e(instance(21,[<,=,<]),7),
+   e(instance(21,[<,<,=]),7),
+   e(instance(21,[<,<,<]),16),
+   e(instance(22,[=,=,<]),2),
+   e(instance(22,[=,<,=]),5),
+   e(instance(22,[=,<,<]),5),
+   e(instance(22,[<,=,=]),2),
+   e(instance(22,[<,=,<]),6),
+   e(instance(22,[<,<,=]),5),
+   e(instance(22,[<,<,<]),18),
+   e(instance(23,[=,=,<]),1),
+   e(instance(23,[=,<,<]),7),
+   e(instance(23,[<,=,=]),2),
+   e(instance(23,[<,=,<]),7),
+   e(instance(23,[<,<,=]),8),
+   e(instance(23,[<,<,<]),16),
+   e(instance(24,[=,=,=]),1),
+   e(instance(24,[=,=,<]),1),
+   e(instance(24,[=,<,=]),4),
+   e(instance(24,[=,<,<]),4),
+   e(instance(24,[<,=,=]),1),
+   e(instance(24,[<,=,<]),7),
+   e(instance(24,[<,<,=]),7),
+   e(instance(24,[<,<,<]),16),
+   e(instance(25,[=,=,<]),2),
+   e(instance(25,[=,<,<]),5),
+   e(instance(25,[<,=,=]),2),
+   e(instance(25,[<,=,<]),6),
+   e(instance(25,[<,<,=]),9),
+   e(instance(25,[<,<,<]),14),
+   e(instance(26,[=,=,<]),1),
+   e(instance(26,[=,<,=]),4),
+   e(instance(26,[=,<,<]),3),
+   e(instance(26,[<,=,=]),2),
+   e(instance(26,[<,=,<]),6),
+   e(instance(26,[<,<,=]),7),
+   e(instance(26,[<,<,<]),13),
+   e(instance(27,[=,=,<]),1),
+   e(instance(27,[=,<,<]),4),
+   e(instance(27,[<,=,=]),2),
+   e(instance(27,[<,=,<]),6),
+   e(instance(27,[<,<,=]),9),
+   e(instance(27,[<,<,<]),10),
+   e(instance(28,[=,=,=]),1),
+   e(instance(28,[=,=,<]),1),
+   e(instance(28,[=,<,=]),3),
+   e(instance(28,[=,<,<]),2),
+   e(instance(28,[<,=,=]),2),
+   e(instance(28,[<,=,<]),5),
+   e(instance(28,[<,<,=]),7),
+   e(instance(28,[<,<,<]),9),
+   e(instance(29,[=,=,<]),1),
+   e(instance(29,[=,<,<]),3),
+   e(instance(29,[<,=,=]),2),
+   e(instance(29,[<,=,<]),5),
+   e(instance(29,[<,<,=]),8),
+   e(instance(29,[<,<,<]),6),
+   e(instance(30,[=,=,<]),1),
+   e(instance(30,[=,<,=]),3),
+   e(instance(30,[=,<,<]),1),
+   e(instance(30,[<,=,=]),2),
+   e(instance(30,[<,=,<]),4),
+   e(instance(30,[<,<,=]),6),
+   e(instance(30,[<,<,<]),5),
+   e(instance(31,[=,=,<]),1),
+   e(instance(31,[=,<,<]),2),
+   e(instance(31,[<,=,=]),3),
+   e(instance(31,[<,=,<]),3),
+   e(instance(31,[<,<,=]),6),
+   e(instance(31,[<,<,<]),3),
+   e(instance(32,[=,=,=]),1),
+   e(instance(32,[=,<,=]),2),
+   e(instance(32,[=,<,<]),1),
+   e(instance(32,[<,=,=]),2),
+   e(instance(32,[<,=,<]),3),
+   e(instance(32,[<,<,=]),4),
+   e(instance(32,[<,<,<]),2),
+   e(instance(33,[=,=,<]),1),
+   e(instance(33,[=,<,<]),1),
+   e(instance(33,[<,=,=]),2),
+   e(instance(33,[<,=,<]),2),
+   e(instance(33,[<,<,=]),4),
+   e(instance(33,[<,<,<]),1),
+   e(instance(34,[=,=,<]),1),
+   e(instance(34,[=,<,=]),2),
+   e(instance(34,[<,=,=]),2),
+   e(instance(34,[<,=,<]),1),
+   e(instance(34,[<,<,=]),2),
+   e(instance(34,[<,<,<]),1),
+   e(instance(35,[=,<,<]),1),
+   e(instance(35,[<,=,=]),2),
+   e(instance(35,[<,=,<]),1),
+   e(instance(35,[<,<,=]),2),
+   e(instance(36,[=,=,=]),1),
+   e(instance(36,[=,<,=]),1),
+   e(instance(36,[<,=,=]),1),
+   e(instance(36,[<,=,<]),1),
+   e(instance(36,[<,<,=]),1),
+   e(instance(37,[=,=,<]),1),
+   e(instance(37,[<,=,=]),1),
+   e(instance(37,[<,<,=]),1),
+   e(instance(38,[=,<,=]),1),
+   e(instance(38,[<,=,=]),1),
+   e(instance(39,[<,=,=]),1),
+   e(instance(40,[=,=,=]),1)
+]
+\end{verbatim}
+
+\subsection{Série des distributions des énoncés}
+\label{annexe2}
+
+Nous présentons ci-dessous la série $D$ des distributions des énoncés où $e(1,68)$ signale qu'il y a 68 énoncés qui ont 1 solution :
+\begin{verbatim}
+[
+   e(1,68),
+   e(2,42),
+   e(3,16),
+   e(4,14),
+   e(5,11),
+   e(6,13),
+   e(7,12),
+   e(8,4),
+   e(9,6),
+   e(10,2),
+   e(13,2),
+   e(14,2),
+   e(16,4),
+   e(18,1)
+]
+\end{verbatim}
+
+Noter que les énoncés n'apparaissent pas dans cette série.
+
+\subsection{Instances classées par difficultés (3 types de difficultés)}
+\label{annexe3}
+\begin{verbatim}
+easy
+68 element(s)
+[
+   e(instance(4,[=,=,=]),1),
+   e(instance(5,[=,=,<]),1),
+   e(instance(6,[=,=,<]),1),
+   e(instance(6,[=,<,=]),1),
+   e(instance(7,[=,=,<]),1),
+   e(instance(7,[=,<,<]),1),
+   e(instance(7,[<,=,=]),1),
+   e(instance(8,[=,=,=]),1),
+   e(instance(8,[=,=,<]),1),
+   e(instance(8,[=,<,=]),1),
+   e(instance(8,[=,<,<]),1),
+   e(instance(8,[<,=,<]),1),
+   e(instance(9,[<,=,<]),1),
+   e(instance(9,[<,<,=]),1),
+   e(instance(10,[<,=,=]),1),
+   e(instance(10,[<,=,<]),1),
+   e(instance(10,[<,<,<]),1),
+   e(instance(11,[<,=,=]),1),
+   e(instance(11,[<,<,=]),1),
+   e(instance(11,[<,<,<]),1),
+   e(instance(12,[=,=,=]),1),
+   e(instance(12,[<,<,=]),1),
+   e(instance(13,[<,=,=]),1),
+   e(instance(14,[<,=,=]),1),
+   e(instance(14,[<,<,=]),1),
+   e(instance(15,[<,=,=]),1),
+   e(instance(16,[=,=,=]),1),
+   e(instance(16,[<,=,=]),1),
+   e(instance(17,[<,=,=]),1),
+   e(instance(18,[<,=,=]),1),
+   e(instance(20,[=,=,=]),1),
+   e(instance(20,[=,=,<]),1),
+   e(instance(20,[<,=,=]),1),
+   e(instance(21,[<,=,=]),1),
+   e(instance(23,[=,=,<]),1),
+   e(instance(24,[=,=,=]),1),
+   e(instance(24,[=,=,<]),1),
+   e(instance(24,[<,=,=]),1),
+   e(instance(26,[=,=,<]),1),
+   e(instance(27,[=,=,<]),1),
+   e(instance(28,[=,=,=]),1),
+   e(instance(28,[=,=,<]),1),
+   e(instance(29,[=,=,<]),1),
+   e(instance(30,[=,=,<]),1),
+   e(instance(30,[=,<,<]),1),
+   e(instance(31,[=,=,<]),1),
+   e(instance(32,[=,=,=]),1),
+   e(instance(32,[=,<,<]),1),
+   e(instance(33,[=,=,<]),1),
+   e(instance(33,[=,<,<]),1),
+   e(instance(33,[<,<,<]),1),
+   e(instance(34,[=,=,<]),1),
+   e(instance(34,[<,=,<]),1),
+   e(instance(34,[<,<,<]),1),
+   e(instance(35,[=,<,<]),1),
+   e(instance(35,[<,=,<]),1),
+   e(instance(36,[=,=,=]),1),
+   e(instance(36,[=,<,=]),1),
+   e(instance(36,[<,=,=]),1),
+   e(instance(36,[<,=,<]),1),
+   e(instance(36,[<,<,=]),1),
+   e(instance(37,[=,=,<]),1),
+   e(instance(37,[<,=,=]),1),
+   e(instance(37,[<,<,=]),1),
+   e(instance(38,[=,<,=]),1),
+   e(instance(38,[<,=,=]),1),
+   e(instance(39,[<,=,=]),1),
+   e(instance(40,[=,=,=]),1)
+]
+
+average
+72 element(s)
+[
+   e(instance(9,[=,=,<]),2),
+   e(instance(9,[=,<,<]),2),
+   e(instance(10,[=,=,<]),2),
+   e(instance(10,[=,<,=]),2),
+   e(instance(10,[=,<,<]),2),
+   e(instance(11,[=,=,<]),2),
+   e(instance(11,[<,=,<]),2),
+   e(instance(12,[=,=,<]),2),
+   e(instance(12,[=,<,=]),2),
+   e(instance(12,[<,<,<]),2),
+   e(instance(13,[<,<,=]),2),
+   e(instance(14,[=,=,<]),2),
+   e(instance(15,[=,=,<]),2),
+   e(instance(16,[=,=,<]),2),
+   e(instance(16,[<,<,=]),2),
+   e(instance(17,[=,=,<]),2),
+   e(instance(18,[=,=,<]),2),
+   e(instance(19,[=,=,<]),2),
+   e(instance(19,[<,=,=]),2),
+   e(instance(21,[=,=,<]),2),
+   e(instance(22,[=,=,<]),2),
+   e(instance(22,[<,=,=]),2),
+   e(instance(23,[<,=,=]),2),
+   e(instance(25,[=,=,<]),2),
+   e(instance(25,[<,=,=]),2),
+   e(instance(26,[<,=,=]),2),
+   e(instance(27,[<,=,=]),2),
+   e(instance(28,[=,<,<]),2),
+   e(instance(28,[<,=,=]),2),
+   e(instance(29,[<,=,=]),2),
+   e(instance(30,[<,=,=]),2),
+   e(instance(31,[=,<,<]),2),
+   e(instance(32,[=,<,=]),2),
+   e(instance(32,[<,=,=]),2),
+   e(instance(32,[<,<,<]),2),
+   e(instance(33,[<,=,=]),2),
+   e(instance(33,[<,=,<]),2),
+   e(instance(34,[=,<,=]),2),
+   e(instance(34,[<,=,=]),2),
+   e(instance(34,[<,<,=]),2),
+   e(instance(35,[<,=,=]),2),
+   e(instance(35,[<,<,=]),2),
+   e(instance(12,[<,=,<]),3),
+   e(instance(13,[=,=,<]),3),
+   e(instance(13,[<,=,<]),3),
+   e(instance(13,[<,<,<]),3),
+   e(instance(14,[=,<,=]),3),
+   e(instance(15,[<,<,=]),3),
+   e(instance(16,[=,<,=]),3),
+   e(instance(18,[<,<,=]),3),
+   e(instance(26,[=,<,<]),3),
+   e(instance(28,[=,<,=]),3),
+   e(instance(29,[=,<,<]),3),
+   e(instance(30,[=,<,=]),3),
+   e(instance(31,[<,=,=]),3),
+   e(instance(31,[<,=,<]),3),
+   e(instance(31,[<,<,<]),3),
+   e(instance(32,[<,=,<]),3),
+   e(instance(11,[=,<,<]),4),
+   e(instance(12,[=,<,<]),4),
+   e(instance(14,[<,=,<]),4),
+   e(instance(17,[<,<,=]),4),
+   e(instance(18,[=,<,=]),4),
+   e(instance(20,[=,<,=]),4),
+   e(instance(20,[<,<,=]),4),
+   e(instance(24,[=,<,=]),4),
+   e(instance(24,[=,<,<]),4),
+   e(instance(26,[=,<,=]),4),
+   e(instance(27,[=,<,<]),4),
+   e(instance(30,[<,=,<]),4),
+   e(instance(32,[<,<,=]),4),
+   e(instance(33,[<,<,=]),4)
+]
+
+difficult
+57 element(s)
+[
+   e(instance(14,[<,<,<]),5),
+   e(instance(15,[<,=,<]),5),
+   e(instance(16,[<,=,<]),5),
+   e(instance(19,[<,<,=]),5),
+   e(instance(22,[=,<,=]),5),
+   e(instance(22,[=,<,<]),5),
+   e(instance(22,[<,<,=]),5),
+   e(instance(25,[=,<,<]),5),
+   e(instance(28,[<,=,<]),5),
+   e(instance(29,[<,=,<]),5),
+   e(instance(30,[<,<,<]),5),
+   e(instance(13,[=,<,<]),6),
+   e(instance(14,[=,<,<]),6),
+   e(instance(15,[<,<,<]),6),
+   e(instance(17,[<,=,<]),6),
+   e(instance(18,[<,=,<]),6),
+   e(instance(19,[<,=,<]),6),
+   e(instance(22,[<,=,<]),6),
+   e(instance(25,[<,=,<]),6),
+   e(instance(26,[<,=,<]),6),
+   e(instance(27,[<,=,<]),6),
+   e(instance(29,[<,<,<]),6),
+   e(instance(30,[<,<,=]),6),
+   e(instance(31,[<,<,=]),6),
+   e(instance(16,[=,<,<]),7),
+   e(instance(18,[=,<,<]),7),
+   e(instance(20,[=,<,<]),7),
+   e(instance(20,[<,=,<]),7),
+   e(instance(21,[<,=,<]),7),
+   e(instance(21,[<,<,=]),7),
+   e(instance(23,[=,<,<]),7),
+   e(instance(23,[<,=,<]),7),
+   e(instance(24,[<,=,<]),7),
+   e(instance(24,[<,<,=]),7),
+   e(instance(26,[<,<,=]),7),
+   e(instance(28,[<,<,=]),7),
+   e(instance(15,[=,<,<]),8),
+   e(instance(21,[=,<,<]),8),
+   e(instance(23,[<,<,=]),8),
+   e(instance(29,[<,<,=]),8),
+   e(instance(16,[<,<,<]),9),
+   e(instance(17,[=,<,<]),9),
+   e(instance(19,[=,<,<]),9),
+   e(instance(25,[<,<,=]),9),
+   e(instance(27,[<,<,=]),9),
+   e(instance(28,[<,<,<]),9),
+   e(instance(17,[<,<,<]),10),
+   e(instance(27,[<,<,<]),10),
+   e(instance(18,[<,<,<]),13),
+   e(instance(26,[<,<,<]),13),
+   e(instance(19,[<,<,<]),14),
+   e(instance(25,[<,<,<]),14),
+   e(instance(20,[<,<,<]),16),
+   e(instance(21,[<,<,<]),16),
+   e(instance(23,[<,<,<]),16),
+   e(instance(24,[<,<,<]),16),
+   e(instance(22,[<,<,<]),18)
+]
+\end{verbatim}
+
+
+\subsection{Instances classées par difficultés (5 types de difficultés)}
+\label{annexe4}
+\begin{verbatim}
+very_easy
+68 element(s)
+[
+   e(instance(4,[=,=,=]),1),
+   e(instance(5,[=,=,<]),1),
+   e(instance(6,[=,=,<]),1),
+   e(instance(6,[=,<,=]),1),
+   e(instance(7,[=,=,<]),1),
+   e(instance(7,[=,<,<]),1),
+   e(instance(7,[<,=,=]),1),
+   e(instance(8,[=,=,=]),1),
+   e(instance(8,[=,=,<]),1),
+   e(instance(8,[=,<,=]),1),
+   e(instance(8,[=,<,<]),1),
+   e(instance(8,[<,=,<]),1),
+   e(instance(9,[<,=,<]),1),
+   e(instance(9,[<,<,=]),1),
+   e(instance(10,[<,=,=]),1),
+   e(instance(10,[<,=,<]),1),
+   e(instance(10,[<,<,<]),1),
+   e(instance(11,[<,=,=]),1),
+   e(instance(11,[<,<,=]),1),
+   e(instance(11,[<,<,<]),1),
+   e(instance(12,[=,=,=]),1),
+   e(instance(12,[<,<,=]),1),
+   e(instance(13,[<,=,=]),1),
+   e(instance(14,[<,=,=]),1),
+   e(instance(14,[<,<,=]),1),
+   e(instance(15,[<,=,=]),1),
+   e(instance(16,[=,=,=]),1),
+   e(instance(16,[<,=,=]),1),
+   e(instance(17,[<,=,=]),1),
+   e(instance(18,[<,=,=]),1),
+   e(instance(20,[=,=,=]),1),
+   e(instance(20,[=,=,<]),1),
+   e(instance(20,[<,=,=]),1),
+   e(instance(21,[<,=,=]),1),
+   e(instance(23,[=,=,<]),1),
+   e(instance(24,[=,=,=]),1),
+   e(instance(24,[=,=,<]),1),
+   e(instance(24,[<,=,=]),1),
+   e(instance(26,[=,=,<]),1),
+   e(instance(27,[=,=,<]),1),
+   e(instance(28,[=,=,=]),1),
+   e(instance(28,[=,=,<]),1),
+   e(instance(29,[=,=,<]),1),
+   e(instance(30,[=,=,<]),1),
+   e(instance(30,[=,<,<]),1),
+   e(instance(31,[=,=,<]),1),
+   e(instance(32,[=,=,=]),1),
+   e(instance(32,[=,<,<]),1),
+   e(instance(33,[=,=,<]),1),
+   e(instance(33,[=,<,<]),1),
+   e(instance(33,[<,<,<]),1),
+   e(instance(34,[=,=,<]),1),
+   e(instance(34,[<,=,<]),1),
+   e(instance(34,[<,<,<]),1),
+   e(instance(35,[=,<,<]),1),
+   e(instance(35,[<,=,<]),1),
+   e(instance(36,[=,=,=]),1),
+   e(instance(36,[=,<,=]),1),
+   e(instance(36,[<,=,=]),1),
+   e(instance(36,[<,=,<]),1),
+   e(instance(36,[<,<,=]),1),
+   e(instance(37,[=,=,<]),1),
+   e(instance(37,[<,=,=]),1),
+   e(instance(37,[<,<,=]),1),
+   e(instance(38,[=,<,=]),1),
+   e(instance(38,[<,=,=]),1),
+   e(instance(39,[<,=,=]),1),
+   e(instance(40,[=,=,=]),1)
+]
+
+easy
+42 element(s)
+[
+   e(instance(9,[=,=,<]),2),
+   e(instance(9,[=,<,<]),2),
+   e(instance(10,[=,=,<]),2),
+   e(instance(10,[=,<,=]),2),
+   e(instance(10,[=,<,<]),2),
+   e(instance(11,[=,=,<]),2),
+   e(instance(11,[<,=,<]),2),
+   e(instance(12,[=,=,<]),2),
+   e(instance(12,[=,<,=]),2),
+   e(instance(12,[<,<,<]),2),
+   e(instance(13,[<,<,=]),2),
+   e(instance(14,[=,=,<]),2),
+   e(instance(15,[=,=,<]),2),
+   e(instance(16,[=,=,<]),2),
+   e(instance(16,[<,<,=]),2),
+   e(instance(17,[=,=,<]),2),
+   e(instance(18,[=,=,<]),2),
+   e(instance(19,[=,=,<]),2),
+   e(instance(19,[<,=,=]),2),
+   e(instance(21,[=,=,<]),2),
+   e(instance(22,[=,=,<]),2),
+   e(instance(22,[<,=,=]),2),
+   e(instance(23,[<,=,=]),2),
+   e(instance(25,[=,=,<]),2),
+   e(instance(25,[<,=,=]),2),
+   e(instance(26,[<,=,=]),2),
+   e(instance(27,[<,=,=]),2),
+   e(instance(28,[=,<,<]),2),
+   e(instance(28,[<,=,=]),2),
+   e(instance(29,[<,=,=]),2),
+   e(instance(30,[<,=,=]),2),
+   e(instance(31,[=,<,<]),2),
+   e(instance(32,[=,<,=]),2),
+   e(instance(32,[<,=,=]),2),
+   e(instance(32,[<,<,<]),2),
+   e(instance(33,[<,=,=]),2),
+   e(instance(33,[<,=,<]),2),
+   e(instance(34,[=,<,=]),2),
+   e(instance(34,[<,=,=]),2),
+   e(instance(34,[<,<,=]),2),
+   e(instance(35,[<,=,=]),2),
+   e(instance(35,[<,<,=]),2)
+]
+
+average
+16 element(s)
+[
+   e(instance(12,[<,=,<]),3),
+   e(instance(13,[=,=,<]),3),
+   e(instance(13,[<,=,<]),3),
+   e(instance(13,[<,<,<]),3),
+   e(instance(14,[=,<,=]),3),
+   e(instance(15,[<,<,=]),3),
+   e(instance(16,[=,<,=]),3),
+   e(instance(18,[<,<,=]),3),
+   e(instance(26,[=,<,<]),3),
+   e(instance(28,[=,<,=]),3),
+   e(instance(29,[=,<,<]),3),
+   e(instance(30,[=,<,=]),3),
+   e(instance(31,[<,=,=]),3),
+   e(instance(31,[<,=,<]),3),
+   e(instance(31,[<,<,<]),3),
+   e(instance(32,[<,=,<]),3)
+]
+
+difficult
+38 element(s)
+[
+   e(instance(11,[=,<,<]),4),
+   e(instance(12,[=,<,<]),4),
+   e(instance(14,[<,=,<]),4),
+   e(instance(17,[<,<,=]),4),
+   e(instance(18,[=,<,=]),4),
+   e(instance(20,[=,<,=]),4),
+   e(instance(20,[<,<,=]),4),
+   e(instance(24,[=,<,=]),4),
+   e(instance(24,[=,<,<]),4),
+   e(instance(26,[=,<,=]),4),
+   e(instance(27,[=,<,<]),4),
+   e(instance(30,[<,=,<]),4),
+   e(instance(32,[<,<,=]),4),
+   e(instance(33,[<,<,=]),4),
+   e(instance(14,[<,<,<]),5),
+   e(instance(15,[<,=,<]),5),
+   e(instance(16,[<,=,<]),5),
+   e(instance(19,[<,<,=]),5),
+   e(instance(22,[=,<,=]),5),
+   e(instance(22,[=,<,<]),5),
+   e(instance(22,[<,<,=]),5),
+   e(instance(25,[=,<,<]),5),
+   e(instance(28,[<,=,<]),5),
+   e(instance(29,[<,=,<]),5),
+   e(instance(30,[<,<,<]),5),
+   e(instance(13,[=,<,<]),6),
+   e(instance(14,[=,<,<]),6),
+   e(instance(15,[<,<,<]),6),
+   e(instance(17,[<,=,<]),6),
+   e(instance(18,[<,=,<]),6),
+   e(instance(19,[<,=,<]),6),
+   e(instance(22,[<,=,<]),6),
+   e(instance(25,[<,=,<]),6),
+   e(instance(26,[<,=,<]),6),
+   e(instance(27,[<,=,<]),6),
+   e(instance(29,[<,<,<]),6),
+   e(instance(30,[<,<,=]),6),
+   e(instance(31,[<,<,=]),6)
+]
+
+very_difficult
+33 element(s)
+[
+   e(instance(16,[=,<,<]),7),
+   e(instance(18,[=,<,<]),7),
+   e(instance(20,[=,<,<]),7),
+   e(instance(20,[<,=,<]),7),
+   e(instance(21,[<,=,<]),7),
+   e(instance(21,[<,<,=]),7),
+   e(instance(23,[=,<,<]),7),
+   e(instance(23,[<,=,<]),7),
+   e(instance(24,[<,=,<]),7),
+   e(instance(24,[<,<,=]),7),
+   e(instance(26,[<,<,=]),7),
+   e(instance(28,[<,<,=]),7),
+   e(instance(15,[=,<,<]),8),
+   e(instance(21,[=,<,<]),8),
+   e(instance(23,[<,<,=]),8),
+   e(instance(29,[<,<,=]),8),
+   e(instance(16,[<,<,<]),9),
+   e(instance(17,[=,<,<]),9),
+   e(instance(19,[=,<,<]),9),
+   e(instance(25,[<,<,=]),9),
+   e(instance(27,[<,<,=]),9),
+   e(instance(28,[<,<,<]),9),
+   e(instance(17,[<,<,<]),10),
+   e(instance(27,[<,<,<]),10),
+   e(instance(18,[<,<,<]),13),
+   e(instance(26,[<,<,<]),13),
+   e(instance(19,[<,<,<]),14),
+   e(instance(25,[<,<,<]),14),
+   e(instance(20,[<,<,<]),16),
+   e(instance(21,[<,<,<]),16),
+   e(instance(23,[<,<,<]),16),
+   e(instance(24,[<,<,<]),16),
+   e(instance(22,[<,<,<]),18)
+]
+\end{verbatim}
+
+
+\end{document}

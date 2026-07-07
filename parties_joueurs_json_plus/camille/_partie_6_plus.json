@@ -1,0 +1,91 @@
+{
+  "cartes_jouees": [
+    {
+      "couleur":"green",
+      "duree":55.99,
+      "position":1,
+      "reponse": {"couleur_devinee":false,"valeur_devinee":"less"},
+      "valeur":7
+    },
+    {
+      "couleur":"blue",
+      "duree":3.21,
+      "position":3,
+      "reponse": {"couleur_devinee":true,"valeur_devinee":"more"},
+      "valeur":7
+    },
+    {
+      "couleur":"red",
+      "duree":10.71,
+      "position":2,
+      "reponse": {"couleur_devinee":false,"valeur_devinee":"more"},
+      "valeur":4
+    },
+    {
+      "couleur":"yellow",
+      "duree":6.84,
+      "position":0,
+      "reponse": {"couleur_devinee":true,"valeur_devinee":"less"},
+      "valeur":3
+    },
+    {
+      "couleur":"blue",
+      "duree":61.18,
+      "position":3,
+      "reponse": {"couleur_devinee":true,"valeur_devinee":"equals"},
+      "valeur":8
+    },
+    {
+      "couleur":"green",
+      "duree":8.0,
+      "position":2,
+      "reponse": {"couleur_devinee":true,"valeur_devinee":"equals"},
+      "valeur":8
+    },
+    {
+      "couleur":"red",
+      "duree":11.19,
+      "position":1,
+      "reponse": {"couleur_devinee":true,"valeur_devinee":"equals"},
+      "valeur":3
+    },
+    {
+      "couleur":"yellow",
+      "duree":2.77,
+      "position":0,
+      "reponse": {"couleur_devinee":true,"valeur_devinee":"more"},
+      "valeur":1
+    },
+    {
+      "couleur":"yellow",
+      "duree":15.83,
+      "position":0,
+      "reponse": {"couleur_devinee":true,"valeur_devinee":"equals"},
+      "valeur":2
+    }
+  ],
+  "ident":"21yellow<red<green=blue0yellow21red32green83blue8",
+  "jeu": {
+    "couleurs": ["blue", "green", "red", "yellow" ],
+    "nb_cartes":4,
+    "ordre_couleurs": [
+      "carte(jaune)",
+      "<",
+      "carte(rouge)",
+      "<",
+      "carte(vert)",
+      "=",
+      "carte(bleu)"
+    ],
+    "somme":21,
+    "type":"couleurs-valeurs-somme-couleurs_ordonnees",
+    "valeurs": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ]
+  },
+  "resultat":"gagne",
+  "solution": [
+    {"couleur":"yellow","position":0,"valeur":2},
+    {"couleur":"red","position":1,"valeur":3},
+    {"couleur":"green","position":2,"valeur":8},
+    {"couleur":"blue","position":3,"valeur":8}
+  ]
+}

@@ -1,0 +1,11 @@
+Le profil de difficulté de Jean repose sur l'analyse de 25 parties. En moyenne, la difficulté objective des parties jouées est intermédiaire.
+ 
+Parmi ces parties, on en compte 10 classées très faciles, 5 classées faciles, 3 classées difficiles et 7 classées très difficiles.
+ 
+Dans un bon nombre de parties, Jean éprouve plus de difficultés que ce que la difficulté objective du jeu laisserait prévoir. Dans de rares parties, il s'en sort mieux que la difficulté objective ne le suggère. Dans plus de la moitié des parties, sa perception correspond à la difficulté objective.
+ 
+Les sommes élevées constituent un facteur de difficulté récurrent pour Jean. En effet, dans plus de la moitié des parties où la somme est élevée, il rencontre une difficulté importante. Cela s'explique par le fait que le calcul mental devient moins fiable avec les grands nombres : Jean a tendance à confondre des sommes proches, ce qui augmente le nombre de solutions à envisager. En revanche, dans de rares parties, les sommes élevées ne posent pas de problème particulier.
+ 
+Quand la solution suit le même ordre que la contrainte de couleur, Jean en tire parti : dans la quasi-totalité des parties, cet aspect est facile voire très facile pour lui. En effet, comme il a l'habitude de placer les cartes dans l'ordre des couleurs, il trouve immédiatement les positions et n'a plus qu'à chercher les valeurs.
+ 
+Sans facteur de difficulté spécifique identifié, Jean trouve le jeu facile dans plus de la moitié des parties, mais difficile dans un bon nombre de parties.

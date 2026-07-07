@@ -1,0 +1,84 @@
+{
+  "cartes_jouees": [
+    {
+      "couleur":"green",
+      "duree":41.0,
+      "position":3,
+      "reponse": {"couleur_devinee":true,"valeur_devinee":"equals"},
+      "valeur":9
+    },
+    {
+      "couleur":"blue",
+      "duree":2.59,
+      "position":0,
+      "reponse": {"couleur_devinee":false,"valeur_devinee":"equals"},
+      "valeur":4
+    },
+    {
+      "couleur":"yellow",
+      "duree":3.09,
+      "position":1,
+      "reponse": {"couleur_devinee":false,"valeur_devinee":"more"},
+      "valeur":5
+    },
+    {
+      "couleur":"red",
+      "duree":11.85,
+      "position":2,
+      "reponse": {"couleur_devinee":false,"valeur_devinee":"less"},
+      "valeur":6
+    },
+    {
+      "couleur":"red",
+      "duree":51.94,
+      "position":1,
+      "reponse": {"couleur_devinee":true,"valeur_devinee":"equals"},
+      "valeur":6
+    },
+    {
+      "couleur":"yellow",
+      "duree":42.15,
+      "position":0,
+      "reponse": {"couleur_devinee":true,"valeur_devinee":"equals"},
+      "valeur":4
+    },
+    {
+      "couleur":"blue",
+      "duree":4.55,
+      "position":2,
+      "reponse": {"couleur_devinee":true,"valeur_devinee":"more"},
+      "valeur":1
+    },
+    {
+      "couleur":"blue",
+      "duree":11.81,
+      "position":2,
+      "reponse": {"couleur_devinee":true,"valeur_devinee":"equals"},
+      "valeur":2
+    }
+  ],
+  "ident":"21blue<yellow<red<green0yellow41red62blue23green9",
+  "jeu": {
+    "couleurs": ["blue", "green", "red", "yellow" ],
+    "nb_cartes":4,
+    "ordre_couleurs": [
+      "carte(bleu)",
+      "<",
+      "carte(jaune)",
+      "<",
+      "carte(rouge)",
+      "<",
+      "carte(vert)"
+    ],
+    "somme":21,
+    "type":"couleurs-valeurs-somme-couleurs_ordonnees",
+    "valeurs": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ]
+  },
+  "resultat":"gagne",
+  "solution": [
+    {"couleur":"yellow","position":0,"valeur":4},
+    {"couleur":"red","position":1,"valeur":6},
+    {"couleur":"blue","position":2,"valeur":2},
+    {"couleur":"green","position":3,"valeur":9}
+  ]
+}

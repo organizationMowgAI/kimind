@@ -1,0 +1,91 @@
+{
+  "cartes_jouees": [
+    {
+      "couleur":"blue",
+      "duree":16.25,
+      "position":3,
+      "reponse": {"couleur_devinee":false,"valeur_devinee":"less"},
+      "valeur":10
+    },
+    {
+      "couleur":"green",
+      "duree":3.6,
+      "position":2,
+      "reponse": {"couleur_devinee":false,"valeur_devinee":"more"},
+      "valeur":9
+    },
+    {
+      "couleur":"yellow",
+      "duree":4.11,
+      "position":1,
+      "reponse": {"couleur_devinee":false,"valeur_devinee":"equals"},
+      "valeur":8
+    },
+    {
+      "couleur":"red",
+      "duree":5.09,
+      "position":0,
+      "reponse": {"couleur_devinee":false,"valeur_devinee":"more"},
+      "valeur":3
+    },
+    {
+      "couleur":"green",
+      "duree":50.13,
+      "position":1,
+      "reponse": {"couleur_devinee":true,"valeur_devinee":"equals"},
+      "valeur":8
+    },
+    {
+      "couleur":"blue",
+      "duree":14.12,
+      "position":2,
+      "reponse": {"couleur_devinee":true,"valeur_devinee":"equals"},
+      "valeur":10
+    },
+    {
+      "couleur":"red",
+      "duree":42.34,
+      "position":3,
+      "reponse": {"couleur_devinee":true,"valeur_devinee":"more"},
+      "valeur":4
+    },
+    {
+      "couleur":"yellow",
+      "duree":44.94,
+      "position":0,
+      "reponse": {"couleur_devinee":true,"valeur_devinee":"equals"},
+      "valeur":7
+    },
+    {
+      "couleur":"red",
+      "duree":7.88,
+      "position":3,
+      "reponse": {"couleur_devinee":true,"valeur_devinee":"equals"},
+      "valeur":5
+    }
+  ],
+  "ident":"30red<yellow<green<blue0yellow71green82blue103red5",
+  "jeu": {
+    "couleurs": ["blue", "green", "red", "yellow" ],
+    "nb_cartes":4,
+    "ordre_couleurs": [
+      "carte(rouge)",
+      "<",
+      "carte(jaune)",
+      "<",
+      "carte(vert)",
+      "<",
+      "carte(bleu)"
+    ],
+    "somme":30,
+    "type":"couleurs-valeurs-somme-couleurs_ordonnees",
+    "valeurs": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ]
+  },
+  "resultat":"gagne",
+  "solution": [
+    {"couleur":"yellow","position":0,"valeur":7},
+    {"couleur":"green","position":1,"valeur":8},
+    {"couleur":"blue","position":2,"valeur":10},
+    {"couleur":"red","position":3,"valeur":5}
+  ]
+}

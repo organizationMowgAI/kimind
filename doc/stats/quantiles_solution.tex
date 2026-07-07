@@ -1,0 +1,93 @@
+
+\documentclass[a4paper, 12]{article}
+
+
+\usepackage{amsmath,amssymb} 
+\usepackage[french]{babel}
+                                                                                                                               
+\newtheorem{ex}{Exemple}
+
+\newcommand\set[1]{\ensuremath{\{#1\}}}
+
+
+\begin{document}
+
+\title{Qualifier les solutions d’un énoncé de \emph{Kimind}}
+\date{}
+\maketitle
+
+\section{Introduction}
+Ce document explore les caractéristiques des solutions associées aux énoncés du jeu \emph{Kimind}, on distingue les solutions \emph{dichotomiques}, \emph{aux valeurs limites}, \emph{dans l’ordre des couleurs}, \emph{l’ordre inverse des couleurs}.
+
+\section{Solution d’un énoncé \emph{Kimind}}
+Un énoncé est complètement défini par une somme et un ordre des couleurs, par exemple  \emph{instance(22, r$<$b$<$g$<$y)}. Une solution d'un énoncé est un ensemble de cartes satisfaisant les contraintes de l'énoncé sans tenir compte des positions, par exemple  \emph{$\{(red,2),$ $(blue,5),\ $ $ (green,6),$ $(yellow,9)\}$}. 
+
+\section{Solution dichotomique}
+Une solution est \emph{dichotomique} lorsque ses valeurs sont proches du milieux des domaines de valeurs imposés par les contraintes de l’énoncé. Considérons l’énoncé \emph{instance(22, r$<$b$<$g$<$y)}, il impose les domaines suivants pour les cartes de chaque couleurs : 
+\set{red(1, 4, 2.5), blue(2, 6, 4), green(5, 9, 7), yellow(7, 10, 8.5)} où $red(1, 4, 2.5)$ signale que le domaine de la carte de couleur \emph{red} est \set{1,\cdots,4} et que le milieu du domaine est $2.5$.
+
+Considérons la solution   \emph{$\{(red,2),$ $(blue,5),\ $ $ (green,6),$ $(yellow,9)\}$} associée à l’énoncé et sommons les distances relatives de chaque valeur au milieu de son domaine : 
+$$ d(s) = \sum_{i=1}^{n} \frac{|v_i - m_i|}{d_i},$$ 
+où $v_i$ est la valeur de la $i^{eme}$ carte de la solution, $m_i = \frac{min_i + max_i}{2}$ le milieu , $max_i$ la plus grande valeur et $min_i$ la plus petite valeur, du domaine de cette carte,  et $d_i = \frac{max_i - min_i}{2}$ est la distance du $m_i$ à la borne inférieure $min_i$. Par convention $d(s) = 1$ (plus grande distance relative possible) si 
+$max_i = min_i$ afin de défavoriser une solution dont des domaines seraient des singletons.
+On observe que $d(s)$ est d’autant plus petit que les valeurs sont proches des milieux des domaines et que les domaines sont grands.
+
+Nous considérons qu’une solution $s$ est dichotomique lorsqu’elle fait partie des solutions de l’énoncé minimisant cette distance. Pour cela nous énumérons toutes les solutions de l’énoncé et calculons $d(s)$ pour chacune d’elle. Nous obtenons :
+
+\begin{verbatim}
+  d({c(blue,4),c(green,7),c(red,2),c(yellow,9)} = 1 ,
+  d({c(blue,4),c(green,7),c(red,3),c(yellow,8)}) =1,
+  d({c(blue,4),c(green,6),c(red,3),c(yellow,9)}) = 2,
+  d([c(blue,5),c(green,7),c(red,2),c(yellow,8)}) = 2,
+  d({c(blue,3),c(green,7),c(red,2),c(yellow,10)}) = 3,
+  d({c(blue,3),c(green,8),c(red,2),c(yellow,9)}) = 3,
+  d({c(blue,4),c(green,6),c(red,2),c(yellow,10)}) = 3,
+  d({c(blue,4),c(green,7),c(red,1),c(yellow,10)}) =3,
+  d({c(blue,4),c(green,8),c(red,1),c(yellow,9)}) = 3,
+  d({c(blue,5),c(green,6),c(red,2),c(yellow,9)}) = 3,
+  d({c(blue,5),c(green,6),c(red,3),c(yellow,8)}) = 3,
+  d({c(blue,5),c(green,7),c(red,1),c(yellow,9)}) = 3,
+  d({c(blue,4),c(green,5),c(red,3),c(yellow,10)}) = 4,
+  d({c(blue,6),c(green,7),c(red,1),c(yellow,8)}) = 4,
+  d({c(blue,3),c(green,8),c(red,1),c(yellow,10)}) = 5 ,
+  d({c(blue,5),c(green,6),c(red,1),c(yellow,10)}) = 5,
+  d({c(blue,5),c(green,6),c(red,4),c(yellow,7)}) = 5,
+  d({c(blue,2),c(green,9),c(red,1),c(yellow,10)}) = 7
+\end{verbatim}
+
+On forme une série statistique $S$ où chaque élément est de la forme $d(s, d(s))$ où $sol$ est la solution et $d(s)$ la distance.
+
+Nous constituons une nouvelle série statistique $D$ où chaque élément est \emph{e(d, n)} où $d$ est une distance et \emph{n}  le nombre de fois où elle apparaît dans $S$. Ainsi 
+$D = \set{e(1, 2), e(2, 2), e(3, 8), e(4, 2), e(5, 3), e(7, 1) }$.
+
+Nous partitionnons $D$ avec des quintiles $D = \set{D_1, D_2, D_3, D_4, D_5}$. Une solution $s$ sera qualifiée de dichotomique si sa distance $d$ se trouve dans $D_1$, donc parmi les plus petites distances. Ainsi les distances précédentes sont partitionnées commet suit :
+\begin{verbatim}
+
+  D1 = [e(1.0,2),e(2.0,2)],
+  D2 = [e(3.0, 8)],
+  D3 = [],
+  D4 = [e(4.0,2),e(5.0,3)],
+  D5 = [e(7.0,1)]
+\end{verbatim}
+
+La distance de solution  \emph{$\{(red,2),$ $(blue,5),\ $ $ (green,6),$ $(yellow,9)\}$} valant $3$, elle n’est pas dans dans $D_1$ aussi cette solution n’est pas considérée comme propice à un traitement dichotomique.
+
+\section{Solution limite}
+Une solution est \emph{limite} lorsque ses valeurs sont proches des limites des domaines de valeurs imposés par les contraintes de l’énoncé. 
+
+On procède de la même façon qu’avec les solutions dichotomiques en calculant pour chaque valeur d’une solution $s$ la somme  de sa distance relative à la plus proche limite de son domaine :
+$$ l(s) = \sum_{i=1}^{n} \frac{min(v_i - min_i, max_i - v_i)}{d_i},$$ 
+où $v_i$ est la valeur de la $i^{eme}$ carte de la solution, $max_i$ la plus grande valeur et $min_i$ la plus petite valeur, du domaine de cette carte,  et $d_i = \frac{max_i - min_i}{2}$ est la distance du milieu du domaine  à la borne inférieure $min_i$ c’est à dire la plus grande distance possible par rapport à une borne du domaine. Par convention $l(s) = 0$ si 
+$max_i = min_i$).
+On observe que $l(s)$ est d’autant plus petit que les valeurs sont proches des limites des domaines et que les domaines sont grands.
+
+Nous considérons qu’une solution $s$ est limite lorsqu’elle fait partie des solutions de l’énoncé minimisant cette distance. Pour cela nous énumérons toutes les solutions de l’énoncé et calculons $l(s)$ pour chacune d’elle. 
+
+On forme une série statistique $S$ où chaque élément est de la forme $d(s, l(s))$ où $sol$ est la solution et $l(s)$ la distance.
+
+Nous constituons une nouvelle série statistique $D$ où chaque élément est \emph{e(l, n)} où $l$ est une distance et \emph{n}  le nombre de fois où elle apparaît dans $S$. Ainsi 
+$D = \set{e(1, 2), e(2, 2), e(3, 8), e(4, 2), e(5, 3), e(7, 1) }$.
+
+Nous partitionnons $D$ avec des quintiles $D = \set{D_1, D_2, D_3, D_4, D_5}$. Une solution $s$ sera qualifiée de limite si sa distance $l(s)$ se trouve dans $D_1$, donc parmi les plus petites distances. 
+
+\end{document}

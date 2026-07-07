@@ -1,0 +1,232 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage[utf8]{inputenc}   % si compilation pdfLaTeX
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+
+\usepackage[french]{babel}
+\usepackage{amsmath,amssymb}
+\usepackage{fancyvrb}
+
+\fvset{obeytabs=true, tabsize=3}
+\newtheorem{ex}{Exemple}
+\newcommand\set[1]{\ensuremath{\{#1\}}}
+
+\begin{document}
+
+\title{Module \emph{gestion\_bk\_joueur.pl}} 
+\date{}
+\maketitle
+
+\section{A quoi sert il ?}
+Gère la BK d’un joueur en autorisant les ajouts, retraits et modifications d’informations.
+
+\section{Où est il ?}
+	Dans le dossier \emph{programs}.
+	
+\section{Comment l’utiliser ?}
+On l’insère comme module dans un programme swi-prolog :
+	
+\begin{Verbatim}
+ :- use_module(gestion_bk_joueur).
+\end{Verbatim}
+
+
+\section{Prédicats disponibles}
+
+\subsection{cree\_bk}
+
+\begin{Verbatim}
+cree_bk(Dossier, Joueur, 
+		[
+			Couleurs_croissantes,
+			Couleurs_decroissantes,
+			Ordre_couleurs_respecte,
+			Somme_valeurs_respectee,
+			Strategie_possible,
+			Choix_valeurs_limites,
+			Choix_valeurs_dichotomiques
+		],
+		Seuil,
+		infos(TempsMoyenGlobal, TempsMoyenJoueur, NbCoupsMoyenGlobal, 
+			   NbCoupsMoyenJoueur)
+		)
+\end{Verbatim}
+
+Écrit dans le répertoire \emph{Dossier} une première BK intitulée \emph{bk\_joueur\_jean.pl} (si la variable \emph{Joueur} est instanciée avec \emph{jean}) en fonction 
+des informations données en arguments.
+
+L’appel de ce prédicat pourrait donner la BK suivante :
+\begin{Verbatim}
+
+/* ========================================================================== */
+/*                              BK_PLAYER jean                                */
+/* ========================================================================== */
+/* ==================== INFORMATION ON THE PLAYER =========================== */
+
+name(jean).
+
+/* =================  CARACTERISTICS OF jean PLAYING ======================= */
+
+respects_colours(jean).
+respects_sum(jean).
+dichotomic_player(jean).
+fast_player(jean).
+
+/* ============  PERSONAL SKILLS WITH RESPECT TO GAMES DIFFICULTIES ========= */
+
+relative_game_difficulty(
+			somme(16), 
+			colors_order(red < green < blue = red), 
+			solution([c(blue,5), c(yellow,5), c(green,4), c(red,2)]), 
+			easy, medium
+			 					).
+
+\end{Verbatim}
+
+\subsection{lit\_bk}
+
+\begin{Verbatim}
+lit_bk(
+		Dossier, 				(input, String)
+		Joueur, 					(input, String)
+		En_tete, 				(output, liste de Strings)
+		Caracteristiques, 	(output, liste de Strings)
+		Strategies,				(output, liste de Strings)
+		Difficulties			(output, liste de Strings)
+	)
+\end{Verbatim}
+
+Relit la BK intitulée \emph{bk\_joueur\_jean} (si la variable \emph{Joueur} est instanciée avec \emph{jean}) située dans le répertoire \emph{Dossier}
+et retourne les informations dans les 4 variables :
+\begin{enumerate}
+	\item \emph{En\_tete}, contient l’en tête de la BK :
+		\begin{Verbatim}
+		[
+			/* ===============================	*/,
+			/*       BK_PLAYER jean 			   */,
+			/* ===============================	*/,
+			/* == INFORMATION ON THE PLAYER	== */,
+		]
+		\end{Verbatim}
+	\item \emph{Caracteristiques}, contient la liste des caractéristiques du joueur : 
+		\begin{Verbatim}
+			[name(jean)]
+		\end{Verbatim}
+	\item \emph{Strategies}, contient la liste des stratégies du joueur :
+		\begin{Verbatim}
+			[
+				respects_colours(jean), 
+				respects_sum(jean),
+				dichotomic_player(jean), 
+				fast_player(jean)
+			]
+		\end{Verbatim}
+		\item \emph{Difficulties}, contient la liste des difficultés relatives du joueur en fonction des caractéristiques des parties
+		\begin{Verbatim}
+			[
+				relative_game_difficulty(
+					somme(16), 
+					colors_order(red < green < blue = red), 
+					solution([c(blue,5), c(yellow,5), c(green,4), c(red,2)]), 
+					easy, medium)
+			]
+		\end{Verbatim}
+\end{enumerate}
+
+\subsection{ecrit\_bk}
+
+\begin{Verbatim}
+ecrit_bk(
+		Dossier, 				(input, String)
+		Joueur, 					(input, String)
+		En_tete, 				(input, liste de Strings)
+		Caracteristiques, 	(input, liste de Strings)
+		Strategies,				(input, liste de Strings)
+		Difficulties			(input, liste de Strings)
+	)
+\end{Verbatim}
+
+Écrit (ou remplace) la BK intitulée \emph{bk\_player\_jean} (si la variable \emph{Joueur} est instanciée avec \emph{jean}) dans le répertoire \emph{Dossier}
+(\emph{En\_tete}, \emph{Caracteristiques}, \emph{Strategies} et \emph{Difficulties} sont décrits en section précédente). 
+
+\subsection{modifie\_bk}
+
+\begin{Verbatim}
+modifie_bk(
+				Dossier, 						(input, String)
+				Joueur, 							(input, String)
+				Modifs_caracteristiques, 	(input, liste d’atomes)
+				Modifs_strategies				(input, liste d’atomes),
+				Modifs_difficulties			(input, liste d’atomes)
+			)
+\end{Verbatim}
+
+Modifie la BK intitulée \emph{bk\_player\_jean} (si la variable \emph{Joueur} est instanciée avec \emph{jean}) située dans le répertoire \emph{Dossier}
+en fonction des modifications présentes dans \emph{Modif\_caracteristiques} et \emph{Modif\_strategies} (l’en tête actuel de la bk est conservé).
+ \emph{Modifs\_caracteristiques}, \emph{Modifs\_strategies} et \emph{Modifs\_difficulties} sont des listes d’atomes parmi :
+ \begin{enumerate}
+ 	\item \emph{a(new\_atom)}: ajoute l’atome \emph{new\_atom},
+ 	\item \emph{r(atom)} : retire l’atome \emph{atom},
+ 	\item \emph{s(atom, new\_atom)} : remplace l’atome \emph{atom} par \emph{new\_atom}.
+ \end{enumerate}
+ 
+ Par l’exemple :
+ \begin{Verbatim}
+modifie_bk(
+	‘../bk’, 						
+	‘jean’, 						
+	[a(age(jean, 31)), s(level(jean, 10), level(jean, 9))], 	
+	[r(respect_sum(jean))],
+	[s(difficulty(5), difficulty(7))]
+			)
+\end{Verbatim}
+modifie la bk \emph{bk\_player\_jean} située dans le dossier \emph{../bk} :
+\begin{enumerate}
+\item ajoute l’atome \emph{age(jean, 31)} aux caractéristiques de \emph{jean},
+\item remplace l’atome \emph{level(jean,10)} par \emph{level(jean, 9)} aux caractéristiques de \emph{jean},
+\item retire l’atome \emph{respect\_sum(jean)} aux stratégies de jeu de \emph{jean},
+\item substitue l’atome \emph{difficulty(5)} par \emph{difficulty(7)} aux difficultés relatives de \emph{jean}
+\end{enumerate}
+
+Il est possible de ne modifier qu’une partie de la BK en utilisant les prédicats suivants :
+
+\begin{Verbatim}
+modify_bk_characteristics(
+				Dossier, 						(input, String)
+				Joueur, 							(input, String)
+				Modifs_characteristics 		(input, liste d’atomes)
+			)
+\end{Verbatim}
+
+
+
+\begin{Verbatim}
+modify_bk_strategies(
+				Dossier, 						(input, String)
+				Joueur, 							(input, String)
+				Modifs_strategies				(input, liste d’atomes)
+			)
+\end{Verbatim}
+
+\begin{Verbatim}
+modify_bk_difficulties(
+				Dossier, 						(input, String)
+				Joueur, 							(input, String)
+				Modifs_difficulties 			(input, liste d’atomes)
+			)
+\end{Verbatim}
+
+
+\subsection{display\_bk}
+
+\begin{Verbatim}
+display_bk(
+				Dossier, 						(input, String)
+				Joueur, 							(input, String)
+			)
+\end{Verbatim}
+
+Affiche la BK intitulée \emph{bk\_player\_jean} (si la variable \emph{Joueur} est instanciée avec \emph{jean}) située dans le répertoire \emph{Dossier}.
+
+\end{document}

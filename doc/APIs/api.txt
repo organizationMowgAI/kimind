@@ -1,0 +1,181 @@
+===================================================================================================
+collecte_infos_joueur.pl :
+---------------------------------------
+• strategies_joueur(
+						Nom_joueur,	# (input, String) nom du joueur
+						Id_joueur	# (input, String) identifiant du joueur
+		   		   )
+	Description : La méthode déduit la façon de jouer du joueur et génère sa BK.
+    Appel       : swipl -s collecte_infos_joueur.pl -g strategies_joueur('colin', 'J12') -t halt
+	Résultat    : La BK du joueur Colin dont l'identifiant est J12.
+
+===================================================================================================
+benchmark_joueur.pl :
+---------------------------------------
+• personalized_benchmark(
+							Dossier_bk,		# (input, String) dossier où se trouve la BK du joueur
+							Joueur			# (input, String) nom du joueur
+		   		   		)
+	Description : La méthode ajoute à la BK du joueur son benchmark personnalisé, donc les
+				  informations sur les parties qu'il a jouées avec la difficulté relative à ce
+				  joueur. La BK du joueur doit déjà exister (cf. collecte_infos_joueurs.pl).
+    Appel       : swipl -s benchmark_joueur.pl -g "personalized_benchmark('../bk_joueurs', 'colin')" -t halt
+	Résultat    : La BK du joueur Colin avec l'ajout de son benchmark personnalisé de la forme :
+		relative_game_difficulty(
+			sum(34),
+			colours_order('b<r<g<y'),
+			solution([c(0,blue,7),c(1,red,8),c(2,green,9),c(3,yellow,10)]),
+			game_difficulty(very_difficult),
+			player_difficulties(same_colours_order(very_easy)),
+			).
+		...	
+
+===================================================================================================
+benchmark.pl
+---------------------------------------
+• benchmark(
+				Output_dir	# (input, string) dossier dans lequel on veut que le benchmark soit créé
+	   	   )
+	Description : Ce prédicat génère un benchmark objectif des 25 parties
+	Appel       : swipl -s benchmark.pl -g benchmark('../') -t halt
+	Résultat    : Un fichier texte dans Output_dir de la forme :
+		Game 1
+		- Instance                           
+			- Sum                           : 34
+			- Colours order                 : blue < red < green < yellow
+			- Solution                      : [c(0,blue,7),c(1,red,8),c(2,green,9),c(3,yellow,10)]
+		- Instance characteristics           
+			- Number of possible solutions  : 24
+			- Difficulty                    : very_easy
+			- Value-guessing strategy       : dichotomic
+			- Colours order of the solution : same
+		...
+		
+===================================================================================================
+exploitation_kimind.pl
+---------------------------------------
+• recup_infos(
+				Joueur,		# (input, string) identifiant du joueur
+				Dossier,	# (input, string) dossier dans lequel se trouvent les informations sur le joueur
+				Infos		# (output, atom) les infos sur le joueur sous la forme infos(TempsMoyenGlobal, TempsMoyenJoueur, NbCoupsMoyenGlobal, NbCoupsMoyenJoueur)
+			 )
+	Description : Ce prédicat renvoie le temps moyen du joueur pour une partie Kimind, mais
+		      	  aussi son nombre de coups moyen ainsi que le temps moyen global (de tous les
+		          joueurs) et le nombre de coups moyen global.
+	Appel       : Dans SWI-Prolog :
+				  recup_infos('J1', '../stats_kimind', Stats).
+	Résultat    : Stats = infos(135.47,51.33,2.46,2.16).
+
+===================================================================================================
+bk_partie.pl
+---------------------------------------
+• instance_characteristics(
+							Instance,			# (input, atom) énoncé de la partie sous la forme instance(Sum, Order)
+							Solution,			# (input, list) solution de la partie
+							Characteristics 	# (output, atom) caractéristiques de la partie sous la forme characteristics(Difficulty, Domain_characteristic, Colours_order)
+			  			  )
+	Description : La méthode permet de récupérer les caractéristiques objectives d'une partie à
+				  l'aide de l'énoncé (somme + ordre) et de sa solution.
+	Appel       : Dans SWI-Prolog : 
+				  instance_characteristics(
+											instance(22,'r<b<g<y'),
+											[c(0, red, 2), c(1, blue, 4), c(2, green, 7), c(3, yellow,9)],
+											Characteristics
+				    					  ).
+	Résultat    : Characteristics = characteristics(very_difficult, dichotomic, same).
+
+===================================================================================================
+bk_joueur_name.pl	(valable pour tous les joueurs en remplaçant name par leur prénom)
+---------------------------------------
+• follows_colours_order(Name).				# indique que le joueur pose les couleurs dans le même ordre que l'énoncé 
+• follows_reversed_colours_order(Name). 	# indique que le joueur pose les couleurs dans l'ordre inverse de l'énoncé
+• respects_colours_constraint(Name).		# indique que le joueur respecte la contrainte sur l'ordre des couleurs
+• respects_sum_constraint(Name).			# indique que le joueur respecte la contrainte de la somme
+• possible_strategy(Name).					# indique que le joueur joue des coups possibles
+• dichotomic_player(Name).					# indique que le joueur a une stratégie dichotomique
+• limit_values_player(Name).				# indique que le joueur utilise des valeurs limites par rapport aux domaines
+Ces faits sont valables si et seulement si le joueur joue comme indiqué dans au moins 75% des parties jouées.
+• fast_player(Name).						# indique que le joueur a une durée moyenne de partie plus courte que la durée moyenne globale (de tous les joueurs)
+• strong_player(Name).						# indique que le joueur a un nombre de coups moyen dans une partie plus faible que la moyenne globale (de tous les joueurs)
+• slow_player(Name).						# indique que le joueur a une durée moyenne de partie plus longue que la durée moyenne globale (de tous les joueurs)
+• weak_player(Name).						# indique que le joueur a un nombre de coups moyen dans une partie plus élevé que la moyenne globale (de tous les joueurs)
+
+===================================================================================================
+bk_enonce.pl
+---------------------------------------
+• unique_solution_instance(
+							Instance	# (input, atom) énoncé de la partie sous la forme instance(Sum, Order)
+			  			  )
+	Description : Le prédicat indique si oui ou non un énoncé n'a qu'une seule solution.
+	Appel       : Dans SWI-Prolog :
+				  unique_solution_instance(instance(22,'r<b<g<y')).
+	Résultat    : False.
+• difficulty_instance(
+						Instance,		# (input, atom) énoncé de la partie sous la forme instance(Sum, Order)
+						Nb_categories,	# (input, int) nombre de catégories de difficultés souhaité (3 ou 5)
+						Difficulty		# (output, atom) catégorie de difficulté de l'énoncé
+					 )
+	Description : Le prédicat indique la difficulté d'un énoncé selon le nombre de catégories souhaité.
+	Appel       : Dans SWI-Prolog :
+				  difficulty_instance(
+										instance(22,'r<b<g<y'),
+										3,
+										Difficulty
+									 ).
+	Résultat    : Difficulty = very_difficult.
+	
+
+===================================================================================================
+bk_solution.pl
+---------------------------------------
+• dichotomic_domains_solution(
+								Instance,	# (input, atom) énoncé de la partie sous la forme instance(Sum, Order)
+								Solution	# (input, list) solution de la partie
+			     			 )
+	Description : La méthode permet de savoir si la solution de l'énoncé se prête à une
+		      	  stratégie dichotomique ou non.
+	Appel       : Dans SWI-Prolog :
+				  dichotomic_domains_solution(
+												instance(22,'r<b<g<y'),
+												[c(0, red, 2), c(1, blue, 4), c(2, green, 7), c(3, yellow,9)]
+											 ).
+	Résultat    : True.
+
+• limits_domains_solution(
+							Instance,	# (input, atom) énoncé de la partie sous la forme instance(Sum, Order)
+							Solution	# (input, list) solution de la partie
+						 )
+	Description : La méthode permet de savoir si la solution de l'énoncé utilise les valeurs
+		          limites des domaines possibles.
+	Appel       : Dans SWI-Prolog :
+				  limits_domains_solution(
+											instance(22,'r<b<g<y'),
+											[c(0, red, 2), c(1, blue, 4), c(2, green, 7), c(3, yellow,9)]
+								   		 ).
+	Résultat    : False.
+
+• solution_follows_colours_order(
+									Instance,	# (input, atom) énoncé de la partie sous la forme instance(Sum, Order)
+									Solution	# (input, list) solution de la partie
+								)
+	Description : La méthode permet de savoir si l'ordre des couleurs dans la solution suit
+		          l'ordre des couleurs de l'énoncé.
+	Appel       : Dans SWI-Prolog :
+				  solution_follows_colours_order(
+													instance(22,'r<b<g<y'),
+													[c(0, red, 2), c(1, blue, 4), c(2, green, 7), c(3, yellow,9)]
+										  		).
+	Résultat    : True.
+
+• solution_follows_reversed_colours_order(
+											Instance,	# (input, atom) énoncé de la partie sous la forme instance(Sum, Order)
+											Solution	# (input, list) solution de la partie
+										 )
+	Description : La méthode permet de savoir si l'ordre inverse des couleurs dans la solution
+		      	  suit l'ordre des couleurs de l'énoncé.
+	Appel       : Dans SWI-Prolog :
+				  solution_follows_reversed_colours_order(
+															instance(22,'r<b<g<y'),
+															[c(0, red, 2), c(1, blue, 4), c(2, green, 7), c(3, yellow,9)]
+												   		 ).
+	Résultat    : False.

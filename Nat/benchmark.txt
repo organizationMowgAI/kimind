@@ -1,0 +1,275 @@
+Game 1
+    - Instance                           
+        - Sum                           : 34
+        - Colours order                 : blue < red < green < yellow
+        - Solution                      : [c(0,blue,7),c(1,red,8),c(2,green,9),c(3,yellow,10)]
+    - Instance characteristics           
+        - Number of possible solutions  : 24
+        - Difficulty                    : very_easy
+        - Value-guessing strategy       : dichotomic
+        - Colours order of the solution : same
+
+Game 2
+    - Instance                           
+        - Sum                           : 35
+        - Colours order                 : yellow < green < red = blue
+        - Solution                      : [c(0,red,10),c(1,blue,10),c(2,green,8),c(3,yellow,7)]
+    - Instance characteristics           
+        - Number of possible solutions  : 48
+        - Difficulty                    : easy
+        - Value-guessing strategy       : dichotomic
+        - Colours order of the solution : other
+
+Game 3
+    - Instance                           
+        - Sum                           : 33
+        - Colours order                 : red < yellow < green = blue
+        - Solution                      : [c(0,green,10),c(1,blue,10),c(2,red,5),c(3,yellow,8)]
+    - Instance characteristics           
+        - Number of possible solutions  : 96
+        - Difficulty                    : difficult
+        - Value-guessing strategy       : dichotomic
+        - Colours order of the solution : other
+
+Game 4
+    - Instance                           
+        - Sum                           : 25
+        - Colours order                 : yellow = green = red < blue
+        - Solution                      : [c(0,yellow,5),c(1,blue,10),c(2,green,5),c(3,red,5)]
+    - Instance characteristics           
+        - Number of possible solutions  : 48
+        - Difficulty                    : easy
+        - Value-guessing strategy       : dichotomic
+        - Colours order of the solution : other
+
+Game 5
+    - Instance                           
+        - Sum                           : 20
+        - Colours order                 : yellow = red < blue < green
+        - Solution                      : [c(0,yellow,3),c(1,green,10),c(2,blue,4),c(3,red,3)]
+    - Instance characteristics           
+        - Number of possible solutions  : 168
+        - Difficulty                    : very_difficult
+        - Value-guessing strategy       : other
+        - Colours order of the solution : other
+
+Game 6
+    - Instance                           
+        - Sum                           : 11
+        - Colours order                 : green = yellow = red < blue
+        - Solution                      : [c(0,blue,5),c(1,green,2),c(2,yellow,2),c(3,red,2)]
+    - Instance characteristics           
+        - Number of possible solutions  : 48
+        - Difficulty                    : easy
+        - Value-guessing strategy       : dichotomic
+        - Colours order of the solution : other
+
+Game 7
+    - Instance                           
+        - Sum                           : 10
+        - Colours order                 : green < blue < red < yellow
+        - Solution                      : [c(0,red,3),c(1,yellow,4),c(2,blue,2),c(3,green,1)]
+    - Instance characteristics           
+        - Number of possible solutions  : 24
+        - Difficulty                    : very_easy
+        - Value-guessing strategy       : dichotomic
+        - Colours order of the solution : other
+
+Game 8
+    - Instance                           
+        - Sum                           : 21
+        - Colours order                 : yellow < red < green = blue
+        - Solution                      : [c(0,yellow,2),c(1,red,3),c(2,green,8),c(3,blue,8)]
+    - Instance characteristics           
+        - Number of possible solutions  : 168
+        - Difficulty                    : very_difficult
+        - Value-guessing strategy       : dichotomic
+        - Colours order of the solution : same
+
+Game 9
+    - Instance                           
+        - Sum                           : 10
+        - Colours order                 : blue < green = red < yellow
+        - Solution                      : [c(0,green,2),c(1,yellow,5),c(2,red,2),c(3,blue,1)]
+    - Instance characteristics           
+        - Number of possible solutions  : 24
+        - Difficulty                    : very_easy
+        - Value-guessing strategy       : dichotomic
+        - Colours order of the solution : other
+
+Game 10
+    - Instance                           
+        - Sum                           : 24
+        - Colours order                 : blue < green < yellow < red
+        - Solution                      : [c(0,red,9),c(1,green,5),c(2,yellow,7),c(3,blue,3)]
+    - Instance characteristics           
+        - Number of possible solutions  : 384
+        - Difficulty                    : very_difficult
+        - Value-guessing strategy       : dichotomic
+        - Colours order of the solution : other
+
+Game 11
+    - Instance                           
+        - Sum                           : 39
+        - Colours order                 : yellow < green = blue = red
+        - Solution                      : [c(0,green,10),c(1,yellow,9),c(2,blue,10),c(3,red,10)]
+    - Instance characteristics           
+        - Number of possible solutions  : 24
+        - Difficulty                    : very_easy
+        - Value-guessing strategy       : dichotomic
+        - Colours order of the solution : other
+
+Game 12
+    - Instance                           
+        - Sum                           : 21
+        - Colours order                 : blue < yellow < red < green
+        - Solution                      : [c(0,yellow,4),c(1,red,6),c(2,blue,2),c(3,green,9)]
+    - Instance characteristics           
+        - Number of possible solutions  : 384
+        - Difficulty                    : very_difficult
+        - Value-guessing strategy       : dichotomic
+        - Colours order of the solution : other
+
+Game 13
+    - Instance                           
+        - Sum                           : 39
+        - Colours order                 : red < blue = yellow = green
+        - Solution                      : [c(0,blue,10),c(1,red,9),c(2,yellow,10),c(3,green,10)]
+    - Instance characteristics           
+        - Number of possible solutions  : 24
+        - Difficulty                    : very_easy
+        - Value-guessing strategy       : dichotomic
+        - Colours order of the solution : other
+
+Game 14
+    - Instance                           
+        - Sum                           : 35
+        - Colours order                 : yellow < red = blue < green
+        - Solution                      : [c(0,red,9),c(1,blue,9),c(2,green,10),c(3,yellow,7)]
+    - Instance characteristics           
+        - Number of possible solutions  : 24
+        - Difficulty                    : very_easy
+        - Value-guessing strategy       : dichotomic
+        - Colours order of the solution : other
+
+Game 15
+    - Instance                           
+        - Sum                           : 16
+        - Colours order                 : green < red < yellow = blue
+        - Solution                      : [c(0,yellow,5),c(1,blue,5),c(2,red,4),c(3,green,2)]
+    - Instance characteristics           
+        - Number of possible solutions  : 48
+        - Difficulty                    : easy
+        - Value-guessing strategy       : dichotomic
+        - Colours order of the solution : other
+
+Game 16
+    - Instance                           
+        - Sum                           : 38
+        - Colours order                 : blue < red = yellow = green
+        - Solution                      : [c(0,red,10),c(1,yellow,10),c(2,green,10),c(3,blue,8)]
+    - Instance characteristics           
+        - Number of possible solutions  : 24
+        - Difficulty                    : very_easy
+        - Value-guessing strategy       : dichotomic
+        - Colours order of the solution : other
+
+Game 17
+    - Instance                           
+        - Sum                           : 37
+        - Colours order                 : green < red = blue = yellow
+        - Solution                      : [c(0,red,10),c(1,blue,10),c(2,green,7),c(3,yellow,10)]
+    - Instance characteristics           
+        - Number of possible solutions  : 24
+        - Difficulty                    : very_easy
+        - Value-guessing strategy       : dichotomic
+        - Colours order of the solution : other
+
+Game 18
+    - Instance                           
+        - Sum                           : 32
+        - Colours order                 : green < yellow < blue < red
+        - Solution                      : [c(0,red,10),c(1,blue,9),c(2,yellow,7),c(3,green,6)]
+    - Instance characteristics           
+        - Number of possible solutions  : 48
+        - Difficulty                    : easy
+        - Value-guessing strategy       : dichotomic
+        - Colours order of the solution : reversed
+
+Game 19
+    - Instance                           
+        - Sum                           : 38
+        - Colours order                 : green = blue < yellow = red
+        - Solution                      : [c(0,yellow,10),c(1,red,10),c(2,green,9),c(3,blue,9)]
+    - Instance characteristics           
+        - Number of possible solutions  : 24
+        - Difficulty                    : very_easy
+        - Value-guessing strategy       : dichotomic
+        - Colours order of the solution : other
+
+Game 20
+    - Instance                           
+        - Sum                           : 30
+        - Colours order                 : yellow < blue < green < red
+        - Solution                      : [c(0,green,8),c(1,blue,7),c(2,yellow,5),c(3,red,10)]
+    - Instance characteristics           
+        - Number of possible solutions  : 120
+        - Difficulty                    : difficult
+        - Value-guessing strategy       : dichotomic
+        - Colours order of the solution : other
+
+Game 21
+    - Instance                           
+        - Sum                           : 36
+        - Colours order                 : blue < yellow = green = red
+        - Solution                      : [c(0,yellow,10),c(1,blue,6),c(2,green,10),c(3,red,10)]
+    - Instance characteristics           
+        - Number of possible solutions  : 24
+        - Difficulty                    : very_easy
+        - Value-guessing strategy       : dichotomic
+        - Colours order of the solution : other
+
+Game 22
+    - Instance                           
+        - Sum                           : 20
+        - Colours order                 : blue < yellow = red < green
+        - Solution                      : [c(0,green,7),c(1,yellow,5),c(2,red,5),c(3,blue,3)]
+    - Instance characteristics           
+        - Number of possible solutions  : 168
+        - Difficulty                    : very_difficult
+        - Value-guessing strategy       : dichotomic
+        - Colours order of the solution : other
+
+Game 23
+    - Instance                           
+        - Sum                           : 30
+        - Colours order                 : red < yellow < green < blue
+        - Solution                      : [c(0,yellow,7),c(1,green,8),c(2,blue,10),c(3,red,5)]
+    - Instance characteristics           
+        - Number of possible solutions  : 120
+        - Difficulty                    : difficult
+        - Value-guessing strategy       : dichotomic
+        - Colours order of the solution : other
+
+Game 24
+    - Instance                           
+        - Sum                           : 24
+        - Colours order                 : yellow < red < blue < green
+        - Solution                      : [c(0,yellow,3),c(1,red,5),c(2,green,9),c(3,blue,7)]
+    - Instance characteristics           
+        - Number of possible solutions  : 384
+        - Difficulty                    : very_difficult
+        - Value-guessing strategy       : dichotomic
+        - Colours order of the solution : other
+
+Game 25
+    - Instance                           
+        - Sum                           : 20
+        - Colours order                 : blue = yellow < red < green
+        - Solution                      : [c(0,blue,3),c(1,green,10),c(2,yellow,3),c(3,red,4)]
+    - Instance characteristics           
+        - Number of possible solutions  : 168
+        - Difficulty                    : very_difficult
+        - Value-guessing strategy       : other
+        - Colours order of the solution : other
+

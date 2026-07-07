@@ -1,0 +1,320 @@
+
+\documentclass[a4paper, 12]{article}
+
+
+\usepackage{amsmath,amssymb} 
+\usepackage[french]{babel}
+                                                                                                                               
+\newtheorem{ex}{Exemple}
+
+\newcommand\set[1]{\ensuremath{\{#1\}}}
+
+
+
+\begin{document}
+
+\title{Partitionner les sommes des valeurs des cartes \\avec des quantiles}
+\date{}
+\maketitle
+
+
+\section{Partition des sommes des valeurs des cartes dans Kimind}
+
+Les valeurs intéressantes sont les nombres de façons de distribuer les sommes sur 4 cartes. Pour une somme donnée, plus ce nombre est grand plus le problème est difficile. Pour qualifier une somme nous avons besoin de deux séries statistiques.
+
+\subsection{Série sur le nombre de façons de distribuer les valeurs des cartes pour des sommes données}
+
+On calcule le nombre de façons de distribuer les valeurs sur 4 cartes pour chaque somme  :
+
+\begin{itemize}
+	\item $1$ distribution pour la somme $4$, 
+	\item $1$ distribution pour la somme $40$,
+	\item $4$ distributions pour la somme $5$,
+	\item $4$ distributions pour la somme $39$,
+	\item $\cdots$,
+	\item $660$ distributions pour la somme $21$,
+	\item $660$ distributions  pour la somme $23$,
+	\item $670$ distributions pour la somme  $22$.
+\end{itemize}
+(voir annexe \ref{distribution1}.)
+
+On a donc la série d'effectifs suivante où les valeurs sont les nombres de distributions  :
+\set{e(1,2), e(4,2), \cdots, e(660, 2), e(670,1)} qui correspondent à la série 
+$D = \set{1, 1, 4, 4, \cdots,660,660,670}$ ayant $37$ valeurs. Noter que les sommes n'apparaissent pas dans cette série.
+
+On calcule la fonction de répartition $F(d_i)$ pour chaque valeur \underline{distincte} $d_i$ de $D$ :
+\begin{itemize}
+\item $F(1) = 2/37$ : proportion des distributions dans $D$ dont la valeur est inférieure ou égale à $1$,
+\item $F(4) = 4/37$ ($4$ distributions de $D$ sont inférieures ou égales à $4$),
+\item $\cdots$,
+\item $F(670) = 37/37$ ($37$ distributions de $D$ sont inférieures ou égales à $670$).
+\end{itemize}
+
+Après on calcule les quintiles :
+\begin{itemize}
+\item $Q_1 = Q(0.2)$ : on cherche le plus petit $d_i$ de $D$ tel que $F(x_i) \ge 0.2$,
+\item $Q_2 = Q(0.4)$ : on cherche le plus petit $d_i$ de $d$ tel que $F(x_i) \ge 0.4$,
+\item $Q_3 = Q(0.6)$ : on cherche le plus petit $d_i$ de $D$ tel que $F(x_i) \ge 0.6$,
+\item $Q_4 = Q(0.8)$ : on cherche le plus petit $d_i$ de $D$ tel que $F(x_i) \ge 0.8$.
+\end{itemize}
+
+puis on créé le parties :
+\begin{itemize}
+	\item $D_1$ = $\set{d_i \in D   | \ d_i \le Q_1}$,
+	\item $D_2$ = $\set{d_i \in D   | \ Q_1 < d_i \le Q_2}$,
+	\item $D_3$ = $\set{d_i \in D   | \ Q_2 < d_i \le Q_3}$,
+	\item $D_4$ = $\set{d_i \in D   | \ Q_3 < d_i \le Q_4}$,
+	\item $D_5$ = $\set{d_i \in D   |  d_i >  Q_4}$,
+\end{itemize}.
+
+On attribue aux distributions de $D_1$ le qualificatif \emph{tres$\_$facile}, pour $D_2$ \emph{facile}, pour $D_3$ \emph{moyen}, pour $D_4$ \emph{difficile} pour $D_5$ \emph{tres$\_$difficile}. 
+
+\subsection{Série sur les sommes}
+Nous calculons les \emph{effectifs des sommes} $ S = \set{e(4,1), e(5,4), \cdots, e(39,4), e(40,1)}$ contenant les couples $(s_i, d_i)$ où $s_i$ est une somme et $d_i$ le nombre de façons de distribuer cette somme sur 4 cartes (voir annexe \ref{somme1}). 
+
+\subsection{Partition de la série sur les sommes}
+
+L'idée est d'utiliser la partition de $D$ pour partitionner $S$ en 4 ensembles $S_1$ (\emph{sommes$\_$tres$\_$faciles}), $S_2$ (\emph{sommes$\_$faciles}), $S_3$ (\emph{sommes$\_$moyennes}),\\  $S_4$ (\emph{sommes$\_$difficiles}) et 
+$S_5$ (\emph{sommes$\_$tres$\_$difficiles}).
+
+Pour chaque somme-effectif $e(s_i, d_i)$ de $S$ on regarde dans quelle partie $D_j$ de $D$ se trouve $d_i$ et l'on place $s_i$ dans la partie $S_j$ de $S$. 
+
+Par exemple, on souhaite connaître la difficulté associée à la somme-effectif $e(39, 4)$ de $S$. On constate que $4$ (nombre de façons de distribuer $39$) est dans la partie $D_1$ de $D$, on met donc la somme $39$ dans $S_1$ comprenant les sommes \emph{tres$\_faciles$}.
+
+
+\subsection{Prédicats disponibles}
+
+Le prédicat suivant  de \emph{fonctions$\_$somme.pl} retourne les deux séries nécessaires :
+\begin{verbatim}
+effectifs_sommes_distributions_positions(Somme_min, Somme_max, Nb_cartes, 
+                                         Min, Max, S, D).
+\end{verbatim}
+qui constitue 2 séries statistiques (avec les  effectifs) :
+\begin{itemize}
+\item la série \emph{S} contient les sommes  (voir annexe \ref{somme1}).
+	  
+\item la série \emph{D}  contient les nombres de distributions des sommes (voir annexe \ref{distribution1}).
+\end{itemize}
+Par exemple l'appel 
+\begin{verbatim}
+effectifs_sommes_distributions_positions(4, 40, 4, 1, 10, S, D)
+\end{verbatim}
+retourne les effectifs des sommes $S$ et les effectifs des nombres de distributions des sommes $D$, pour des sommes entre $4$ et $40$, avec $4$ cartes, chaque carte ayant une valeur minimale de $1$ 
+et maximale de $10$.
+
+Par ailleurs, si l’on ne veut pas tenir compte des positions on appelle le prédicat 
+\begin{verbatim}
+effectifs_distributions_sommes(Somme_min, Somme_max, Nb_cartes, 
+                               Min, Max, S, D).
+\end{verbatim}
+
+
+Le prédicat \emph{difficultes$\_$sommes$\_$positions(Nb$\_$difficultes, Partition$\_$sommes)} retourne la partition des sommes en fonction de leurs difficultes). Les sommes de $4$ à $40$ sont considérées et les difficultés possibles sont \emph{$[$tres$\_$facile, facile, moyen, difficile, tres$\_$difficile$]$}  (annexe \ref{annexe45}) soit \emph{$[$facile, moyen, difficile$]$} (annexe \ref{annexe46}).
+
+Le prédicat \emph{difficultes$\_$sommes(Nb$\_$difficultes, Partition$\_$sommes)}  partitionne les sommes sans tenir compte des positions
+(voir annexes \ref{annexe47} et \ref{annexe48}).
+
+\section{Annexes}
+
+\subsection{Effectifs des sommes (en tenant compte des positions)}
+\label{somme1}
+
+il y a 10000 sommes dans la série, voici les effectifs (somme, nbOccurrences) :
+
+\begin{verbatim}
+e(4,1)	% la somme 4 a 1 distribution
+e(5,4)      % la somme 5 a 4 distributions
+e(6,10)
+e(7,20)
+e(8,35)
+e(9,56)
+e(10,84)
+e(11,120)
+e(12,165)
+e(13,220)
+e(14,282)
+e(15,348)
+e(16,415)
+e(17,480)
+e(18,540)
+e(19,592)
+e(20,633)
+e(21,660)
+e(22,670)
+e(23,660)
+e(24,633)
+e(25,592)
+e(26,540)
+e(27,480)
+e(28,415)
+e(29,348)
+e(30,282)
+e(31,220)
+e(32,165)
+e(33,120)
+e(34,84)
+e(35,56)
+e(36,35)
+e(37,20)
+e(38,10)
+e(39,4)
+e(40,1)   % la somme 40 a 1 distribution
+\end{verbatim}
+
+
+\subsection{Effectifs des nombres de distributions des sommes en tenant compte des positions}
+\label{distribution1}
+Il y a 37 nombres de distributions dans la série voici les effectifs (nbDistribution, NbOccurrences)
+
+\begin{verbatim}
+   e(1,2),	  %  2 sommes distinctes ont 1 distribution possible
+   e(4,2),    % 2 sommes ont 4 distributions (la valeur 4 apparait 2 fois dans la série)
+   e(10,2),  % 10 distributions possibles pour 2 sommes
+   e(20,2),
+   e(35,2),
+   e(56,2),
+   e(84,2),
+   e(120,2),
+   e(165,2),
+   e(220,2),
+   e(282,2),
+   e(348,2),
+   e(415,2),
+   e(480,2),
+   e(540,2),
+   e(592,2),
+   e(633,2),
+   e(660,2), 
+   e(670,1)   % 1 somme a 670 distributions
+\end{verbatim}
+
+
+
+\subsection{Effectif des sommes (sans tenir compte des positions)}
+
+il y a 715 sommes dans la série voici les effectifs (somme, nbOccurrences) :
+
+\begin{verbatim}
+   e(4,1),		%  la somme 4 a 1 distribution (elle n'apparait qu'une fois dans la série)
+   e(5,1)		% la somme 5 a 1 distribution
+   e(6,2),		% la somme 6 a 2 distributions
+   e(7,3),
+   e(8,5),
+   e(9,6),
+   e(10,9),
+   e(11,11),
+   e(12,15),
+   e(13,18),
+   e(14,22),
+   e(15,25),
+   e(16,30),
+   e(17,32),
+   e(18,36),
+   e(19,38),
+   e(20,41),
+   e(21,41),
+   e(22,43),
+   e(23,41),
+   e(24,41),
+   e(25,38),
+   e(26,36),
+   e(27,32),
+   e(28,30),
+   e(29,25),
+   e(30,22),
+   e(31,18),
+   e(32,15),
+   e(33,11),
+   e(34,9),
+   e(35,6),
+   e(36,5),
+   e(37,3),
+   e(38,2),
+   e(39,1),	% la somme 39 a 1 distribution
+   e(40,1)         % la somme 40 a 1 distribution
+\end{verbatim}
+
+\subsection{Effectif des nombres de distributions des sommes (sans tenir compte des positions)}
+
+il y a $37$ éléments dans la série, voici les effectifs (nbDistribution, NbOccurrences) :
+
+\begin{verbatim}
+   e(1,4),		% 4 sommes ont 1 distributions
+   e(2,2),
+   e(3,2),
+   e(5,2),
+   e(6,2),
+   e(9,2),
+   e(11,2),
+   e(15,2),
+   e(18,2),
+   e(22,2),
+   e(25,2),
+   e(30,2),
+   e(32,2),
+   e(36,2),
+   e(38,2),
+   e(41,4),
+   e(43,1)     % 1 somme a 43 distributions
+\end{verbatim}
+
+
+\subsection{Difficultés  avec positions des sommes avec 5 classes de difficultés}
+\label{annexe45}
+\begin{verbatim}
+q(very_easy,[e(4,1),e(5,4),e(6,10),e(7,20),e(37,20),e(38,10),e(39,4),e(40,1)])
+
+q(easy,[e(8,35),e(9,56),e(10,84),e(11,120),e(33,120),e(34,84),e(35,56),e(36,35)])
+
+q(average,[e(12,165),e(13,220),e(14,282),e(15,348),e(29,348),e(30,282),
+           e(31,220),e(32,165)])
+
+q(difficult,[e(16,415),e(17,480),e(18,540),e(26,540),e(27,480),e(28,415)])
+
+q(very_difficult,[e(19,592),e(20,633),e(21,660),e(22,670),e(23,660),
+                  e(24,633),e(25,592)])
+\end{verbatim}
+
+
+\subsection{Difficultés  avec positions des sommes avec  3 classes de difficultés}
+\label{annexe46}
+\begin{verbatim}
+q(easy,[e(4,1),e(5,4),e(6,10),e(7,20),e(8,35),e(9,56),e(10,84),e(34,84),
+	       e(35,56),e(36,35), e(37,20),e(38,10),e(39,4),e(40,1)])
+   
+q(average,[e(11,120),e(12,165),e(13,220),e(14,282),e(15,348),e(16,415),
+           e(28,415),e(29,348),e(30,282),e(31,220),e(32,165),e(33,120)])
+   
+q(difficult,[e(17,480),e(18,540),e(19,592),e(20,633),e(21,660),
+             e(22,670),e(23,660), (24,633),e(25,592),e(26,540),e(27,480)])
+\end{verbatim}
+
+
+\subsection{Difficultés  sans positions des sommes avec  5 classes de difficultés}
+\label{annexe47}
+\begin{verbatim}
+q(very_easy,[e(4,1),e(5,1),e(6,2),e(7,3),e(37,3),e(38,2),e(39,1),e(40,1)])
+
+q(easy,[e(8,5),e(9,6),e(10,9),e(11,11),e(33,11),e(34,9),e(35,6),e(36,5)])
+
+q(average,[e(12,15),e(13,18),e(14,22),e(15,25),e(29,25),e(30,22),e(31,18),e(32,15)])
+
+q(difficult,[e(16,30),e(17,32),e(18,36),e(26,36),e(27,32),e(28,30)])
+
+q(very_difficult,[e(19,38),e(20,41),e(21,41),e(22,43),e(23,41),e(24,41),e(25,38)])
+\end{verbatim}
+
+\subsection{Difficultés  sans positions des sommes avec  3 classes de difficultés}
+\label{annexe48}
+\begin{verbatim}
+q(easy,[e(4,1),e(5,1),e(6,2),e(7,3),e(8,5),e(9,6),e(10,9),e(34,9),e(35,6),
+        e(36,5),e(37,3),e(38,2),e(39,1),e(40,1)])
+
+q(average,[e(11,11),e(12,15),e(13,18),e(14,22),e(15,25),e(16,30),e(28,30),
+           e(29,25),e(30,22),e(31,18),e(32,15),e(33,11)])
+
+q(difficult,[e(17,32),e(18,36),e(19,38),e(20,41),e(21,41),e(22,43),e(23,41),
+             e(24,41),e(25,38),e(26,36),e(27,32)])
+\end{verbatim}
+
+\end{document}
