@@ -308,6 +308,7 @@ distances_solution_milieux([], _Milieux, []) :-
 
 distances_solution_milieux([c(_Position, Couleur, Valeur)|Cartes], 
 						   Milieux, [Distance|Distances]) :-
+						   
 	Tcouleur =..[Couleur, Min, Max, Milieu],
 	member(Tcouleur, Milieux),
 	(

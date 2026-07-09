@@ -44,9 +44,11 @@ scenario5 :-
 	% Scenario 6 : Creer un benchmark des enoncés des 25 parties 
         % et l'afficher
 scenario6 :-
-	Dir = '../',
-        benchmark:benchmark(Dir),
-	afficher(Dir, 'benchmark.txt').
+						% on prend les enonces arbitrairement du premier joueur
+	Games_dir =  '../parties_joueurs_plus/alexis/',	
+	Output_dir = '../',
+    benchmark:benchmark(Games_dir, Output_dir),
+	afficher(Output_dir, 'benchmark.txt').
 
 % ----------
 	% Scenario 7 : Creer une BK d'un joueur et 
@@ -64,6 +66,10 @@ scenario8 :-
 	benchmark_joueur:personalized_benchmark(Bk_dir, 'jean'),
 	gestion_bk_joueur:display_bk(Bk_dir, jean),
 	afficher(Bk_dir, 'jean-fr_difficultes.txt').
+	
+difficultes_joueur(Name, Bk_dir) :-
+	benchmark_joueur:personalized_benchmark(Bk_dir, Name),
+	gestion_bk_joueur:display_bk(Bk_dir, Name).
 
 /* ========================= APPELS AUX BKS ================================= */
 

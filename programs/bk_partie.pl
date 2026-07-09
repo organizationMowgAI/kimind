@@ -12,7 +12,7 @@
 :- 
 	use_module(bk_enonce),
 	use_module(bk_solution),
-        use_module(fonctions_enonce),
+    use_module(fonctions_enonce),
 	use_module(gestion_module).
 
 /* ================================ RULES =================================== */
@@ -30,7 +30,7 @@
 instance_characteristics(	
 						 Instance, Solution,
                          characteristics(Difficulty, Domain_characteristic, 
-					 Colours_order)
+					 					 Colours_order)
 						 ) :-
     bk_enonce:difficulty_instance(pos, Instance, 5, Difficulty),
     domains_characteristics(Instance, Solution, Domain_characteristic),

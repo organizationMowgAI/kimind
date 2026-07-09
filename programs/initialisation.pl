@@ -29,7 +29,7 @@
 	% initialise une partie a partir d'un enonce (somme + ordre des couleurs)
 initialisation_enonce(Somme, Ordre_couleurs, Couleurs, 
 				      Valeurs, Nb_cartes, Cartes) :-
-	                          
+	running_game:assert(couleurs(Couleurs)),                  
     memorise_ordre_couleurs(Ordre_couleurs),                
     set_ids_couleurs(Couleurs, Ordre_couleurs),    
 	get_ids_des_couleurs(Ids_couleurs),       

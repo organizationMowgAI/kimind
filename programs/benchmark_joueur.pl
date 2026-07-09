@@ -87,7 +87,8 @@ get_player_game_difficulties(
     Player_characteristics,
     [Player_difficulty|Player_difficulties]
 							) :-
-    benchmark:ordre_vers_atom(Ordre_couleurs, Ordre),
+							
+    benchmark:ordre_vers_atom(Ordre_couleurs, Ordre), 
     difficulties_by_characteristic(Player_characteristics, 
 								   instance(Somme, Ordre), Solution, 
 								   Player_difficulty),

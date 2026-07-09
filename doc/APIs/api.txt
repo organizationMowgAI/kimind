@@ -1,3 +1,7 @@
+PROGRAMMES 
+
+
+
 ===================================================================================================
 collecte_infos_joueur.pl :
 ---------------------------------------
@@ -36,7 +40,7 @@ benchmark.pl
 • benchmark(
 				Output_dir	# (input, string) dossier dans lequel on veut que le benchmark soit créé
 	   	   )
-	Description : Ce prédicat génère un benchmark objectif des 25 parties
+	Description : Ce prédicat génère un benchmark des 25 parties
 	Appel       : swipl -s benchmark.pl -g benchmark('../') -t halt
 	Résultat    : Un fichier texte dans Output_dir de la forme :
 		Game 1
@@ -56,17 +60,18 @@ exploitation_kimind.pl
 ---------------------------------------
 • recup_infos(
 				Joueur,		# (input, string) identifiant du joueur
-				Dossier,	# (input, string) dossier dans lequel se trouvent les informations sur le joueur
+				Dossier,		# (input, string) dossier dans lequel se trouvent les informations sur le joueur
 				Infos		# (output, atom) les infos sur le joueur sous la forme infos(TempsMoyenGlobal, TempsMoyenJoueur, NbCoupsMoyenGlobal, NbCoupsMoyenJoueur)
 			 )
-	Description : Ce prédicat renvoie le temps moyen du joueur pour une partie Kimind, mais
-		      	  aussi son nombre de coups moyen ainsi que le temps moyen global (de tous les
+	Description : Ce prédicat renvoie le temps moyen du joueur pour une partie Kimind, 
+		      	  son nombre de coups moyen ainsi que le temps moyen global (de tous les
 		          joueurs) et le nombre de coups moyen global.
 	Appel       : Dans SWI-Prolog :
 				  recup_infos('J1', '../stats_kimind', Stats).
 	Résultat    : Stats = infos(135.47,51.33,2.46,2.16).
 
 ===================================================================================================
+
 bk_partie.pl
 ---------------------------------------
 • instance_characteristics(
@@ -88,19 +93,23 @@ bk_partie.pl
 bk_joueur_name.pl	(valable pour tous les joueurs en remplaçant name par leur prénom)
 ---------------------------------------
 • follows_colours_order(Name).				# indique que le joueur pose les couleurs dans le même ordre que l'énoncé 
-• follows_reversed_colours_order(Name). 	# indique que le joueur pose les couleurs dans l'ordre inverse de l'énoncé
-• respects_colours_constraint(Name).		# indique que le joueur respecte la contrainte sur l'ordre des couleurs
-• respects_sum_constraint(Name).			# indique que le joueur respecte la contrainte de la somme
+• follows_reversed_colours_order(Name). 		# indique que le joueur pose les couleurs dans l'ordre inverse de l'énoncé
+• respects_colours_constraint(Name).			# indique que le joueur respecte la contrainte sur l'ordre des couleurs
+• respects_sum_constraint(Name).				# indique que le joueur respecte la contrainte de la somme
 • possible_strategy(Name).					# indique que le joueur joue des coups possibles
 • dichotomic_player(Name).					# indique que le joueur a une stratégie dichotomique
-• limit_values_player(Name).				# indique que le joueur utilise des valeurs limites par rapport aux domaines
-Ces faits sont valables si et seulement si le joueur joue comme indiqué dans au moins 75% des parties jouées.
-• fast_player(Name).						# indique que le joueur a une durée moyenne de partie plus courte que la durée moyenne globale (de tous les joueurs)
+• limit_values_player(Name).					# indique que le joueur utilise des valeurs limites par rapport aux domaines
+											# Ces faits sont valables si et seulement si le joueur joue comme indiqué dans au moins 75% des parties jouées.
+• fast_player(Name).							# indique que le joueur a une durée moyenne de partie plus courte que la durée moyenne globale (de tous les joueurs)
 • strong_player(Name).						# indique que le joueur a un nombre de coups moyen dans une partie plus faible que la moyenne globale (de tous les joueurs)
-• slow_player(Name).						# indique que le joueur a une durée moyenne de partie plus longue que la durée moyenne globale (de tous les joueurs)
-• weak_player(Name).						# indique que le joueur a un nombre de coups moyen dans une partie plus élevé que la moyenne globale (de tous les joueurs)
+• slow_player(Name).							# indique que le joueur a une durée moyenne de partie plus longue que la durée moyenne globale (de tous les joueurs)
+• weak_player(Name).							# indique que le joueur a un nombre de coups moyen dans une partie plus élevé que la moyenne globale (de tous les joueurs)
 
 ===================================================================================================
+
+BKs
+
+
 bk_enonce.pl
 ---------------------------------------
 • unique_solution_instance(
@@ -126,6 +135,7 @@ bk_enonce.pl
 	
 
 ===================================================================================================
+
 bk_solution.pl
 ---------------------------------------
 • dichotomic_domains_solution(

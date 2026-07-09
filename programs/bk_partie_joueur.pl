@@ -25,8 +25,10 @@
 	% alors la difficulte de la partie pour ce joueur se resume a la difficulte de
 	% la partie en considerant le nombre de solutions sans prendre en compte les
 	% positions
-player_game_difficulty(follows_colours_order, Game, Solution, 
-					   same_colours_order(Player_difficulty)) :-
+player_game_difficulty(
+						follows_colours_order, Game, Solution, 
+					   	same_colours_order(Player_difficulty)
+					   ) :-
     solution_follows_colours_order(Game, Solution),
 	!,
 	no_position_difficulty(Game, Player_difficulty).
@@ -84,8 +86,6 @@ player_game_difficulty(value_tendency(Player, 3, Value), _Instance,
 /* 	   RAISONNEMENT QUALITATIF POUR QUALIFIER LA DIFFICULTE D'UNE PARTIE      */ 
 /*             EN FONCTION DES CARACTERISTIQUES D'UN JOUEUR                   */  
 /* -------------------------------------------------------------------------- */
-
-
 
 
 /* =============================== FIN LISTING ============================== */

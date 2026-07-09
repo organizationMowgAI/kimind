@@ -37,6 +37,7 @@ dichotomic_solution(Instance, Solution) :-
 								% partition des distances
 	stats:parties(Effectifs_distributions, 5, [Partie1|_Parties_distributions]),
 								% on verifie que Distance est dans Partie1
+	!,							% (ajout Domi, semble necessaire si fail)							
 	member(e(Somme_distances, _), Partie1).
 
 % ----------
@@ -57,6 +58,7 @@ limits_solution(Instance, Solution) :-
 								% partition des distances
 	stats:parties(Effectifs_distributions, 5, [Partie1|_Parties_distributions]),
 								% on verifie que Distance est dans Partie1
+	!,							
 	member(e(Somme_distances, _), Partie1).
 
 % ----------
